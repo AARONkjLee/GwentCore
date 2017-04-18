@@ -1,0 +1,5 @@
+Git 服务器地址；
+https://github.com/AARONkjLee/GwentCore.git
+
+ProcessOn 项目原型流程图地址：
+https://www.processon.com/view/link/http://v3.processon.com/view/link/58f5e44ee4b040814211bf84

@@ -2,5 +2,8 @@
 本文件用于记录每次会议静态信息
 2017/4/18
 1.项目同步方案即初始化：
-	基于 Git 和 VS 2015，远程服务器由 Github 提供:https://github.com/AARONkjLee/GwentCore.git
+	基于 Git 和 VS 2015，远程服务器由 Github 提供: https://github.com/AARONkjLee/GwentCore.git
 	鉴于 Cocos 本体过大，git 服务器中不同步 cocos2d 文件夹(已经添加于.gitignore)，初次 clone 项目时，请在其他位置手动创建一个新的 cocos 项目，并且将 $(Project)\cocos2d 文件夹复制到 \GwentCore\ 内，然后再打开 \GwentCore\proj.win32\GwentCore.sln
+2.项目原型流程图链接：
+	基于 ProcessOn， 链接： https://www.processon.com/view/link/http://v3.processon.com/view/link/58f5e44ee4b040814211bf84
+	（有密码保护，见群）
