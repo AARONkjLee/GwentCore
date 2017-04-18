@@ -258,3 +258,7 @@ paket-files/
 #debugger
 .Debug.win32/*
 /proj.win32/Debug.win32
+
+#Fake resources
+Resources\Gwent-master\*
+/Resources/Gwent-master
