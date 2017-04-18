@@ -7,3 +7,5 @@
 2.项目原型流程图链接：
 	基于 ProcessOn， 链接： https://www.processon.com/view/link/http://v3.processon.com/view/link/58f5e44ee4b040814211bf84
 	（有密码保护，见群）
+3.下次会议预计：
+	规定各模块接口
