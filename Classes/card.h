@@ -2,4 +2,4 @@
 #define __card_H__ 
  
  
-#ifndef __card_H__ 
+#endif __card_H__ 
