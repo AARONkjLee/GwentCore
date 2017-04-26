@@ -10,6 +10,9 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{da50dda2-3343-4179-abbf-06fcb9262faf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -23,6 +26,15 @@
     </ClCompile>
     <ClCompile Include="..\Classes\card.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_reader.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_value.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_writer.cpp">
+      <Filter>json</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,10 +50,62 @@
     <ClInclude Include="..\Classes\card.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\include\json\allocator.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\include\json\assertions.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\include\json\autolink.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\include\json\config.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\include\json\features.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\include\json\forwards.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\include\json\json.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\include\json\reader.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\include\json\value.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\include\json\version.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\include\json\writer.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jsoncpp-master\src\lib_json\json_tool.h">
+      <Filter>json</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
       <Filter>resource</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Classes\jsoncpp-master\src\lib_json\CMakeLists.txt">
+      <Filter>json</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Classes\jsoncpp-master\src\lib_json\json_valueiterator.inl">
+      <Filter>json</Filter>
+    </None>
+    <None Include="..\Classes\jsoncpp-master\src\lib_json\sconscript">
+      <Filter>json</Filter>
+    </None>
+    <None Include="..\Classes\jsoncpp-master\src\lib_json\version.h.in">
+      <Filter>json</Filter>
+    </None>
   </ItemGroup>
 </Project>
