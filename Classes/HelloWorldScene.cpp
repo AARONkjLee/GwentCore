@@ -1,9 +1,6 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
 
-#include <json\json.h>
-#include <iostream>
-
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -75,28 +72,7 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
-//json test
-	std::string strValue = "{ \"key\":\"value1\",\
-		\"array\":[{\"arraykey\":1},{\"arraykey\":2}]}";
 
-	Json::Reader reader;
-	Json::Value root;
-	// reader将Json字符串解析到root，root将包含Json里所有子元素
-	if (reader.parse(strValue, root))
-	{
-		if (!root["key"].isNull())
-		{
-			std::string strValue = root["key"].asString();
-			std::cout << strValue << std::endl;
-		}
-		Json::Value arrayObj = root["array"];
-		for (int i = 0; i<arrayObj.size(); i++)
-		{
-			int iarrayValue = arrayObj[i]["arraykey"].asInt();
-			std::cout << iarrayValue << std::endl;
-		}
-	}
-//json test end.    
     return true;
 }
 
