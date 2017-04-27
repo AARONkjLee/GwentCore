@@ -6,7 +6,7 @@
 所有卡牌信息存储于一个文件内，作为一个大vec或list或别的容器，取决于哪种数据结构在实际中用着顺手，考虑到下列信息变量类型不同，我们可能得用一些第三方的高级容器，或者在读取该文件的函数中，单独处理每个信息的变量类型 // to-do
 
 一个element记录了一个card的全部信息，本身也是一个vec，包含的信息：
-{ID, Name, Pic, Description, CardType, CardSet, Strength, UnitType, SpellType, WeatherType, EffectType, Effect}
+{ID, Name, Pic, Description, CardType, CardSet, Strength, UnitType, UnitLevel, SpellType, WeatherType, EffectType, Effect}
 
 ID: int, 每种卡片的唯一 id，方便 hashing
 
@@ -16,26 +16,30 @@ Pic: string, 图片文件名，因为存在同名不同卡图的卡片所以这�
 
 Description: string, 卡片描述信息，和实际效果无关，只是故事或背景描述，会被GUI显示
 
-CardType: enum CardType {NullCType，Unit, Spell, Leader} 
+CardType: enum CardType {NullCType，Unit, Spell} 
+.json 中对应为 {"0", "U", "S"}
 卡牌类型的enum类型变量，分别对应，缺省无类型(受限于enum，这个类似Null的得手动实现，之后的enum定义不再解释)，单位牌类型，特殊牌类型，领导牌类型
 
 CardSet: enum CardSet {NullCSet, Northern, Nilfgaarian, Monster, Scoiatael, Neutral}  
+.json 中对应为 {"0", "O", "E", "M", "S", "N"}
 卡牌阵营，分别对应无阵营，北方领域，尼弗迦德，怪物，松鼠党，中立卡牌。类似炉石的职业，对战中每个阵营有特殊技能，不过本文件中和此无关，无需在意。
 BTW由于史凯利杰阵营更新了一堆奇怪的卡牌，那些暂时不考虑制作。
 
 Strength: int, 卡牌战力，对于spell来说视为-1，因为存在0的单位卡牌，要与之区分。注意甚至存在同名不同战力的卡。
 
-UnitType: enum UnitType {NullUType, CloseCombat, RangedCombat, Seige} 单位类型，分别对应无类型，近战，远程，攻城
+UnitType: enum UnitType {NullUType, CloseCombat, RangedCombat, Seige, } 单位类型，分别对应无类型，近战，远程，攻城
+
+UnitLevel: enum UnitLevel {NullULevel, Ordinary, Hero} 单位等级，分别对应无等级，普通等级，英雄等级
 
 SpellType: enum SpellType {NullSType, Weather, Horn, Decoy, Scorch} 效果牌类型，分别对应无类型，天气，号角，诱饵，灼烧
 
 WeatherType: enum WeatherType {NullWType, BitingFrost, Fog, Rain, ClearW} 天气牌类型，对应无类型，霜降，雾，雨，清除天气（即放晴）
 
 EffectType: Vector<EffectType>; 
-enum EffectType {NullEType（无效果类型），Hero（英雄），Spy（间谍），TightBond（同胞之情，临近翻倍），
+enum EffectType {NullEType（无效果类型），Spy（间谍），TightBond（同胞之情，临近翻倍），
 Decoy（诱饵），SpellHorn（特殊牌号角），UnitHorn（单位牌号角），SpellScorch（特殊牌烧毁），
 UnitScorch（单位牌烧毁），Muster（同党，战吼检索拉卡组手牌同名卡），MoraleBoost（士气，同排加一），
-BitingFrost（霜降），Fog（雾），Rain（雨），ClearW（清除天气）} 
+BitingFrost（霜降），Fog（雾），Rain（雨），ClearW（清除天气）}
 效果类型，是一个 EffectType 的 Vector， 因为一张卡牌可以同时拥有多个效果。注意GUI也会根据卡牌效果类型绘制卡牌，比如 Hero 都是金边的。
 
 Effect: bool，由于昆特牌的效果极度模板化，大多数效果（只考虑原游戏卡池的话是所有效果）根据效果类型，完全可以继承一样的方法，所以这个信息本身是不必要的。
