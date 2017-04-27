@@ -1,0 +1,16 @@
+领导牌卡池数据结构：
+
+{ID，Name, Pic, Description, CardSet, Effect}
+
+ID: int, 从0开始，唯一id
+
+Name: string, 卡片名称，会被GUI显示
+
+Pic: string, 图片文件名，因为存在同名不同卡图的卡片所以这个信息有必要存在
+
+Description: string, 卡片描述信息，和实际效果无关，只是故事或背景描述，会被GUI显示
+
+CardSet: enum CardSet {NullCSet, Northern, Nilfgaarian, Monster, Scoiatael, Neutral}  
+.json 中对应为 {"0", "O", "E", "M", "S", "N"}
+卡牌阵营，分别对应无阵营，北方领域，尼弗迦德，怪物，松鼠党，中立卡牌。类似炉石的职业，对战中每个阵营有特殊技能，不过本文件中和此无关，无需在意。
+BTW由于史凯利杰阵营更新了一堆奇怪的卡牌，那些暂时不考虑制作。

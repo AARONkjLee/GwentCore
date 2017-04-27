@@ -16,6 +16,8 @@ Pic: string, 图片文件名，因为存在同名不同卡图的卡片所以这�
 
 Description: string, 卡片描述信息，和实际效果无关，只是故事或背景描述，会被GUI显示
 
+CountLimit: int, 该id卡牌最多向卡组中放几张，默认为1，只有所有信息包括卡图都一样的卡，才不用新建一个卡牌，只给这个数+1
+
 CardType: enum CardType {NullCType，Unit, Spell} 
 .json 中对应为 {"0", "U", "S"}  //第一项是零，后面.json中定义的NullType都为0
 卡牌类型的enum类型变量，分别对应，缺省无类型(受限于enum，这个类似Null的得手动实现，之后的enum定义不再解释)，单位牌类型，特殊牌类型，领导牌类型
@@ -36,7 +38,7 @@ SpellType: enum SpellType {NullSType, Weather, Horn, Decoy, Scorch} 效果牌类
 WeatherType: enum WeatherType {NullWType, BitingFrost, Fog, Rain, ClearW} 天气牌类型，对应无类型，霜降，雾，雨，清除天气（即放晴）
 
 EffectType: Vector<EffectType>; 
-enum EffectType {NullEType（无效果类型），Spy（间谍），TightBond（同胞之情，临近翻倍），
+enum EffectType {NullEType（无效果类型），Spy（间谍），TightBond（同胞之情，同名卡战力翻倍），
 Decoy（诱饵），SpellHorn（特殊牌号角），UnitHorn（单位牌号角），SpellScorch（特殊牌烧毁），
 UnitScorch（单位牌烧毁），Muster（同党，战吼检索拉卡组手牌同名卡），MoraleBoost（士气，同排加一），
 BitingFrost（霜降），Fog（雾），Rain（雨），ClearW（清除天气）}
