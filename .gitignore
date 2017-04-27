@@ -262,3 +262,4 @@ paket-files/
 #Fake resources
 Resources\Gwent-master\*
 /Resources/Gwent-master
+/Resources/GwentCardsResources
