@@ -27,7 +27,7 @@ BTW由于史凯利杰阵营更新了一堆奇怪的卡牌，那些暂时不考�
 
 Strength: int, 卡牌战力，对于spell来说视为-1，因为存在0的单位卡牌，要与之区分。注意甚至存在同名不同战力的卡。
 
-UnitType: enum UnitType {NullUType, CloseCombat, RangedCombat, Seige, } 单位类型，分别对应无类型，近战，远程，攻城
+UnitType: enum UnitType {NullUType, CloseCombat, RangedCombat, Seige, CloseRangeCombat} 单位类型，分别对应无类型，近战，远程，攻城, 近远战混合
 
 UnitLevel: enum UnitLevel {NullULevel, Ordinary, Hero} 单位等级，分别对应无等级，普通等级，英雄等级
 
