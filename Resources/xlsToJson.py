@@ -1,4 +1,6 @@
-  
+# To run this python 2.x script, please use pip to install xlrd.
+
+
 import xlrd  
 import json  
 import codecs  
