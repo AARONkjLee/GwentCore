@@ -12,10 +12,14 @@ private:
 	Card cardPrototype;
 	int currentStrength;
 	CPosition position;
-	//Sprite* BodySprite;
-	//Sprite* StrengthSprite;
 
 	/*
+	Do NOT do like below!  To inherit from Sprite, see:
+	http://blog.csdn.net/while0/article/details/25615685
+
+	Sprite* BodySprite;
+	Sprite* StrengthSprite;
+
 	If someday we want to implement DIY cards, we may need these
 
 	Sprite* SetSprite;
@@ -24,11 +28,19 @@ private:
 	*/
 
 public:
+	void initCardPrototype(int cid);
+	static CardSprite* create(int cid);
+
+	/*
+	Do NOT do like below!  To inherit from Sprite, see:
+	http://blog.csdn.net/while0/article/details/25615685
+
 	CardSprite();
 	CardSprite(const int & cid);
 	CardSprite(const int & cid, const CPosition & posi);
 	void initDraw();
 	~CardSprite();
+	*/
 
-	CREATE_FUNC(CardSprite);
+	//CREATE_FUNC(CardSprite);  useless for define the create function manually
 };

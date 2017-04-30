@@ -75,8 +75,8 @@ bool CardSpriteTest::init()
     this->addChild(sprite, 0);
 	*/
 
-	CardSprite c1(0);
-	c1.initDraw();
+	auto CardS1 = CardSprite::create(0);
+	this->addChild(CardS1);
 
 
 

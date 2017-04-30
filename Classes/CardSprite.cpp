@@ -3,7 +3,7 @@
 CardSprite::CardSprite()
 {
 }
-
+/*
 CardSprite::CardSprite(const int & cid)
 {
 	cardPrototype.reload(cid);
@@ -26,7 +26,25 @@ void CardSprite::initDraw()
 		this->addChild(StrengthSprite);
 	}
 }
-
+*/
 CardSprite::~CardSprite()
 {
+}
+
+void CardSprite::initCardPrototype(int cid)
+{
+	cardPrototype.reload(cid);
+}
+
+CardSprite * CardSprite::create(int cid)
+{
+	CardSprite* sprite  = new CardSprite();
+	sprite->initCardPrototype(cid);
+	std::string filename = sprite->cardPrototype.getPicDir();
+	if (sprite && sprite->initWithFile(filename)){
+		sprite->autorelease();
+		return sprite;
+	}
+	CC_SAFE_DELETE(sprite);
+	return nullptr;
 }
