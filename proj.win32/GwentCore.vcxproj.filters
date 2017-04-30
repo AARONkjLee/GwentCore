@@ -39,6 +39,9 @@
     <ClCompile Include="..\Classes\CardSprite.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\CardSpriteTest.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -90,6 +93,9 @@
       <Filter>json</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\CardSprite.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardSpriteTest.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
