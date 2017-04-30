@@ -36,6 +36,9 @@
     <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_writer.cpp">
       <Filter>json</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\CardSprite.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -85,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\jsoncpp-master\src\lib_json\json_tool.h">
       <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardSprite.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

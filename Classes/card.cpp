@@ -1,7 +1,17 @@
 #include "card.h"
 
 
+Card::Card()
+{
+
+}
+
 Card::Card(int id){
+
+}
+
+void Card::reload(int id)
+{
 
 }
 
@@ -52,6 +62,11 @@ CardSet Card::getSet(){
 
 UnitType Card::getCardSet(){
 	return this->unitType;
+}
+
+int Card::getStrength()
+{
+	return this->strength;
 }
 
 UnitLevel Card::getUnitLevel(){

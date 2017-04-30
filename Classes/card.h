@@ -9,7 +9,9 @@ enum UnitType {NullUType, CloseCombat, RangedCombat, Seige, CloseRangedCombat};
 enum UnitLevel {NullULevel, Ordinary, Hero };
 enum SpellType {NullSType, Weather, Horn, Decoy, Scorch};
 enum WeatherType {NullWType, Bitingfroest, Fog, Rain, ClearWeather};
-enum EffectType {NullEType, Agile, Spy, TightBond, Decoy, Medic, SpellHorn, UnitHorn, SpellScorch, UnitScorch, Muster, MoraleBoost, BitingFrost, Fog, Rain, ClearWeather };
+enum EffectType {NullEType, Agile, Spy, TightBond, Decoy, Medic, 
+				SpellHorn, UnitHorn, SpellScorch, UnitScorch, Muster, 
+				MoraleBoost, BitingFrost, Fog, Rain, ClearWeather };
 
 class Card {
 private:
@@ -29,8 +31,11 @@ private:
 	bool exEffect;
 
 public:
+	Card();
 	Card(int id);
 	~Card() {}
+
+	void reload(int id);
 
 /*return the collection limit of this card*/
 	int getCountLimit();
@@ -46,6 +51,8 @@ public:
 	CardSet getSet();
 /*return the card set*/
 	UnitType getCardSet();
+/*return the strength*/
+	int getStrength();
 /*return the unit level*/
 	UnitLevel getUnitLevel();
 /*return the spell type*/
