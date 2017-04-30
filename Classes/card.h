@@ -2,6 +2,8 @@
 #define __card_H__ 
 
 #include <json/json.h>
+#include <fstream>
+#include <string>
 
 enum CardType { NullCType, Unit, Spell };
 enum CardSet {NullCSet, Northern, Nilfgaarian, Monster, Scoiateal, Neutral};
@@ -9,9 +11,9 @@ enum UnitType {NullUType, CloseCombat, RangedCombat, Seige, CloseRangedCombat};
 enum UnitLevel {NullULevel, Ordinary, Hero };
 enum SpellType {NullSType, Weather, Horn, Decoy, Scorch};
 enum WeatherType {NullWType, Bitingfroest, Fog, Rain, ClearWeather};
-enum EffectType {NullEType, Agile, Spy, TightBond, Decoy, Medic, 
-				SpellHorn, UnitHorn, SpellScorch, UnitScorch, Muster, 
-				MoraleBoost, BitingFrost, Fog, Rain, ClearWeather };
+enum EffectType {NullEType, Agile, Spye, TightBonde, Decoye, Medice, 
+				SpellHorne, UnitHorne, SpellScorche, UnitScorche, Mustere, 
+				MoraleBooste, BitingFroste, Foge, Raine, ClearWeathere };
 
 class Card {
 private:
@@ -20,7 +22,7 @@ private:
 	int strength;
 	std::string picDir;
 	std::string name;
-	std::string discription;
+	std::string description;
 	CardType cardType;
 	CardSet cardSet;
 	UnitType unitType;
@@ -35,6 +37,7 @@ public:
 	Card(int id);
 	~Card() {}
 
+/*load the card using the id*/
 	void reload(int id);
 
 /*return the collection limit of this card*/

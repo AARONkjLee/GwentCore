@@ -119,5 +119,8 @@
     <None Include="..\Classes\jsoncpp-master\src\lib_json\version.h.in">
       <Filter>json</Filter>
     </None>
+    <None Include="..\Resources\CardPoolDatabase.json">
+      <Filter>src</Filter>
+    </None>
   </ItemGroup>
 </Project>

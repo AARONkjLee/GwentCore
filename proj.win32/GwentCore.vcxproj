@@ -196,6 +196,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <None Include="..\Classes\jsoncpp-master\src\lib_json\json_valueiterator.inl" />
     <None Include="..\Classes\jsoncpp-master\src\lib_json\sconscript" />
     <None Include="..\Classes\jsoncpp-master\src\lib_json\version.h.in" />
+    <None Include="..\Resources\CardPoolDatabase.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

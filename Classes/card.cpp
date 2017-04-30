@@ -1,17 +1,29 @@
 #include "card.h"
 
 
-Card::Card()
-{
-
-}
+Card::Card(){}//defaul initalization
 
 Card::Card(int id){
-
+	this->reload(id);
 }
 
-void Card::reload(int id)
-{
+void Card::reload(int id){
+	std::ifstream cardsPool;
+	cardsPool.open("CardPoolDatabase.json");
+	Json::Reader reader;
+	Json::Value cards;
+	if (!reader.parse(cardsPool, cards, false)){return;}
+	Json::Value card = cards[id];
+	this->cardID = card["cardID"].asInt();
+	this->countLimit = card["CountLimit"].asInt();
+	this->strength = card["Strength"].asInt();
+	this->exEffect = card["exEffect"].asBool();
+	this->description = card["Description"].asCString();
+	this->name = card["Name"].asCString();
+	this->picDir = card["Pic"].asCString();
+//	std::string strCardSet = card["CardSet"].asCString();
+//	std::string strCardType = card["CardType"].asCString();
+
 
 }
 
@@ -24,19 +36,19 @@ std::string Card::getPicDir(){
 		case NullCSet: 			
 			break;
 		case Northern:
-			return "Northern Realms" + picDir;
+			return "GwentCardsResources/Northern Realms/" + picDir;
 			break;
 		case Nilfgaarian:
-			return "Nilfgaardian Empire" + picDir;
+			return "GwentCardsResources/Nilfgaardian Empire/" + picDir;
 			break;
 		case Monster:
-			return "Monsters" + picDir;
+			return "GwentCardsResources/Monsters/" + picDir;
 			break;
 		case Scoiateal:
-			return "Scoia'tael" + picDir;
+			return "GwentCardsResources/Scoia'tael/" + picDir;
 			break;
 		case Neutral:
-			return "Neutrals" + picDir;
+			return "GwentCardsResources/Neutrals/" + picDir;
 			break;
 	}
 
@@ -47,7 +59,7 @@ std::string Card::getCardName(){
 }
 
 std::string Card::getCardDiscription(){
-	return discription;
+	return description;
 }
 
 CardType Card::getCardType(){
