@@ -9,10 +9,24 @@ enum CPosition {Hand1, Hand2, Grave1, Grave2, Deck1, Deck2,
 
 class CardSprite : public cocos2d::Sprite{
 private:
-	//Card cardPrototype;
+	Card cardPrototype;
 	int currentStrength;
 	CPosition position;
+	Sprite* BodySprite;
+	Sprite* StrengthSprite;
+
+	/*
+	If someday we want to implement DIY cards, we may need these
+
+	Sprite* SetSprite;
+	Sprite* UTypeSprite;
+	Sprite* SpellSprite;
+	*/
+
 public:
+	CardSprite();
 	CardSprite(int cid);
+	CardSprite(int cid, CPosition posi);
+	void initDraw();
 	~CardSprite();
 };
