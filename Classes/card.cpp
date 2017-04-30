@@ -12,7 +12,7 @@ void Card::reload(int id){
 	cardsPool.open("CardPoolDatabase.json");
 	Json::Reader reader;
 	Json::Value cards;
-	if (!reader.parse(cardsPool, cards, false)){return;}
+	if (!reader.parse(cardsPool, cards, false)){return;}  // Bug's here!  with id=3, this directly returns.
 	Json::Value card = cards[id];
 	this->cardID = card["cardID"].asInt();
 	this->countLimit = card["CountLimit"].asInt();
@@ -42,7 +42,8 @@ std::string Card::getPicDir(){
 			return "GwentCardsResources/Nilfgaardian Empire/" + picDir;
 			break;
 		case Monster:
-			return "GwentCardsResources/Monsters/" + picDir;
+			//return "GwentCardsResources/Monsters/" + picDir;
+			return picDir;
 			break;
 		case Scoiateal:
 			return "GwentCardsResources/Scoia'tael/" + picDir;

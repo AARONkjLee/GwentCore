@@ -1,9 +1,10 @@
 #include "CardSprite.h"
 
+/*
 CardSprite::CardSprite()
 {
 }
-/*
+
 CardSprite::CardSprite(const int & cid)
 {
 	cardPrototype.reload(cid);
@@ -26,10 +27,11 @@ void CardSprite::initDraw()
 		this->addChild(StrengthSprite);
 	}
 }
-*/
+
 CardSprite::~CardSprite()
 {
 }
+*/
 
 void CardSprite::initCardPrototype(int cid)
 {
