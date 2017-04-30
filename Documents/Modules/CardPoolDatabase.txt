@@ -8,11 +8,11 @@
 一个element记录了一个card的全部信息，本身也是一个vec，包含的信息：
 {ID, Name, Pic, Description, CountLimit, CardType, CardSet, Strength, UnitType, UnitLevel, SpellType, WeatherType, EffectType, Effect}
 
-ID: int, 每种卡片的唯一 id，方便 hashing
+cardID: int, 每种卡片的唯一 id，方便 hashing
 
 Name: string, 卡片名称，会被GUI显示
 
-Pic: string, 图片文件名，因为存在同名不同卡图的卡片所以这个信息有必要存在
+PicDir: string, 图片文件名，因为存在同名不同卡图的卡片所以这个信息有必要存在
 
 Description: string, 卡片描述信息，和实际效果无关，只是故事或背景描述，会被GUI显示
 
@@ -29,7 +29,7 @@ BTW由于史凯利杰阵营更新了一堆奇怪的卡牌，那些暂时不考�
 
 Strength: int, 卡牌战力，对于spell来说视为-1，因为存在0的单位卡牌，要与之区分。注意甚至存在同名不同战力的卡。
 
-UnitType: enum UnitType {NullUType, CloseCombat, RangedCombat, Seige, CloseRangeCombat} 单位类型，分别对应无类型，近战，远程，攻城, 近远战混合
+UnitType: enum UnitType {NullUType, CloseCombat, RangedCombat, Seige, CloseRangedCombat} 单位类型，分别对应无类型，近战，远程，攻城, 近远战混合
 
 UnitLevel: enum UnitLevel {NullULevel, Ordinary, Hero} 单位等级，分别对应无等级，普通等级，英雄等级
 
@@ -38,11 +38,11 @@ SpellType: enum SpellType {NullSType, Weather, Horn, Decoy, Scorch} 效果牌类
 WeatherType: enum WeatherType {NullWType, BitingFrost, Fog, Rain, ClearW} 天气牌类型，对应无类型，霜降，雾，雨，清除天气（即放晴）
 
 EffectType: Vector<EffectType>; 
-enum EffectType {NullEType（无效果类型），Spy（间谍），TightBond（同胞之情，同名卡战力翻倍），
+enum EffectType {NullEType（无效果类型），Agile（灵巧，可近战可远战） ，Spy（间谍），TightBond（同胞之情，同名卡战力翻倍），
 Decoy（诱饵），SpellHorn（特殊牌号角），UnitHorn（单位牌号角），SpellScorch（特殊牌烧毁），
 UnitScorch（单位牌烧毁），Muster（同党，战吼检索拉卡组手牌同名卡），MoraleBoost（士气，同排加一），
 BitingFrost（霜降），Fog（雾），Rain（雨），ClearW（清除天气）}
 效果类型，是一个 EffectType 的 Vector， 因为一张卡牌可以同时拥有多个效果。注意GUI也会根据卡牌效果类型绘制卡牌，比如 Hero 都是金边的。
 
-Effect: bool，由于昆特牌的效果极度模板化，大多数效果（只考虑原游戏卡池的话是所有效果）根据效果类型，完全可以继承一样的方法，所以这个信息本身是不必要的。
+exEffect: bool，由于昆特牌的效果极度模板化，大多数效果（只考虑原游戏卡池的话是所有效果）根据效果类型，完全可以继承一样的方法，所以这个信息本身是不必要的。
 但是考虑到未来的可拓展性，定义了该变量，ture表示需要导入外部效果代码（具体实现to-do），false表示不需要。目前卡池中所有卡牌该变量均为false。
