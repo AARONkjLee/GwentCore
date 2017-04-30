@@ -12,8 +12,8 @@ private:
 	Card cardPrototype;
 	int currentStrength;
 	CPosition position;
-	Sprite* BodySprite;
-	Sprite* StrengthSprite;
+	//Sprite* BodySprite;
+	//Sprite* StrengthSprite;
 
 	/*
 	If someday we want to implement DIY cards, we may need these
@@ -25,8 +25,10 @@ private:
 
 public:
 	CardSprite();
-	CardSprite(int cid);
-	CardSprite(int cid, CPosition posi);
+	CardSprite(const int & cid);
+	CardSprite(const int & cid, const CPosition & posi);
 	void initDraw();
 	~CardSprite();
+
+	CREATE_FUNC(CardSprite);
 };

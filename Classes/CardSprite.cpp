@@ -4,13 +4,13 @@ CardSprite::CardSprite()
 {
 }
 
-CardSprite::CardSprite(int cid)
+CardSprite::CardSprite(const int & cid)
 {
 	cardPrototype.reload(cid);
 	currentStrength = cardPrototype.getStrength();
 }
 
-CardSprite::CardSprite(int cid, CPosition posi)
+CardSprite::CardSprite(const int & cid, const CPosition & posi)
 {
 	cardPrototype.reload(cid);
 	currentStrength = cardPrototype.getStrength();
@@ -19,7 +19,12 @@ CardSprite::CardSprite(int cid, CPosition posi)
 
 void CardSprite::initDraw()
 {
-	if 
+	auto BodySprite = Sprite::create(cardPrototype.getPicDir());
+	this->addChild(BodySprite);
+	if (cardPrototype.getCardType() == Unit) {
+		auto StrengthSprite = Sprite::create("StrengthBack.png");
+		this->addChild(StrengthSprite);
+	}
 }
 
 CardSprite::~CardSprite()

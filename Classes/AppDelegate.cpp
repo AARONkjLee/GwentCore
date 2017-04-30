@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+//#include "HelloWorldScene.h"
+#include "CardSpriteTest.h"
 
 USING_NS_CC;
 
@@ -73,8 +74,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     register_all_packages();
 
+	// 从这里添加自己的scene
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    //auto scene = HelloWorld::createScene();
+	auto scene = CardSpriteTest::createScene();
 
     // run
     director->runWithScene(scene);
