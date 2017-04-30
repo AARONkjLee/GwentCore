@@ -39,7 +39,7 @@ WeatherType: enum WeatherType {NullWType, BitingFrost, Fog, Rain, ClearW} 天气
 
 EffectType: Vector<EffectType>; 
 enum EffectType {NullEType（无效果类型），Agile（灵巧，可近战可远战） ，Spy（间谍），TightBond（同胞之情，同名卡战力翻倍），
-Decoy（诱饵），SpellHorn（特殊牌号角），UnitHorn（单位牌号角），SpellScorch（特殊牌烧毁），
+Decoy（诱饵），Medic（医生）， SpellHorn（特殊牌号角），UnitHorn（单位牌号角），SpellScorch（特殊牌烧毁），
 UnitScorch（单位牌烧毁），Muster（同党，战吼检索拉卡组手牌同名卡），MoraleBoost（士气，同排加一），
 BitingFrost（霜降），Fog（雾），Rain（雨），ClearW（清除天气）}
 效果类型，是一个 EffectType 的 Vector， 因为一张卡牌可以同时拥有多个效果。注意GUI也会根据卡牌效果类型绘制卡牌，比如 Hero 都是金边的。
