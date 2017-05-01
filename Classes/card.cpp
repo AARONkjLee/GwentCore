@@ -9,10 +9,14 @@ Card::Card(int id){
 
 void Card::reload(int id){
 	std::ifstream cardsPool;
-	cardsPool.open("CardPoolDatabase.json");
+	cardsPool.open("..//Resources/CardPoolDatabase.json");  
+	// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
 	Json::Reader reader;
-	Json::Value cards;
-	if (!reader.parse(cardsPool, cards, false)){return;}  // Bug's here!  with id=3, this directly returns.
+	Json::Value root;
+	if (!reader.parse(cardsPool, root, false)){
+		return;
+	}  
+	Json::Value cards = root;
 	Json::Value card = cards[id];
 	this->cardID = card["cardID"].asInt();
 	this->countLimit = card["CountLimit"].asInt();
@@ -21,6 +25,7 @@ void Card::reload(int id){
 	this->description = card["Description"].asCString();
 	this->name = card["Name"].asCString();
 	this->picDir = card["Pic"].asCString();
+//  to-do
 //	std::string strCardSet = card["CardSet"].asCString();
 //	std::string strCardType = card["CardType"].asCString();
 
@@ -32,7 +37,9 @@ int Card::getCountLimit(){
 }
 
 std::string Card::getPicDir(){
-	switch(cardSet){
+	// To be called in Cocos, the initial dir is ($ProjectDir)/Resources
+	return "GwentCardsResources/Monsters/" + picDir;
+	/*switch(cardSet){
 		case NullCSet: 			
 			break;
 		case Northern:
@@ -42,8 +49,7 @@ std::string Card::getPicDir(){
 			return "GwentCardsResources/Nilfgaardian Empire/" + picDir;
 			break;
 		case Monster:
-			//return "GwentCardsResources/Monsters/" + picDir;
-			return picDir;
+			return "GwentCardsResources/Monsters/" + picDir;
 			break;
 		case Scoiateal:
 			return "GwentCardsResources/Scoia'tael/" + picDir;
@@ -51,7 +57,7 @@ std::string Card::getPicDir(){
 		case Neutral:
 			return "GwentCardsResources/Neutrals/" + picDir;
 			break;
-	}
+	}*/
 
 }
 
