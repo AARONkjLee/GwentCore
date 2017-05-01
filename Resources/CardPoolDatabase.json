@@ -1,16 +1,16 @@
 [
     {
-        "CardSet": "Monster", 
-        "CardType": "Unit", 
-        "CountLimit": 1, 
-        "Description": "Ugly - nature's way of saying: Stay the fuck away.", 
-        "EffectType": "Muster", 
-        "Name": "Arachas", 
-        "Pic": "Arachas 1.png", 
+        "CardSet": "NullCSet", 
+        "CardType": "NullCTyoe", 
+        "CountLimit": "", 
+        "Description": "You must read a wrong card!", 
+        "EffectType": "NullEType", 
+        "Name": "Error Card!", 
+        "Pic": "ErrorCard.png", 
         "SpellType": "NullSType", 
-        "Strength": 4, 
-        "UnitLevel": "Ordinary", 
-        "UnitType": "CloseCombat", 
+        "Strength": -1, 
+        "UnitLevel": "NullULevel", 
+        "UnitType": "NullUType", 
         "WeatherType": "NullWType", 
         "cardID": 0, 
         "exEffect": 0
@@ -22,7 +22,7 @@
         "Description": "Ugly - nature's way of saying: Stay the fuck away.", 
         "EffectType": "Muster", 
         "Name": "Arachas", 
-        "Pic": "Arachas 2.png", 
+        "Pic": "Arachas 1.png", 
         "SpellType": "NullSType", 
         "Strength": 4, 
         "UnitLevel": "Ordinary", 
@@ -38,13 +38,29 @@
         "Description": "Ugly - nature's way of saying: Stay the fuck away.", 
         "EffectType": "Muster", 
         "Name": "Arachas", 
-        "Pic": "Arachas 3.png", 
+        "Pic": "Arachas 2.png", 
         "SpellType": "NullSType", 
         "Strength": 4, 
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
         "cardID": 2, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Ugly - nature's way of saying: Stay the fuck away.", 
+        "EffectType": "Muster", 
+        "Name": "Arachas", 
+        "Pic": "Arachas 3.png", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 3, 
         "exEffect": 0
     }, 
     {
@@ -60,7 +76,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "Seige", 
         "WeatherType": "NullWType", 
-        "cardID": 3, 
+        "cardID": 4, 
         "exEffect": 0
     }, 
     {
@@ -76,7 +92,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 4, 
+        "cardID": 5, 
         "exEffect": 0
     }, 
     {
@@ -92,7 +108,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseRangedCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 5, 
+        "cardID": 6, 
         "exEffect": 0
     }, 
     {
@@ -108,7 +124,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "RangedCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 6, 
+        "cardID": 7, 
         "exEffect": 0
     }, 
     {
@@ -124,7 +140,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 7, 
+        "cardID": 8, 
         "exEffect": 0
     }, 
     {
@@ -140,7 +156,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 8, 
+        "cardID": 9, 
         "exEffect": 0
     }, 
     {
@@ -156,7 +172,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 9, 
+        "cardID": 10, 
         "exEffect": 0
     }, 
     {
@@ -172,7 +188,7 @@
         "UnitLevel": "Hero", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 10, 
+        "cardID": 11, 
         "exEffect": 0
     }, 
     {
@@ -188,7 +204,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "Seige", 
         "WeatherType": "NullWType", 
-        "cardID": 11, 
+        "cardID": 12, 
         "exEffect": 0
     }, 
     {
@@ -204,7 +220,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "RangedCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 12, 
+        "cardID": 13, 
         "exEffect": 0
     }, 
     {
@@ -220,7 +236,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 13, 
+        "cardID": 14, 
         "exEffect": 0
     }, 
     {
@@ -236,7 +252,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "Seige", 
         "WeatherType": "NullWType", 
-        "cardID": 14, 
+        "cardID": 15, 
         "exEffect": 0
     }, 
     {
@@ -252,7 +268,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 15, 
+        "cardID": 16, 
         "exEffect": 0
     }, 
     {
@@ -268,7 +284,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 16, 
+        "cardID": 17, 
         "exEffect": 0
     }, 
     {
@@ -284,7 +300,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 17, 
+        "cardID": 18, 
         "exEffect": 0
     }, 
     {
@@ -300,7 +316,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "RangedCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 18, 
+        "cardID": 19, 
         "exEffect": 0
     }, 
     {
@@ -316,7 +332,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 19, 
+        "cardID": 20, 
         "exEffect": 0
     }, 
     {
@@ -332,7 +348,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 20, 
+        "cardID": 21, 
         "exEffect": 0
     }, 
     {
@@ -348,7 +364,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 21, 
+        "cardID": 22, 
         "exEffect": 0
     }, 
     {
@@ -364,7 +380,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "RangedCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 22, 
+        "cardID": 23, 
         "exEffect": 0
     }, 
     {
@@ -380,7 +396,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 23, 
+        "cardID": 24, 
         "exEffect": 0
     }, 
     {
@@ -396,7 +412,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseRangedCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 24, 
+        "cardID": 25, 
         "exEffect": 0
     }, 
     {
@@ -412,7 +428,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "Seige", 
         "WeatherType": "NullWType", 
-        "cardID": 25, 
+        "cardID": 26, 
         "exEffect": 0
     }, 
     {
@@ -428,7 +444,7 @@
         "UnitLevel": "Hero", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 26, 
+        "cardID": 27, 
         "exEffect": 0
     }, 
     {
@@ -444,7 +460,7 @@
         "UnitLevel": "Hero", 
         "UnitType": "CloseRangedCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 27, 
+        "cardID": 28, 
         "exEffect": 0
     }, 
     {
@@ -460,7 +476,7 @@
         "UnitLevel": "Hero", 
         "UnitType": "RangedCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 28, 
+        "cardID": 29, 
         "exEffect": 0
     }, 
     {
@@ -476,7 +492,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 29, 
+        "cardID": 30, 
         "exEffect": 0
     }, 
     {
@@ -492,7 +508,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 30, 
+        "cardID": 31, 
         "exEffect": 0
     }, 
     {
@@ -508,7 +524,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 31, 
+        "cardID": 32, 
         "exEffect": 0
     }, 
     {
@@ -524,7 +540,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 32, 
+        "cardID": 33, 
         "exEffect": 0
     }, 
     {
@@ -540,7 +556,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 33, 
+        "cardID": 34, 
         "exEffect": 0
     }, 
     {
@@ -556,7 +572,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 34, 
+        "cardID": 35, 
         "exEffect": 0
     }, 
     {
@@ -572,7 +588,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 35, 
+        "cardID": 36, 
         "exEffect": 0
     }, 
     {
@@ -588,7 +604,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 36, 
+        "cardID": 37, 
         "exEffect": 0
     }, 
     {
@@ -604,7 +620,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 37, 
+        "cardID": 38, 
         "exEffect": 0
     }, 
     {
@@ -620,7 +636,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 38, 
+        "cardID": 39, 
         "exEffect": 0
     }, 
     {
@@ -636,7 +652,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "RangedCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 39, 
+        "cardID": 40, 
         "exEffect": 0
     }, 
     {
@@ -652,7 +668,7 @@
         "UnitLevel": "Hero", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 40, 
+        "cardID": 41, 
         "exEffect": 0
     }, 
     {
@@ -668,7 +684,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 41, 
+        "cardID": 42, 
         "exEffect": 0
     }, 
     {
@@ -684,7 +700,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 42, 
+        "cardID": 43, 
         "exEffect": 0
     }, 
     {
@@ -700,7 +716,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "RangedCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 43, 
+        "cardID": 44, 
         "exEffect": 0
     }, 
     {
@@ -716,7 +732,7 @@
         "UnitLevel": "Hero", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 44, 
+        "cardID": 45, 
         "exEffect": 0
     }, 
     {
@@ -732,7 +748,7 @@
         "UnitLevel": "Hero", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 45, 
+        "cardID": 46, 
         "exEffect": 0
     }, 
     {
@@ -748,7 +764,7 @@
         "UnitLevel": "Hero", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 46, 
+        "cardID": 47, 
         "exEffect": 0
     }, 
     {
@@ -764,7 +780,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 47, 
+        "cardID": 48, 
         "exEffect": 0
     }, 
     {
@@ -780,7 +796,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 48, 
+        "cardID": 49, 
         "exEffect": 0
     }, 
     {
@@ -796,7 +812,7 @@
         "UnitLevel": "Hero", 
         "UnitType": "RangedCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 49, 
+        "cardID": 50, 
         "exEffect": 0
     }, 
     {
@@ -812,7 +828,7 @@
         "UnitLevel": "Ordinary", 
         "UnitType": "CloseCombat", 
         "WeatherType": "NullWType", 
-        "cardID": 50, 
+        "cardID": 51, 
         "exEffect": 0
     }, 
     {
@@ -828,7 +844,7 @@
         "UnitLevel": "NullULevel", 
         "UnitType": "NullUType", 
         "WeatherType": "BitingFrost", 
-        "cardID": 51, 
+        "cardID": 52, 
         "exEffect": 0
     }, 
     {
@@ -844,7 +860,7 @@
         "UnitLevel": "NullULevel", 
         "UnitType": "NullUType", 
         "WeatherType": "ClearWeather", 
-        "cardID": 52, 
+        "cardID": 53, 
         "exEffect": 0
     }, 
     {
@@ -860,7 +876,7 @@
         "UnitLevel": "NullULevel", 
         "UnitType": "NullUType", 
         "WeatherType": "Fog", 
-        "cardID": 53, 
+        "cardID": 54, 
         "exEffect": 0
     }, 
     {
@@ -876,7 +892,7 @@
         "UnitLevel": "NullULevel", 
         "UnitType": "NullUType", 
         "WeatherType": "Rain", 
-        "cardID": 54, 
+        "cardID": 55, 
         "exEffect": 0
     }, 
     {
@@ -892,7 +908,7 @@
         "UnitLevel": "NullULevel", 
         "UnitType": "NullUType", 
         "WeatherType": "NullWType", 
-        "cardID": 55, 
+        "cardID": 56, 
         "exEffect": 0
     }, 
     {
@@ -908,7 +924,7 @@
         "UnitLevel": "NullULevel", 
         "UnitType": "NullUType", 
         "WeatherType": "NullWType", 
-        "cardID": 56, 
+        "cardID": 57, 
         "exEffect": 0
     }, 
     {
@@ -924,24 +940,8 @@
         "UnitLevel": "NullULevel", 
         "UnitType": "NullUType", 
         "WeatherType": "NullWType", 
-        "cardID": 57, 
-        "exEffect": 0
-    }, 
-    {
-        "CardSet": "", 
-        "CardType": "", 
-        "CountLimit": "", 
-        "Description": "", 
-        "EffectType": "", 
-        "Name": "", 
-        "Pic": "", 
-        "SpellType": "", 
-        "Strength": "", 
-        "UnitLevel": "", 
-        "UnitType": "", 
-        "WeatherType": "", 
         "cardID": 58, 
-        "exEffect": ""
+        "exEffect": 0
     }, 
     {
         "CardSet": "", 

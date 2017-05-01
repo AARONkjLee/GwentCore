@@ -2,6 +2,8 @@
 
 #include "card.h"
 #include "cocos2d.h"
+static const std::string CARD_BACK_DIR = "GwentCardsResources/Back.jpg";
+
 
 enum CPosition {Hand1, Hand2, Grave1, Grave2, Deck1, Deck2, 
 	Weather1, Weather2, Combat1, Combat2, Ranged1, Ranged2, 

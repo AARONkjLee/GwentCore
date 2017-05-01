@@ -45,7 +45,8 @@ def Excel2Json(file_path):
         json_data=json.dumps(result,indent= 4,sort_keys=True).decode('unicode_escape')  
           
         saveFile(os.getcwd(),worksheets[int(inp)],json_data)  
-        print json_data  
+        print json_data
+        print "Successfully create .json file"
   
   
  # 获取excel数据源  

@@ -43,6 +43,9 @@ CardSprite * CardSprite::create(int cid)
 	CardSprite* sprite  = new CardSprite();
 	sprite->initCardPrototype(cid);
 	std::string filename = sprite->cardPrototype.getPicDir();
+	if (filename.empty()) {
+		filename = CARD_BACK_DIR;
+	}
 	if (sprite && sprite->initWithFile(filename)){
 		sprite->autorelease();
 		return sprite;
