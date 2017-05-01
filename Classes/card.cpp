@@ -12,11 +12,10 @@ void Card::reload(int id){
 	cardsPool.open("..//Resources/CardPoolDatabase.json");  
 	// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
 	Json::Reader reader;
-	Json::Value root;
-	if (!reader.parse(cardsPool, root, false)){
+	Json::Value cards;
+	if (!reader.parse(cardsPool, cards, false)){
 		return;
-	}  
-	Json::Value cards = root;
+	}
 	Json::Value card = cards[id];
 	this->cardID = card["cardID"].asInt();
 	this->countLimit = card["CountLimit"].asInt();
@@ -25,9 +24,11 @@ void Card::reload(int id){
 	this->description = card["Description"].asCString();
 	this->name = card["Name"].asCString();
 	this->picDir = card["Pic"].asCString();
+	this->strengthStr = card["Strength"].asString();
 //  to-do
-//	std::string strCardSet = card["CardSet"].asCString();
-//	std::string strCardType = card["CardType"].asCString();
+	std::string strCardSet = card["CardSet"].asCString();
+	std::string strCardType = card["CardType"].asCString();
+
 
 
 }
@@ -86,6 +87,11 @@ UnitType Card::getCardSet(){
 int Card::getStrength()
 {
 	return this->strength;
+}
+
+std::string Card::getStrengthStr()
+{
+	return this->strengthStr;
 }
 
 UnitLevel Card::getUnitLevel(){
