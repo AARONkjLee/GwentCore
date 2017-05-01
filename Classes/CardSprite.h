@@ -2,7 +2,11 @@
 
 #include "card.h"
 #include "cocos2d.h"
-static const std::string CARD_BACK_DIR = "GwentCardsResources/Back.jpg";
+
+const std::string CARD_BACK_DIR = "GwentCardsResources/Back.jpg";
+const std::string CARD_STRENGTH_BACK_DIR = "StrengthBack.png";
+const cocos2d::Vec2 STRENGTH_BACK_COORDINATES((float)90, (float)946);
+const cocos2d::Vec2 STRENGTH_LABEL_COORDINATES((float)89, (float)943);
 
 
 enum CPosition {Hand1, Hand2, Grave1, Grave2, Deck1, Deck2, 
@@ -13,6 +17,7 @@ class CardSprite : public cocos2d::Sprite{
 private:
 	Card cardPrototype;
 	int currentStrength;
+	std::string getStrStrength();
 	CPosition position;
 
 	/*
