@@ -23,6 +23,7 @@ private:
 	std::string picDir;
 	std::string name;
 	std::string description;
+	std::string strengthStr;
 	CardType cardType;
 	CardSet cardSet;
 	UnitType unitType;
@@ -56,6 +57,8 @@ public:
 	UnitType getCardSet();
 /*return the strength*/
 	int getStrength();
+/*return the strength*/
+	std::string getStrengthStr();
 /*return the unit level*/
 	UnitLevel getUnitLevel();
 /*return the spell type*/
