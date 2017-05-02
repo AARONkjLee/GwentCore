@@ -48,7 +48,7 @@ def Excel2Json(file_path):
                     try:
                         tmp[title_cn]=int(temp) 
                     except(ValueError):
-                        if title_cn != "Description" and title_cn != "Pic":
+                        if title_cn != "Description" and title_cn != "Pic" and title_cn != "Name":  # 名字，描述和图片文件名不需要删除空格
                                 temp = temp.replace(" ","")
                         tmp[title_cn]= temp
             result.append(tmp)  

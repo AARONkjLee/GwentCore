@@ -7,7 +7,7 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "ErrorCard!", 
+        "Name": "Error Card!", 
         "Pic": "ErrorCard.png", 
         "SpellType": "NullSType", 
         "Strength": -1, 
@@ -79,7 +79,7 @@
         "EffectType": [
             "Muster"
         ], 
-        "Name": "Arachas:Behemoth", 
+        "Name": "Arachas: Behemoth", 
         "Pic": "Arachas Behemoth.png", 
         "SpellType": "NullSType", 
         "Strength": 6, 
@@ -115,7 +115,7 @@
         "EffectType": [
             "Agile"
         ], 
-        "Name": "CelaenoHarpy", 
+        "Name": "Celaeno Harpy", 
         "Pic": "Celaeno Harpy.png", 
         "SpellType": "NullSType", 
         "Strength": 2, 
@@ -151,7 +151,7 @@
         "EffectType": [
             "Muster"
         ], 
-        "Name": "Crone:Brewess", 
+        "Name": "Crone: Brewess", 
         "Pic": "Crone Brewess.png", 
         "SpellType": "NullSType", 
         "Strength": 6, 
@@ -169,7 +169,7 @@
         "EffectType": [
             "Muster"
         ], 
-        "Name": "Crone:Weavess", 
+        "Name": "Crone: Weavess", 
         "Pic": "Crone Weavess.png", 
         "SpellType": "NullSType", 
         "Strength": 6, 
@@ -187,7 +187,7 @@
         "EffectType": [
             "Muster"
         ], 
-        "Name": "Crone:Whispess", 
+        "Name": "Crone: Whispess", 
         "Pic": "Crone Whispess.png", 
         "SpellType": "NullSType", 
         "Strength": 6, 
@@ -223,7 +223,7 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "EarthElemental", 
+        "Name": "Earth Elemental", 
         "Pic": "Earth Elemental.png", 
         "SpellType": "NullSType", 
         "Strength": 6, 
@@ -277,7 +277,7 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "FireElemental", 
+        "Name": "Fire Elemental", 
         "Pic": "Fire Elemental.png", 
         "SpellType": "NullSType", 
         "Strength": 6, 
@@ -421,7 +421,7 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "GraveHag", 
+        "Name": "Grave Hag", 
         "Pic": "Grave Hag.png", 
         "SpellType": "NullSType", 
         "Strength": 5, 
@@ -475,7 +475,7 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "IceGiant", 
+        "Name": "Ice Giant", 
         "Pic": "Ice Giant.png", 
         "SpellType": "NullSType", 
         "Strength": 6, 
@@ -602,7 +602,7 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "PlagueMaiden", 
+        "Name": "Plague Maiden", 
         "Pic": "Plague Maiden.png", 
         "SpellType": "NullSType", 
         "Strength": 5, 
@@ -620,7 +620,7 @@
         "EffectType": [
             "Muster"
         ], 
-        "Name": "Vampire:Bruxa", 
+        "Name": "Vampire: Bruxa", 
         "Pic": "Vampire Bruxa.png", 
         "SpellType": "NullSType", 
         "Strength": 4, 
@@ -638,7 +638,7 @@
         "EffectType": [
             "Muster"
         ], 
-        "Name": "Vampire:Ekimmara", 
+        "Name": "Vampire: Ekimmara", 
         "Pic": "Vampire Ekimmara.png", 
         "SpellType": "NullSType", 
         "Strength": 4, 
@@ -656,7 +656,7 @@
         "EffectType": [
             "Muster"
         ], 
-        "Name": "Vampire:Fleder", 
+        "Name": "Vampire: Fleder", 
         "Pic": "Vampire Fleder.png", 
         "SpellType": "NullSType", 
         "Strength": 4, 
@@ -674,7 +674,7 @@
         "EffectType": [
             "Muster"
         ], 
-        "Name": "Vampire:Garkain", 
+        "Name": "Vampire: Garkain", 
         "Pic": "Vampire Garkain.png", 
         "SpellType": "NullSType", 
         "Strength": 4, 
@@ -692,7 +692,7 @@
         "EffectType": [
             "Muster"
         ], 
-        "Name": "Vampire:Katakan", 
+        "Name": "Vampire: Katakan", 
         "Pic": "Vampire Katakan.png", 
         "SpellType": "NullSType", 
         "Strength": 5, 
@@ -746,7 +746,7 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "CirillaFinoaElenRiannon", 
+        "Name": "Cirilla Finoa Elen Riannon", 
         "Pic": "Cirilla Finoa Elen Riannon 2.png", 
         "SpellType": "NullSType", 
         "Strength": 15, 
@@ -782,7 +782,7 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "EmielRegisRohellecTerzieff", 
+        "Name": "Emiel Regis Rohellec Terzieff", 
         "Pic": "Emiel Regis Rohellec Terzieff 2.png", 
         "SpellType": "NullSType", 
         "Strength": 5, 
@@ -800,7 +800,7 @@
         "EffectType": [
             "Muster"
         ], 
-        "Name": "GaunterO'Dimm:Darkness", 
+        "Name": "Gaunter O'Dimm: Darkness", 
         "Pic": "Gaunter O'Dimm Darkness 1.png", 
         "SpellType": "NullSType", 
         "Strength": 4, 
@@ -818,7 +818,7 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "GeraltofRivia", 
+        "Name": "Geralt of Rivia", 
         "Pic": "Geralt of Rivia 2.png", 
         "SpellType": "NullSType", 
         "Strength": 15, 
@@ -836,7 +836,7 @@
         "EffectType": [
             "Spy"
         ], 
-        "Name": "MysteriousElf", 
+        "Name": "Mysterious Elf", 
         "Pic": "Mysterious Elf 2.png", 
         "SpellType": "NullSType", 
         "Strength": 0, 
@@ -854,7 +854,7 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "TrissMerigold", 
+        "Name": "Triss Merigold", 
         "Pic": "Triss Merigold 2.png", 
         "SpellType": "NullSType", 
         "Strength": 7, 
@@ -908,7 +908,7 @@
         "EffectType": [
             "Medic"
         ], 
-        "Name": "YenneferofVengerberg", 
+        "Name": "Yennefer of Vengerberg", 
         "Pic": "Yennefer of Vengerberg 2.png", 
         "SpellType": "NullSType", 
         "Strength": 7, 
@@ -926,7 +926,7 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "ZoltanChivay", 
+        "Name": "Zoltan Chivay", 
         "Pic": "Zoltan Chivay 2.png", 
         "SpellType": "NullSType", 
         "Strength": 5, 
@@ -944,7 +944,7 @@
         "EffectType": [
             "BitingFrost"
         ], 
-        "Name": "BitingFrost", 
+        "Name": "Biting Frost", 
         "Pic": "Biting Frost 1.png", 
         "SpellType": "Weather", 
         "Strength": -1, 
@@ -962,7 +962,7 @@
         "EffectType": [
             "ClearWeather"
         ], 
-        "Name": "ClearWeather", 
+        "Name": "Clear Weather", 
         "Pic": "Clear Weather 1.png", 
         "SpellType": "Weather", 
         "Strength": -1, 
@@ -980,7 +980,7 @@
         "EffectType": [
             "Fog"
         ], 
-        "Name": "ImpenetrablrFog", 
+        "Name": "Impenetrablr Fog", 
         "Pic": "Impenetrablr Fog 1.png", 
         "SpellType": "Weather", 
         "Strength": -1, 
@@ -998,7 +998,7 @@
         "EffectType": [
             "Rain"
         ], 
-        "Name": "TorrentialRain", 
+        "Name": "Torrential Rain", 
         "Pic": "Torrential Rain 1.png", 
         "SpellType": "Weather", 
         "Strength": -1, 
@@ -1016,7 +1016,7 @@
         "EffectType": [
             "SpellHorn"
         ], 
-        "Name": "Commander'sHorn", 
+        "Name": "Commander's Horn", 
         "Pic": "Commander's Horn 1.png", 
         "SpellType": "Horn", 
         "Strength": -1, 
