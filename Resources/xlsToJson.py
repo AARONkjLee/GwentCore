@@ -44,10 +44,13 @@ def Excel2Json(file_path):
                             tmp_effects.append(effect)
                     tmp["EffectType"]=tmp_effects
                 else:
+                    temp = (sheet.row_values(i)[j])
                     try:
-                        tmp[title_cn]=int(sheet.row_values(i)[j]).replace(" ","") 
+                        tmp[title_cn]=int(temp) 
                     except(ValueError):
-                        tmp[title_cn]=sheet.row_values(i)[j].replace(" ","") 
+                        if title_cn != "Description" and title_cn != "Pic":
+                                temp = temp.replace(" ","")
+                        tmp[title_cn]= temp
             result.append(tmp)  
         json_data=json.dumps(result,indent= 4,sort_keys=True).decode('unicode_escape')  
           

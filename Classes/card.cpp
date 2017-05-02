@@ -118,7 +118,7 @@ void Card::reload(int id) {
 	}
 	for (int i = 0; i < jsonEffects.size(); i++) {
 		EffectType effectType;
-		std::string strEffectType = card["EffectType"].asCString();
+		std::string strEffectType = jsonEffects[i].asCString();
 		if (strEffectType == "NullEType") {
 			effectType = NullEType;
 		}
