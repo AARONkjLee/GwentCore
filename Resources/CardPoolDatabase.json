@@ -4,7 +4,9 @@
         "CardType": "NullCTyoe", 
         "CountLimit": "", 
         "Description": "You must read a wrong card!", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Error Card!", 
         "Pic": "ErrorCard.png", 
         "SpellType": "NullSType", 
@@ -20,7 +22,10 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Ugly - nature's way of saying: Stay the fuck away.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "[Muster", 
+            "NullEType]"
+        ], 
         "Name": "Arachas", 
         "Pic": "Arachas 1.png", 
         "SpellType": "NullSType", 
@@ -36,7 +41,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Ugly - nature's way of saying: Stay the fuck away.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Arachas", 
         "Pic": "Arachas 2.png", 
         "SpellType": "NullSType", 
@@ -52,7 +59,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Ugly - nature's way of saying: Stay the fuck away.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Arachas", 
         "Pic": "Arachas 3.png", 
         "SpellType": "NullSType", 
@@ -68,7 +77,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Like a cross between a crab, a spider... and a ploughin' mountain.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Arachas: Behemoth", 
         "Pic": "Arachas Behemoth.png", 
         "SpellType": "NullSType", 
@@ -84,7 +95,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Admit your mistakes and bury them proper - else they'll come back to haunt you.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Botchling", 
         "Pic": "Botchling.png", 
         "SpellType": "NullSType", 
@@ -100,7 +113,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Common Harpies feed on carrion. Celaeno harpies… they feed on dreams.", 
-        "EffectType": "Agile", 
+        "EffectType": [
+            "Agile"
+        ], 
         "Name": "Celaeno Harpy", 
         "Pic": "Celaeno Harpy.png", 
         "SpellType": "NullSType", 
@@ -116,7 +131,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Born of an egg laid by a cockerel... if you believe such peasant drivel.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Cockatrice", 
         "Pic": "Cockatrice.png", 
         "SpellType": "NullSType", 
@@ -132,7 +149,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "We'll cut you up, boy.  A fine broth you will make.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Crone: Brewess", 
         "Pic": "Crone Brewess.png", 
         "SpellType": "NullSType", 
@@ -148,7 +167,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "I sense your pain.  I see your fear...", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Crone: Weavess", 
         "Pic": "Crone Weavess.png", 
         "SpellType": "NullSType", 
@@ -164,7 +185,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "I'd be your best - and last.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Crone: Whispess", 
         "Pic": "Crone Whispess.png", 
         "SpellType": "NullSType", 
@@ -180,7 +203,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Some men connot admit defeat.  Some keept fighting from beyond the grave.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Draug", 
         "Pic": "Draug.png", 
         "SpellType": "NullSType", 
@@ -196,7 +221,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "How to fight an earth elemental? You don't.  You run.  Fast as you can.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Earth Elemental", 
         "Pic": "Earth Elemental.png", 
         "SpellType": "NullSType", 
@@ -212,7 +239,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "The nest!  Take out the nest, or the bastards'll just keep coming!", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Endrega", 
         "Pic": "Endrega.png", 
         "SpellType": "NullSType", 
@@ -228,7 +257,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "A fiend looks a bit like a deer.  An enormous, evil deer.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Fiend", 
         "Pic": "Fiend.png", 
         "SpellType": "NullSType", 
@@ -244,7 +275,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Fire is so delightful.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Fire Elemental", 
         "Pic": "Fire Elemental.png", 
         "SpellType": "NullSType", 
@@ -260,7 +293,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Fog creeps on little cat feet.  Foglets creep over the bodies of their victims.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Foglet", 
         "Pic": "Foglet.png", 
         "SpellType": "NullSType", 
@@ -276,7 +311,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Fork tails...  Bah!  Fucker's tails're more like cleavers.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Forktail", 
         "Pic": "Forktail.png", 
         "SpellType": "NullSType", 
@@ -292,7 +329,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "What have I done?  The mage cried out, fritened of his own creation.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Frightener", 
         "Pic": "Frightener.png", 
         "SpellType": "NullSType", 
@@ -308,7 +347,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Ancient sculptors' nightmarish fantasies, brought to life by bored mages.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Gargoyle", 
         "Pic": "Gargoyle.png", 
         "SpellType": "NullSType", 
@@ -324,7 +365,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "If ghouls are part of the Circle of Life...  Then it's a damn vicious circle.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Ghoul", 
         "Pic": "Ghoul 1.png", 
         "SpellType": "NullSType", 
@@ -340,7 +383,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "If ghouls are part of the Circle of Life...  Then it's a damn vicious circle.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Ghoul", 
         "Pic": "Ghoul 2.png", 
         "SpellType": "NullSType", 
@@ -356,7 +401,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "If ghouls are part of the Circle of Life...  Then it's a damn vicious circle.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Ghoul", 
         "Pic": "Ghoul 3.png", 
         "SpellType": "NullSType", 
@@ -372,7 +419,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Their long tongues're for slurping marrow - and whipping prey.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Grave Hag", 
         "Pic": "Grave Hag.png", 
         "SpellType": "NullSType", 
@@ -388,7 +437,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Griffins like to toy with their prey.  Eat'em alive, piece by piece.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Griffin", 
         "Pic": "Griffin.png", 
         "SpellType": "NullSType", 
@@ -404,7 +455,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "There are many species of harpy, and all are kleptomaniacs.", 
-        "EffectType": "Agile", 
+        "EffectType": [
+            "Agile"
+        ], 
         "Name": "Harpy", 
         "Pic": "Harpy.png", 
         "SpellType": "NullSType", 
@@ -420,7 +473,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Fled one time in my life.  From the Ice Giant.  And I'm not a bit ashamed.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Ice Giant", 
         "Pic": "Ice Giant.png", 
         "SpellType": "NullSType", 
@@ -436,7 +491,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Ladd nahw!  Kill them!  Litter the earth with their entrails!", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Imlerith", 
         "Pic": "Imlerith.png", 
         "SpellType": "NullSType", 
@@ -452,7 +509,10 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Kill a kayran?  Simple.  Take your best sword...  Then sell it and hire a witcher.", 
-        "EffectType": "Agile, MoraleBoost", 
+        "EffectType": [
+            "Agile", 
+            "MoraleBoost"
+        ], 
         "Name": "Kayran", 
         "Pic": "Kayran.png", 
         "SpellType": "NullSType", 
@@ -468,7 +528,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "We never hut in there woods.  Not even if it means the whole village straves", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Leshen", 
         "Pic": "Leshen.png", 
         "SpellType": "NullSType", 
@@ -484,7 +546,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Damn things are almost cute, if you ignore the whole vicious killer aspect.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Nekker", 
         "Pic": "Nekker 1.png", 
         "SpellType": "NullSType", 
@@ -500,7 +564,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Damn things are almost cute, if you ignore the whole vicious killer aspect.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Nekker", 
         "Pic": "Nekker 2.png", 
         "SpellType": "NullSType", 
@@ -516,7 +582,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Damn things are almost cute, if you ignore the whole vicious killer aspect.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Nekker", 
         "Pic": "Nekker 3.png", 
         "SpellType": "NullSType", 
@@ -532,7 +600,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "The sick rave about a boil-pocked woman surrounded by herds of rabid rats...", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Plague Maiden", 
         "Pic": "Plague Maiden.png", 
         "SpellType": "NullSType", 
@@ -548,7 +618,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "A vile, bloodthirsty, man-eating hag.  Kind of like my mother-in-law.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Vampire: Bruxa", 
         "Pic": "Vampire Bruxa.png", 
         "SpellType": "NullSType", 
@@ -564,7 +636,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Who would think overgrown bats would have a tatse for gaudy jewelry?", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Vampire: Ekimmara", 
         "Pic": "Vampire Ekimmara.png", 
         "SpellType": "NullSType", 
@@ -580,7 +654,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Higher vampires embrace their victims.  Fleders rip them to shreds.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Vampire: Fleder", 
         "Pic": "Vampire Fleder.png", 
         "SpellType": "NullSType", 
@@ -596,7 +672,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Blood-drinkers and corpse-eaters so foul their very ugliness paralyses foes.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Vampire: Garkain", 
         "Pic": "Vampire Garkain.png", 
         "SpellType": "NullSType", 
@@ -612,7 +690,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Drinking blood of the Continent since the Conjunction.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Vampire: Katakan", 
         "Pic": "Vampire Katakan.png", 
         "SpellType": "NullSType", 
@@ -628,7 +708,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Wolves aren't as bad as they say.  Werewolves, though - they're worse.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Werewolf", 
         "Pic": "Werewolf.png", 
         "SpellType": "NullSType", 
@@ -644,7 +726,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Imagin a cross between a winged snake and a nightmare.  Wyverns are worse.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Wyvern", 
         "Pic": "Wyvern.png", 
         "SpellType": "NullSType", 
@@ -660,7 +744,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Know when fairy tales cease to be tales?  When people start believing in them.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Cirilla Finoa Elen Riannon", 
         "Pic": "Cirilla Finoa Elen Riannon 2.png", 
         "SpellType": "NullSType", 
@@ -676,7 +762,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Dandelion, you're a cynic, a lecher, a whoremonger, a liar - and my best friend.", 
-        "EffectType": "UnitHorn", 
+        "EffectType": [
+            "UnitHorn"
+        ], 
         "Name": "Dandelion", 
         "Pic": "Dandelion 2.png", 
         "SpellType": "NullSType", 
@@ -692,7 +780,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Men, the polite ones, at least, would call me a monster.  A blood-drinking freak.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Emiel Regis Rohellec Terzieff", 
         "Pic": "Emiel Regis Rohellec Terzieff 2.png", 
         "SpellType": "NullSType", 
@@ -708,7 +798,9 @@
         "CardType": "Unit", 
         "CountLimit": 3, 
         "Description": "Fear not the shadows, but the light.", 
-        "EffectType": "Muster", 
+        "EffectType": [
+            "Muster"
+        ], 
         "Name": "Gaunter O'Dimm: Darkness", 
         "Pic": "Gaunter O'Dimm Darkness 1.png", 
         "SpellType": "NullSType", 
@@ -724,7 +816,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "If that's what it takes to save the world, it's better to let that world die.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Geralt of Rivia", 
         "Pic": "Geralt of Rivia 2.png", 
         "SpellType": "NullSType", 
@@ -740,7 +834,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "You humans have... Unusual tastes.", 
-        "EffectType": "Spy", 
+        "EffectType": [
+            "Spy"
+        ], 
         "Name": "Mysterious Elf", 
         "Pic": "Mysterious Elf 2.png", 
         "SpellType": "NullSType", 
@@ -756,7 +852,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "I can take care of myself.  Trust me.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Triss Merigold", 
         "Pic": "Triss Merigold 2.png", 
         "SpellType": "NullSType", 
@@ -772,7 +870,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "If you're to be hanged, ask for water.  Anything can happen before they fetch it.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Vesemir", 
         "Pic": "Vesemir 2.png", 
         "SpellType": "NullSType", 
@@ -788,7 +888,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Also calls himself Borkh Three Jackdaws... he's not the best at names.", 
-        "EffectType": "UnitScorch", 
+        "EffectType": [
+            "UnitScorch"
+        ], 
         "Name": "Villentretenmerth", 
         "Pic": "Villentretenmerth 2.png", 
         "SpellType": "NullSType", 
@@ -804,7 +906,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Magic is Chaos, Art and Science.  It is a curse, ablessing and a progression.", 
-        "EffectType": "Medic", 
+        "EffectType": [
+            "Medic"
+        ], 
         "Name": "Yennefer of Vengerberg", 
         "Pic": "Yennefer of Vengerberg 2.png", 
         "SpellType": "NullSType", 
@@ -820,7 +924,9 @@
         "CardType": "Unit", 
         "CountLimit": 1, 
         "Description": "Life without old mates and booze is like a woman without a rump.", 
-        "EffectType": "NullEType", 
+        "EffectType": [
+            "NullEType"
+        ], 
         "Name": "Zoltan Chivay", 
         "Pic": "Zoltan Chivay 2.png", 
         "SpellType": "NullSType", 
@@ -836,7 +942,9 @@
         "CardType": "Spell", 
         "CountLimit": 3, 
         "Description": "Best part about frost - bodies of the fallen don't rot so quickly.", 
-        "EffectType": "BitingFrost", 
+        "EffectType": [
+            "BitingFrost"
+        ], 
         "Name": "Biting Frost", 
         "Pic": "Biting Frost 1.png", 
         "SpellType": "Weather", 
@@ -852,7 +960,9 @@
         "CardType": "Spell", 
         "CountLimit": 3, 
         "Description": "The sun's shinin.  Dromle!  The sun's shinin'!  Maybe there's hope left after all.", 
-        "EffectType": "ClearWeather", 
+        "EffectType": [
+            "ClearWeather"
+        ], 
         "Name": "Clear Weather", 
         "Pic": "Clear Weather 1.png", 
         "SpellType": "Weather", 
@@ -868,7 +978,9 @@
         "CardType": "Spell", 
         "CountLimit": 3, 
         "Description": "A good commander's dream... a bad one's horror.", 
-        "EffectType": "Fog", 
+        "EffectType": [
+            "Fog"
+        ], 
         "Name": "Impenetrablr Fog", 
         "Pic": "Impenetrablr Fog 1.png", 
         "SpellType": "Weather", 
@@ -884,7 +996,9 @@
         "CardType": "Spell", 
         "CountLimit": 3, 
         "Description": "Even the rain in the land smells like piss.", 
-        "EffectType": "Rain", 
+        "EffectType": [
+            "Rain"
+        ], 
         "Name": "Torrential Rain", 
         "Pic": "Torrential Rain 1.png", 
         "SpellType": "Weather", 
@@ -900,7 +1014,9 @@
         "CardType": "Spell", 
         "CountLimit": 3, 
         "Description": "Plus one to morale, minus three to hearing.", 
-        "EffectType": "SpellHorn", 
+        "EffectType": [
+            "SpellHorn"
+        ], 
         "Name": "Commander's Horn", 
         "Pic": "Commander's Horn 1.png", 
         "SpellType": "Horn", 
@@ -916,7 +1032,9 @@
         "CardType": "Spell", 
         "CountLimit": 3, 
         "Description": "When you run out of peasants, decoys also make decent arrow fodder.", 
-        "EffectType": "Decoy", 
+        "EffectType": [
+            "Decoy"
+        ], 
         "Name": "Decoy", 
         "Pic": "Decoy 1.png", 
         "SpellType": "Decoy", 
@@ -932,7 +1050,9 @@
         "CardType": "Spell", 
         "CountLimit": 3, 
         "Description": "Pillars of flame turn the mightiest to ash.  All others tremble in shock and awe.", 
-        "EffectType": "SpellScorch", 
+        "EffectType": [
+            "SpellScorch"
+        ], 
         "Name": "Scorch", 
         "Pic": "Scorch 1.png", 
         "SpellType": "Scorch", 
@@ -948,7 +1068,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -964,7 +1086,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -980,7 +1104,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -996,7 +1122,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1012,7 +1140,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1028,7 +1158,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1044,7 +1176,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1060,7 +1194,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1076,7 +1212,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1092,7 +1230,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1108,7 +1248,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1124,7 +1266,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1140,7 +1284,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1156,7 +1302,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1172,7 +1320,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1188,7 +1338,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1204,7 +1356,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1220,7 +1374,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1236,7 +1392,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1252,7 +1410,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1268,7 +1428,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1284,7 +1446,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1300,7 +1464,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1316,7 +1482,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1332,7 +1500,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1348,7 +1518,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1364,7 +1536,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1380,7 +1554,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1396,7 +1572,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1412,7 +1590,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1428,7 +1608,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1444,7 +1626,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1460,7 +1644,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1476,7 +1662,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1492,7 +1680,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1508,7 +1698,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1524,7 +1716,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1540,7 +1734,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1556,7 +1752,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1572,7 +1770,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1588,7 +1788,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1604,7 +1806,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1620,7 +1824,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1636,7 +1842,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1652,7 +1860,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1668,7 +1878,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1684,7 +1896,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1700,7 +1914,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1716,7 +1932,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1732,7 +1950,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1748,7 +1968,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1764,7 +1986,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1780,7 +2004,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1796,7 +2022,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1812,7 +2040,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1828,7 +2058,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1844,7 +2076,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1860,7 +2094,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1876,7 +2112,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1892,7 +2130,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1908,7 +2148,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1924,7 +2166,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1940,7 +2184,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1956,7 +2202,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1972,7 +2220,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -1988,7 +2238,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2004,7 +2256,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2020,7 +2274,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2036,7 +2292,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2052,7 +2310,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2068,7 +2328,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2084,7 +2346,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2100,7 +2364,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2116,7 +2382,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2132,7 +2400,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2148,7 +2418,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2164,7 +2436,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2180,7 +2454,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2196,7 +2472,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2212,7 +2490,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2228,7 +2508,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2244,7 +2526,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2260,7 +2544,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2276,7 +2562,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2292,7 +2580,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2308,7 +2598,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2324,7 +2616,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2340,7 +2634,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2356,7 +2652,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2372,7 +2670,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2388,7 +2688,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2404,7 +2706,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2420,7 +2724,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2436,7 +2742,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2452,7 +2760,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2468,7 +2778,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2484,7 +2796,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2500,7 +2814,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2516,7 +2832,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2532,7 +2850,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2548,7 +2868,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2564,7 +2886,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2580,7 +2904,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2596,7 +2922,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2612,7 +2940,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2628,7 +2958,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2644,7 +2976,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2660,7 +2994,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2676,7 +3012,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2692,7 +3030,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2708,7 +3048,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2724,7 +3066,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2740,7 +3084,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2756,7 +3102,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2772,7 +3120,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2788,7 +3138,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2804,7 +3156,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2820,7 +3174,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2836,7 +3192,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2852,7 +3210,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2868,7 +3228,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2884,7 +3246,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2900,7 +3264,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2916,7 +3282,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 
@@ -2932,7 +3300,9 @@
         "CardType": "", 
         "CountLimit": "", 
         "Description": "", 
-        "EffectType": "", 
+        "EffectType": [
+            ""
+        ], 
         "Name": "", 
         "Pic": "", 
         "SpellType": "", 

@@ -37,10 +37,17 @@ def Excel2Json(file_path):
                 title_de=str(row_0[j]).decode('unicode_escape')  
                 title_cn= title_de.split("'")[1]  
                 #获取单元格的值
-                try:
-                    tmp[title_cn]=int(sheet.row_values(i)[j]) 
-                except(ValueError):
-                    tmp[title_cn]=sheet.row_values(i)[j] 
+                if title_cn == "EffectType":
+                    tmp_effects = []
+                    effects = sheet.row_values(i)[j].replace(" ","").split(",")
+                    for effect in effects:
+                            tmp_effects.append(effect)
+                    tmp["EffectType"]=tmp_effects
+                else:
+                    try:
+                        tmp[title_cn]=int(sheet.row_values(i)[j]).replace(" ","") 
+                    except(ValueError):
+                        tmp[title_cn]=sheet.row_values(i)[j].replace(" ","") 
             result.append(tmp)  
         json_data=json.dumps(result,indent= 4,sort_keys=True).decode('unicode_escape')  
           
