@@ -16,6 +16,7 @@ void Card::reload(int id) {
 	if (!reader.parse(cardsPool, cards, false)) {
 		return;
 	}
+	cardsPool.close();
 	Json::Value card = cards[id];
 	Json::Value jsonEffects = card["EffectType"];
 	this->cardID = card["cardID"].asInt();
@@ -204,11 +205,11 @@ std::string Card::getPicDir(){
 }
 
 std::string Card::getCardName(){
-	return name;
+	return this->name;
 }
 
 std::string Card::getCardDiscription(){
-	return description;
+	return this->description;
 }
 
 CardType Card::getCardType(){
