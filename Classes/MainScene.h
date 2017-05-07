@@ -7,6 +7,9 @@
 
 
 const std::string MAIN_BG_DIR = "MainScene/Gwent_BackPic_1920x1080_logoless.jpg";
+const std::string BUTTON_NROMAL_DIR = "MainScene/MainButtonNormal.png";
+const std::string BUTTON_SELECTED_DIR = "MainScene/MainButtonSelected.png";
+const std::string LOGO_DIR = "MainScene/Logo.png";
 
 
 class MainScene : public cocos2d::Scene

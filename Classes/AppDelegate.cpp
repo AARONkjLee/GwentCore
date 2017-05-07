@@ -1,13 +1,14 @@
 #include "AppDelegate.h"
 //#include "HelloWorldScene.h"
 #include "CardSpriteTest.h"
+#include "MainScene.h"
 
 USING_NS_CC;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(1920, 1080);
-static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
-static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
-static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
+static cocos2d::Size designResolutionSize = cocos2d::Size(1600,900);
+static cocos2d::Size smallResolutionSize = cocos2d::Size(1280, 720);
+static cocos2d::Size mediumResolutionSize = cocos2d::Size(1600, 900);
+static cocos2d::Size largeResolutionSize = cocos2d::Size(1920, 1080); // Background Resolution
 
 AppDelegate::AppDelegate()
 {
@@ -56,28 +57,26 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // Set the design resolution
     glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::NO_BORDER);
     auto frameSize = glview->getFrameSize();
-    // if the frame's height is larger than the height of medium size.
-    if (frameSize.height > mediumResolutionSize.height)
-    {        
-        director->setContentScaleFactor(MIN(largeResolutionSize.height/designResolutionSize.height, largeResolutionSize.width/designResolutionSize.width));
-    }
-    // if the frame's height is larger than the height of small size.
-    else if (frameSize.height > smallResolutionSize.height)
-    {        
-        director->setContentScaleFactor(MIN(mediumResolutionSize.height/designResolutionSize.height, mediumResolutionSize.width/designResolutionSize.width));
-    }
-    // if the frame's height is smaller than the height of medium size.
-    else
-    {        
-        director->setContentScaleFactor(MIN(smallResolutionSize.height/designResolutionSize.height, smallResolutionSize.width/designResolutionSize.width));
-    }
+	
+	// ResolutionPolicy:NO_BORDER made picture out of screen when the resoluition ratio changes.
+	// So change content scale factor according to h&w
+	
+	// see http://cocos2d-x.org/wiki/Detailed_explanation_of_Cocos2d-x_Multi-resolution_adaptation
+
+
+	if (frameSize.height/9 != frameSize.width/16) {
+		director->setContentScaleFactor(
+			MAX(largeResolutionSize.height / frameSize.height, largeResolutionSize.width / frameSize.width));
+	}
+
 
     register_all_packages();
 
 	// 从这里添加自己的scene
     // create a scene. it's an autorelease object
-    //auto scene = HelloWorld::createScene();
-	auto scene = CardSpriteTest::createScene();
+    // auto scene = HelloWorld::createScene();
+	// auto scene = CardSpriteTest::createScene();
+	auto scene = MainScene::create();
 
     // run
     director->runWithScene(scene);
