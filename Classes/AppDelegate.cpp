@@ -3,9 +3,11 @@
 #include "CardSpriteTest.h"
 #include "MainScene.h"
 
+
+
 USING_NS_CC;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(1920, 1080);
+static cocos2d::Size designResolutionSize = cocos2d::Size(1280,720);
 static cocos2d::Size smallResolutionSize = cocos2d::Size(1280, 720);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1600, 900);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(1920, 1080); // Background Resolution
@@ -42,6 +44,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     if(!glview) {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
         glview = GLViewImpl::createWithRect("GwentCore", cocos2d::Rect(0, 0, designResolutionSize.width, designResolutionSize.height));
+		//glview = GLViewImpl::createWithFullScreen("Gwent Core");
 #else
         glview = GLViewImpl::create("GwentCore");
 #endif
@@ -64,10 +67,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	// see http://cocos2d-x.org/wiki/Detailed_explanation_of_Cocos2d-x_Multi-resolution_adaptation
 
 
-	if (frameSize.height/9 != frameSize.width/16) {
+	//if (frameSize.height/9 != frameSize.width/16) {
 		director->setContentScaleFactor(
 			MAX(largeResolutionSize.height / frameSize.height, largeResolutionSize.width / frameSize.width));
-	}
+	//}
 
 
     register_all_packages();

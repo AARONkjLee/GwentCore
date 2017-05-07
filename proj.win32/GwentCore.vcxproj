@@ -149,11 +149,14 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\CardCollection.cpp" />
     <ClCompile Include="..\Classes\CardSprite.cpp" />
     <ClCompile Include="..\Classes\CardSpriteTest.cpp" />
+    <ClCompile Include="..\Classes\CollectionSceneTest.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_reader.cpp" />
     <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_value.cpp" />
     <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_writer.cpp" />
     <ClCompile Include="..\Classes\MainScene.cpp" />
+    <ClCompile Include="..\Classes\PlaySceneTest.cpp" />
+    <ClCompile Include="..\Classes\SettingSceneTest.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +165,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\CardCollection.h" />
     <ClInclude Include="..\Classes\CardSprite.h" />
     <ClInclude Include="..\Classes\CardSpriteTest.h" />
+    <ClInclude Include="..\Classes\CollectionSceneTest.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\jsoncpp-master\include\json\allocator.h" />
     <ClInclude Include="..\Classes\jsoncpp-master\include\json\assertions.h" />
@@ -176,6 +180,8 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\jsoncpp-master\include\json\writer.h" />
     <ClInclude Include="..\Classes\jsoncpp-master\src\lib_json\json_tool.h" />
     <ClInclude Include="..\Classes\MainScene.h" />
+    <ClInclude Include="..\Classes\PlaySceneTest.h" />
+    <ClInclude Include="..\Classes\SettingSceneTest.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
