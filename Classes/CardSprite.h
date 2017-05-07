@@ -5,9 +5,12 @@
 
 const std::string CARD_BACK_DIR = "GwentCardsResources/Back.jpg";
 const std::string CARD_STRENGTH_BACK_DIR = "StrengthBack.png";
-const cocos2d::Vec2 STRENGTH_BACK_COORDINATES((float)90, (float)946);
-const cocos2d::Vec2 STRENGTH_LABEL_COORDINATES((float)89, (float)943);
-
+const std::string CARD_HERO_STRENGTH_BACK_DIR = "StrengthBackHero.png";
+const cocos2d::Size CARD_SIZE((float)674, (float)1048);
+const cocos2d::Size STRENGTH_BACK_COORDINATES((float)90, (float)946);
+const cocos2d::Size STRENGTH_HERO_BACK_COORDINATES((float)92, (float)944);
+const cocos2d::Size STRENGTH_LABEL_COORDINATES((float)88, (float)943);
+const cocos2d::Size STRENGTH_HERO_LABEL_COORDINATES((float)92, (float)943);
 
 enum CPosition {Hand1, Hand2, Grave1, Grave2, Deck1, Deck2, 
 	Weather1, Weather2, Combat1, Combat2, Ranged1, Ranged2, 

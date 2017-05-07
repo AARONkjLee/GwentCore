@@ -60,19 +60,35 @@ CardSprite * CardSprite::create(int cid)
 		sprite->autorelease();
 
 		//to-do judge the CType and ULevel
-		auto strengthSprite = Sprite::create(CARD_STRENGTH_BACK_DIR);
-		strengthSprite->setPosition(STRENGTH_BACK_COORDINATES);
-		sprite->addChild(strengthSprite);
+		if (sprite->cardPrototype.getCardType() == Unit) {
+			bool heroFlag = sprite->cardPrototype.getUnitLevel() == Hero;
+			std::string strengthBackFilename = 
+				(heroFlag) ? CARD_HERO_STRENGTH_BACK_DIR : 
+				CARD_STRENGTH_BACK_DIR;
+			auto strengthSprite = Sprite::create(strengthBackFilename);
+			sprite->addChild(strengthSprite);
+			strengthSprite->setPosition(
+				((heroFlag) ? STRENGTH_HERO_BACK_COORDINATES.width :
+					STRENGTH_BACK_COORDINATES.width)
+				/ CARD_SIZE.width * (sprite->getContentSize().width),
+				((heroFlag) ? STRENGTH_HERO_BACK_COORDINATES.height :
+					STRENGTH_BACK_COORDINATES.height)
+				/ CARD_SIZE.height * (sprite->getContentSize().height));
 
-		
-
-		auto strengthLabel = Label::create(
-			sprite->getStrStrength(), // to change to sprite->cardPrototype.getStrengthStr()
-			"fonts/Marker Felt.ttf", 72);
-		strengthLabel->setColor(Color3B(0,0,0));
-		strengthLabel->setPosition(STRENGTH_LABEL_COORDINATES);
-		sprite->addChild(strengthLabel);
-
+			auto strengthLabel = Label::create(
+				sprite->getStrStrength(), // to change to sprite->cardPrototype.getStrengthStr()
+				"fonts/Marker Felt.ttf", 72);
+			sprite->addChild(strengthLabel);
+			strengthLabel->setColor(
+				(heroFlag) ? Color3B(255, 255, 255) : Color3B(0, 0, 0));
+			strengthLabel->setPosition(
+				( (heroFlag) ? STRENGTH_HERO_LABEL_COORDINATES.width : 
+					STRENGTH_LABEL_COORDINATES.width )
+				/ CARD_SIZE.width * (sprite->getContentSize().width),
+				( (heroFlag) ? STRENGTH_HERO_LABEL_COORDINATES.height :
+					STRENGTH_LABEL_COORDINATES.height )
+				/ CARD_SIZE.height * (sprite->getContentSize().height));
+		}
 		return sprite;
 	}
 

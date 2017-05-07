@@ -75,10 +75,16 @@ bool CardSpriteTest::init()
     this->addChild(sprite, 0);
 	*/
 
-	auto CardS1 = CardSprite::create(1);
-	CardS1->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
-	CardS1->setScale(0.5);
+	auto CardS1 = CardSprite::create(11);
+	CardS1->setPosition(Vec2(visibleSize.width / 4 + origin.x, visibleSize.height / 2 + origin.y));
+	//CardS1->setScale(0.5);
+
+	auto CardS2 = CardSprite::create(1);
+	CardS2->setPosition(Vec2(visibleSize.width * 3 / 4 + origin.x, visibleSize.height / 2 + origin.y));
+	//CardS2->setScale(0.5);
+
 	this->addChild(CardS1);
+	this->addChild(CardS2);
 
 
 
