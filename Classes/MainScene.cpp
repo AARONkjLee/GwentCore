@@ -22,12 +22,17 @@ bool MainScene::init()
 	mainBGSprite->setPosition(origin.x + visibleSize.width/2,
 		origin.y + visibleSize.height/2);
 	mainLayer->addChild(mainBGSprite);
-	/*auto closeItem = MenuItemImage::create("MainButtonNormal.png",
-		"MainButtonSelected.png",
-		CC_CALLLBACK_1(menuCloseCallback, this));
-	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width / 2,
-		origin.y + closeItem->getContentSize().height / 2));*/
 
+	auto closeItem = MenuItemImage::create(BUTTON_NROMAL_DIR,
+		BUTTON_SELECTED_DIR,
+		CC_CALLBACK_1(MainScene::menuCloseCallback, this));
+	closeItem->setScale((float)68/81);
+	closeItem->setPosition(Vec2(origin.x + visibleSize.width*0.324,
+		origin.y + visibleSize.height*0.144));
+	
+	auto menu = Menu::create(closeItem, NULL);
+	menu->setPosition(Vec2::ZERO);
+	this->addChild(menu, 1);	
 	return true;
 }
 

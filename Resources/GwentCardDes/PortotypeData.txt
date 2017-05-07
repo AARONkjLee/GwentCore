@@ -1,0 +1,16 @@
+Logo.png:
+	scale: 0.48474;
+	vectors: 0.324,0.731
+barStart:
+	scale: 0.443
+	vectors: 0.324,0.384
+barStart:
+	scale: 0.443
+	vectors: 0.324,0.304
+barStart:
+	scale: 0.443
+	vectors: 0.324,0.224
+barStart:
+	scale: 0.443
+	vectors: 0.324,0.144
+		

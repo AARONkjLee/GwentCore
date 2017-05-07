@@ -5,7 +5,7 @@
 
 USING_NS_CC;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(1600,900);
+static cocos2d::Size designResolutionSize = cocos2d::Size(1920, 1080);
 static cocos2d::Size smallResolutionSize = cocos2d::Size(1280, 720);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1600, 900);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(1920, 1080); // Background Resolution
