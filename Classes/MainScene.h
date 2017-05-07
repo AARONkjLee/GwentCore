@@ -5,6 +5,10 @@
 //³¡¾°ÇÐ»»½Ì³Ì
 //http://www.cnblogs.com/HangZhe/p/5701019.html
 
+
+const std::string MAIN_BG_DIR = "MainScene/Gwent_BackPic_1920x1080_logoless.jpg";
+
+
 class MainScene : public cocos2d::Scene
 {
 public:

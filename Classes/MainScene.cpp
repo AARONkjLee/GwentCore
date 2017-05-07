@@ -18,13 +18,17 @@ bool MainScene::init()
 
 	this->addChild(mainLayer);
 	
+	auto mainBGSprite = Sprite::create(MAIN_BG_DIR);
+	mainBGSprite->setPosition(origin.x + visibleSize.width/2,
+		origin.y + visibleSize.height/2);
+	mainLayer->addChild(mainBGSprite);
 	/*auto closeItem = MenuItemImage::create("MainButtonNormal.png",
 		"MainButtonSelected.png",
 		CC_CALLLBACK_1(menuCloseCallback, this));
 	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width / 2,
 		origin.y + closeItem->getContentSize().height / 2));*/
 
-	return false;
+	return true;
 }
 
 void MainScene::menuCloseCallback(Ref* pSender)
