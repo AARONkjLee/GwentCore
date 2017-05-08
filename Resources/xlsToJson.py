@@ -74,6 +74,15 @@ def saveFile(file_path,file_name,data):
     output.write(data)  
     output.close()  
   
-if __name__ == '__main__':  
-    #file_path = raw_input('请输入excel文件路径：\n')  
-    json_data=Excel2Json("CardPoolDatabase.xlsx")  
+if __name__ == '__main__':
+	while 1:
+		choice = raw_input('请选择需要转换的数据文件：\n A. 卡池数据（CardPoolDatabase.xlsx）\tB. 领导派数据（LeaderCardPoolDatabase.xlsx)\tC. Exit\n')
+		if choice == "A" :
+			json_data=Excel2Json("CardPoolDatabase.xlsx")
+		elif choice == "B":
+			json_data=Excel2Json("LeaderCardPoolDatabase.xlsx")
+		elif choice == "C":
+			break
+		else:
+			print "Invalid Input, Try Again."
+	
