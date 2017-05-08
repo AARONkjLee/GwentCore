@@ -154,6 +154,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_reader.cpp" />
     <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_value.cpp" />
     <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_writer.cpp" />
+    <ClCompile Include="..\Classes\leaderCard.cpp" />
     <ClCompile Include="..\Classes\MainScene.cpp" />
     <ClCompile Include="..\Classes\PlaySceneTest.cpp" />
     <ClCompile Include="..\Classes\PlayScene\BattleInfo.cpp" />
@@ -180,6 +181,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\jsoncpp-master\include\json\version.h" />
     <ClInclude Include="..\Classes\jsoncpp-master\include\json\writer.h" />
     <ClInclude Include="..\Classes\jsoncpp-master\src\lib_json\json_tool.h" />
+    <ClInclude Include="..\Classes\leaderCard.h" />
     <ClInclude Include="..\Classes\MainScene.h" />
     <ClInclude Include="..\Classes\PlaySceneTest.h" />
     <ClInclude Include="..\Classes\PlayScene\BattleInfo.h" />

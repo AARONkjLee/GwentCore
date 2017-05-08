@@ -19,6 +19,9 @@
     <Filter Include="src\PlayScene">
       <UniqueIdentifier>{d121e3cf-51fe-4c1d-b9d5-d294aaae48b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\card">
+      <UniqueIdentifier>{d3f23db1-cf9d-4a60-bccd-6c0fc38eb13b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -28,9 +31,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\card.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_reader.cpp">
@@ -66,6 +66,12 @@
     <ClCompile Include="..\Classes\PlayScene\BattleInfo.cpp">
       <Filter>src\PlayScene</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\card.cpp">
+      <Filter>src\card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\leaderCard.cpp">
+      <Filter>src\card</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -75,9 +81,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\card.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\jsoncpp-master\include\json\allocator.h">
@@ -139,6 +142,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\PlayScene\BattleInfo.h">
       <Filter>src\PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\card.h">
+      <Filter>src\card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\leaderCard.h">
+      <Filter>src\card</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
