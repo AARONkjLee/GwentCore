@@ -198,7 +198,12 @@ std::string Card::getPicDir(){
 			return "GwentCardsResources/Scoia'tael/" + picDir;
 			break;
 		case Neutral:
-			return "GwentCardsResources/Neutrals/" + picDir;
+			if (this->cardType == Spell) {
+				return "GwentCardsResources/Neutrals/" + picDir;
+			}
+			else if (this->cardType == Unit) {
+				return "GwentCardsResources/Neutral Units/" + picDir;
+			}
 			break;
 	}
 
