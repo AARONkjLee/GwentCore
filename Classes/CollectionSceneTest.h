@@ -1,8 +1,9 @@
 #pragma once
 
 #include "cocos2d.h"
+#include "MainScene.h"
 
-class CardSpriteTest : public cocos2d::Layer
+class CollectionSceneTest : public cocos2d::Layer
 {
 public:
     static cocos2d::Scene* createScene();
@@ -10,8 +11,8 @@ public:
     virtual bool init();
     
     // a selector callback
-    void menuCloseCallback(cocos2d::Ref* pSender);
+    void GoBackToMainSceneCallback(cocos2d::Ref* pSender);
 
     // implement the "static create()" method manually
-    CREATE_FUNC(CardSpriteTest);
+    CREATE_FUNC(CollectionSceneTest);
 };
