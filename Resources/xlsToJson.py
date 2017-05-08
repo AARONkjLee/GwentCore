@@ -53,8 +53,8 @@ def Excel2Json(file_path):
                         tmp[title_cn]= temp
             result.append(tmp)  
         json_data=json.dumps(result,indent= 4,sort_keys=True).decode('unicode_escape')  
-          
-        saveFile(os.getcwd(),worksheets[int(inp)],json_data)  
+        file_name = file_path.split(".")[0]  
+        saveFile(os.getcwd(),file_name,json_data)  
         print json_data
         print "Successfully create .json file"
   
@@ -70,7 +70,7 @@ def get_data(file_path):
          return None  
   
 def saveFile(file_path,file_name,data):  
-    output = codecs.open(file_path+"/"+"CardPoolDatabase"+".json",'w',"utf-8")  
+    output = codecs.open(file_path+"/"+file_name+".json",'w',"utf-8")  
     output.write(data)  
     output.close()  
   

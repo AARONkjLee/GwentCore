@@ -1,142 +1,3099 @@
 [
     {
-        "Ability": "Pick_Rain", 
+        "CardSet": "NullCSet", 
+        "CardType": "NullCTyoe", 
+        "CountLimit": "", 
+        "Description": "You must read a wrong card!", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Error Card!", 
+        "Pic": "ErrorCard.png", 
+        "SpellType": "NullSType", 
+        "Strength": -1, 
+        "UnitLevel": "NullULevel", 
+        "UnitType": "NullUType", 
+        "WeatherType": "NullWType", 
+        "cardID": 0, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Ugly - nature's way of saying: Stay the fuck away.", 
+        "EffectType": [
+            "Muster"
+        ], 
+        "Name": "Arachas", 
+        "Pic": "Arachas 1.png", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 1, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Ugly - nature's way of saying: Stay the fuck away.", 
+        "EffectType": [
+            "Muster"
+        ], 
+        "Name": "Arachas", 
+        "Pic": "Arachas 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 2, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Ugly - nature's way of saying: Stay the fuck away.", 
+        "EffectType": [
+            "Muster"
+        ], 
+        "Name": "Arachas", 
+        "Pic": "Arachas 3.png", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 3, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Like a cross between a crab, a spider... and a ploughin' mountain.", 
+        "EffectType": [
+            "Muster"
+        ], 
+        "Name": "Arachas: Behemoth", 
+        "Pic": "Arachas Behemoth.png", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Seige", 
+        "WeatherType": "NullWType", 
+        "cardID": 4, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Admit your mistakes and bury them proper - else they'll come back to haunt you.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Botchling", 
+        "Pic": "Botchling.png", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 5, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Common Harpies feed on carrion. Celaeno harpies… they feed on dreams.", 
+        "EffectType": [
+            "Agile"
+        ], 
+        "Name": "Celaeno Harpy", 
+        "Pic": "Celaeno Harpy.png", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 6, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Born of an egg laid by a cockerel... if you believe such peasant drivel.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Cockatrice", 
+        "Pic": "Cockatrice.png", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 7, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "We'll cut you up, boy.  A fine broth you will make.", 
+        "EffectType": [
+            "Muster"
+        ], 
+        "Name": "Crone: Brewess", 
+        "Pic": "Crone Brewess.png", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 8, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "I sense your pain.  I see your fear...", 
+        "EffectType": [
+            "Muster"
+        ], 
+        "Name": "Crone: Weavess", 
+        "Pic": "Crone Weavess.png", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 9, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "I'd be your best - and last.", 
+        "EffectType": [
+            "Muster"
+        ], 
+        "Name": "Crone: Whispess", 
+        "Pic": "Crone Whispess.png", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 10, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Some men connot admit defeat.  Some keept fighting from beyond the grave.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Draug", 
+        "Pic": "Draug.png", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 11, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "How to fight an earth elemental? You don't.  You run.  Fast as you can.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Earth Elemental", 
+        "Pic": "Earth Elemental.png", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Seige", 
+        "WeatherType": "NullWType", 
+        "cardID": 12, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "The nest!  Take out the nest, or the bastards'll just keep coming!", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Endrega", 
+        "Pic": "Endrega.png", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 13, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "A fiend looks a bit like a deer.  An enormous, evil deer.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Fiend", 
+        "Pic": "Fiend.png", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 14, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Fire is so delightful.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Fire Elemental", 
+        "Pic": "Fire Elemental.png", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Seige", 
+        "WeatherType": "NullWType", 
+        "cardID": 15, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Fog creeps on little cat feet.  Foglets creep over the bodies of their victims.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Foglet", 
+        "Pic": "Foglet.png", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 16, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Fork tails...  Bah!  Fucker's tails're more like cleavers.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Forktail", 
+        "Pic": "Forktail.png", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 17, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "What have I done?  The mage cried out, fritened of his own creation.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Frightener", 
+        "Pic": "Frightener.png", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 18, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Ancient sculptors' nightmarish fantasies, brought to life by bored mages.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Gargoyle", 
+        "Pic": "Gargoyle.png", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 19, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "If ghouls are part of the Circle of Life...  Then it's a damn vicious circle.", 
+        "EffectType": [
+            "Muster"
+        ], 
+        "Name": "Ghoul", 
+        "Pic": "Ghoul 1.png", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 20, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "If ghouls are part of the Circle of Life...  Then it's a damn vicious circle.", 
+        "EffectType": [
+            "Muster"
+        ], 
+        "Name": "Ghoul", 
+        "Pic": "Ghoul 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 21, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "If ghouls are part of the Circle of Life...  Then it's a damn vicious circle.", 
+        "EffectType": [
+            "Muster"
+        ], 
+        "Name": "Ghoul", 
+        "Pic": "Ghoul 3.png", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 22, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Their long tongues're for slurping marrow - and whipping prey.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Grave Hag", 
+        "Pic": "Grave Hag.png", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 23, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Griffins like to toy with their prey.  Eat'em alive, piece by piece.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Griffin", 
+        "Pic": "Griffin.png", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 24, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "There are many species of harpy, and all are kleptomaniacs.", 
+        "EffectType": [
+            "Agile"
+        ], 
+        "Name": "Harpy", 
+        "Pic": "Harpy.png", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 25, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Fled one time in my life.  From the Ice Giant.  And I'm not a bit ashamed.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Ice Giant", 
+        "Pic": "Ice Giant.png", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Seige", 
+        "WeatherType": "NullWType", 
+        "cardID": 26, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Ladd nahw!  Kill them!  Litter the earth with their entrails!", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Imlerith", 
+        "Pic": "Imlerith.png", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 27, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Kill a kayran?  Simple.  Take your best sword...  Then sell it and hire a witcher.", 
+        "EffectType": [
+            "Agile", 
+            "MoraleBooste"
+        ], 
+        "Name": "Kayran", 
+        "Pic": "Kayran.png", 
+        "SpellType": "NullSType", 
+        "Strength": 8, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 28, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "We never hut in there woods.  Not even if it means the whole village straves", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Leshen", 
+        "Pic": "Leshen.png", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 29, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Damn things are almost cute, if you ignore the whole vicious killer aspect.", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Nekker", 
+        "Pic": "Nekker 1.png", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 30, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Damn things are almost cute, if you ignore the whole vicious killer aspect.", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Nekker", 
+        "Pic": "Nekker 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 31, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Damn things are almost cute, if you ignore the whole vicious killer aspect.", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Nekker", 
+        "Pic": "Nekker 3.png", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 32, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "The sick rave about a boil-pocked woman surrounded by herds of rabid rats...", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Plague Maiden", 
+        "Pic": "Plague Maiden.png", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 33, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "A vile, bloodthirsty, man-eating hag.  Kind of like my mother-in-law.", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Vampire: Bruxa", 
+        "Pic": "Vampire Bruxa.png", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 34, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Who would think overgrown bats would have a tatse for gaudy jewelry?", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Vampire: Ekimmara", 
+        "Pic": "Vampire Ekimmara.png", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 35, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Higher vampires embrace their victims.  Fleders rip them to shreds.", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Vampire: Fleder", 
+        "Pic": "Vampire Fleder.png", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 36, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Blood-drinkers and corpse-eaters so foul their very ugliness paralyses foes.", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Vampire: Garkain", 
+        "Pic": "Vampire Garkain.png", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 37, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Drinking blood of the Continent since the Conjunction.", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Vampire: Katakan", 
+        "Pic": "Vampire Katakan.png", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 38, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Wolves aren't as bad as they say.  Werewolves, though - they're worse.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Werewolf", 
+        "Pic": "Werewolf.png", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 39, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Monster", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Imagin a cross between a winged snake and a nightmare.  Wyverns are worse.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Wyvern", 
+        "Pic": "Wyvern.png", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 40, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Know when fairy tales cease to be tales?  When people start believing in them.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Cirilla Finoa Elen Riannon", 
+        "Pic": "Cirilla Finoa Elen Riannon 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 15, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 41, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Dandelion, you're a cynic, a lecher, a whoremonger, a liar - and my best friend.", 
+        "EffectType": [
+            "UnitHorne"
+        ], 
+        "Name": "Dandelion", 
+        "Pic": "Dandelion 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 42, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Men, the polite ones, at least, would call me a monster.  A blood-drinking freak.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Emiel Regis Rohellec Terzieff", 
+        "Pic": "Emiel Regis Rohellec Terzieff 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 43, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Unit", 
+        "CountLimit": 3, 
+        "Description": "Fear not the shadows, but the light.", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Gaunter O'Dimm: Darkness", 
+        "Pic": "Gaunter O'Dimm Darkness 1.png", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 44, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "If that's what it takes to save the world, it's better to let that world die.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Geralt of Rivia", 
+        "Pic": "Geralt of Rivia 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 15, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 45, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "You humans have... Unusual tastes.", 
+        "EffectType": [
+            "Spye"
+        ], 
+        "Name": "Mysterious Elf", 
+        "Pic": "Mysterious Elf 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 0, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 46, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "I can take care of myself.  Trust me.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Triss Merigold", 
+        "Pic": "Triss Merigold 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 7, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 47, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "If you're to be hanged, ask for water.  Anything can happen before they fetch it.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Vesemir", 
+        "Pic": "Vesemir 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 48, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Also calls himself Borkh Three Jackdaws... he's not the best at names.", 
+        "EffectType": [
+            "UnitScorche"
+        ], 
+        "Name": "Villentretenmerth", 
+        "Pic": "Villentretenmerth 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 7, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 49, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Magic is Chaos, Art and Science.  It is a curse, ablessing and a progression.", 
+        "EffectType": [
+            "Medic"
+        ], 
+        "Name": "Yennefer of Vengerberg", 
+        "Pic": "Yennefer of Vengerberg 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 7, 
+        "UnitLevel": "Hero", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 50, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Life without old mates and booze is like a woman without a rump.", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Zoltan Chivay", 
+        "Pic": "Zoltan Chivay 2.png", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 51, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Spell", 
+        "CountLimit": 3, 
+        "Description": "Best part about frost - bodies of the fallen don't rot so quickly.", 
+        "EffectType": [
+            "BitingFroste"
+        ], 
+        "Name": "Biting Frost", 
+        "Pic": "Biting Frost 1.png", 
+        "SpellType": "Weather", 
+        "Strength": -1, 
+        "UnitLevel": "NullULevel", 
+        "UnitType": "NullUType", 
+        "WeatherType": "BitingFrost", 
+        "cardID": 52, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Spell", 
+        "CountLimit": 3, 
+        "Description": "The sun's shinin.  Dromle!  The sun's shinin'!  Maybe there's hope left after all.", 
+        "EffectType": [
+            "ClearWeathere"
+        ], 
+        "Name": "Clear Weather", 
+        "Pic": "Clear Weather 1.png", 
+        "SpellType": "Weather", 
+        "Strength": -1, 
+        "UnitLevel": "NullULevel", 
+        "UnitType": "NullUType", 
+        "WeatherType": "ClearWeather", 
+        "cardID": 53, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Spell", 
+        "CountLimit": 3, 
+        "Description": "A good commander's dream... a bad one's horror.", 
+        "EffectType": [
+            "Foge"
+        ], 
+        "Name": "Impenetrablr Fog", 
+        "Pic": "Impenetrablr Fog 1.png", 
+        "SpellType": "Weather", 
+        "Strength": -1, 
+        "UnitLevel": "NullULevel", 
+        "UnitType": "NullUType", 
+        "WeatherType": "Fog", 
+        "cardID": 54, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Spell", 
+        "CountLimit": 3, 
+        "Description": "Even the rain in the land smells like piss.", 
+        "EffectType": [
+            "Raine"
+        ], 
+        "Name": "Torrential Rain", 
+        "Pic": "Torrential Rain 1.png", 
+        "SpellType": "Weather", 
+        "Strength": -1, 
+        "UnitLevel": "NullULevel", 
+        "UnitType": "NullUType", 
+        "WeatherType": "Rain", 
+        "cardID": 55, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Spell", 
+        "CountLimit": 3, 
+        "Description": "Plus one to morale, minus three to hearing.", 
+        "EffectType": [
+            "SpellHorne"
+        ], 
+        "Name": "Commander's Horn", 
+        "Pic": "Commander's Horn 1.png", 
+        "SpellType": "Horn", 
+        "Strength": -1, 
+        "UnitLevel": "NullULevel", 
+        "UnitType": "NullUType", 
+        "WeatherType": "NullWType", 
+        "cardID": 56, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Spell", 
+        "CountLimit": 3, 
+        "Description": "When you run out of peasants, decoys also make decent arrow fodder.", 
+        "EffectType": [
+            "Decoye"
+        ], 
+        "Name": "Decoy", 
+        "Pic": "Decoy 1.png", 
+        "SpellType": "Decoy", 
+        "Strength": 0, 
+        "UnitLevel": "NullULevel", 
+        "UnitType": "NullUType", 
+        "WeatherType": "NullWType", 
+        "cardID": 57, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Neutral", 
+        "CardType": "Spell", 
+        "CountLimit": 3, 
+        "Description": "Pillars of flame turn the mightiest to ash.  All others tremble in shock and awe.", 
+        "EffectType": [
+            "SpellScorche"
+        ], 
+        "Name": "Scorch", 
+        "Pic": "Scorch 1.png", 
+        "SpellType": "Scorch", 
+        "Strength": -1, 
+        "UnitLevel": "NullULevel", 
+        "UnitType": "NullUType", 
+        "WeatherType": "NullWType", 
+        "cardID": 58, 
+        "exEffect": 0
+    }, 
+    {
         "CardSet": "Nilfgaarian", 
-        "Description": "Pick a Torrential Rain card from your deck and play it instantly.", 
-        "Name": "Emhyr var Emreis: His Imperial Majesty", 
-        "Pic": "Leader\Emhyr var Emreis: His Imperial Majesty.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Albrich", 
+        "Pic": "Albrich.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 59, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Read_Hand_Card", 
         "CardSet": "Nilfgaarian", 
-        "Description": "Look at 3 random cards from your opponent's hand.", 
-        "Name": "Emhyr var Emreis: Emperor of Nilfgaarian", 
-        "Pic": "Leader\Emhyr var Emreis: Emperor of Nilfgaarian.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Assire var Anahid", 
+        "Pic": "Assire var Anahid.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 60, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Cancel_Ability", 
         "CardSet": "Nilfgaarian", 
-        "Description": "Cancel your opponent's Leader Ability.", 
-        "Name": "Emhyr var Emreis: the White Flame", 
-        "Pic": "Leader\Emhyr var Emreis: the White Flame.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Black Infantry Archer", 
+        "Pic": "Black Infantry Archer 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 61, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Rraw_From_Opponent", 
         "CardSet": "Nilfgaarian", 
-        "Description": "Draw a card from your opponent's discard pile.", 
-        "Name": "Emhyr var Emreis: The Relentless", 
-        "Pic": "Leader\Emhyr var Emreis: The Relentless.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Black Infantry Archer", 
+        "Pic": "Black Infantry Archer 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 62, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Restore_Unit", 
         "CardSet": "Nilfgaarian", 
-        "Description": "Abilities that restore a unit to the battlefield restore a randomly-chosen unit. Affects both players.", 
-        "Name": "Emhyr var Emreis: Invader of the North", 
-        "Pic": "Leader\Emhyr var Emreis: Invader of the North.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Cahir Mawr Dyffryn aep Ceallach", 
+        "Pic": "Cahir Mawr Dyffryn aep Ceallach.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 63, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Pick_Fog", 
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Cynthia", 
+        "Pic": "Cynthia.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 64, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Medice"
+        ], 
+        "Name": "Etolian Auxiliary Archers", 
+        "Pic": "Etolian Auxiliary Archers 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 65, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Medice"
+        ], 
+        "Name": "Etolian Auxiliary Archers", 
+        "Pic": "Etolian Auxiliary Archers 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 66, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Fringilla Vigo", 
+        "Pic": "Fringilla Vigo.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 67, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Heavy Zerrikanian Fire Scorpion", 
+        "Pic": "Heavy Zerrikanian Fire Scorpion.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 68, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Impera Brigade Guard", 
+        "Pic": "Impera Brigade Guard 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 3, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 69, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Impera Brigade Guard", 
+        "Pic": "Impera Brigade Guard 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 3, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 70, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Impera Brigade Guard", 
+        "Pic": "Impera Brigade Guard 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 3, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 71, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Impera Brigade Guard", 
+        "Pic": "Impera Brigade Guard 4.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 3, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 72, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Letho of Gulet", 
+        "Pic": "Letho of Gulet.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 73, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Medice"
+        ], 
+        "Name": "Menno Coehoorn", 
+        "Pic": "Menno Coehoorn.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 74, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Morteisen", 
+        "Pic": "Morteisen.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 3, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 75, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Morvran Voorhis", 
+        "Pic": "Morvran Voorhis.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 76, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Nausicaa Cavalry Rider", 
+        "Pic": "Nausicaa Cavalry Rider 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 77, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Nausicaa Cavalry Rider", 
+        "Pic": "Nausicaa Cavalry Rider 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 78, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Nausicaa Cavalry Rider", 
+        "Pic": "Nausicaa Cavalry Rider 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 79, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Puttkammer", 
+        "Pic": "Puttkammer.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 3, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 80, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Rainfarn", 
+        "Pic": "Rainfarn.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 81, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Renuald aep Matsen", 
+        "Pic": "Renuald aep Matsen.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 82, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Rotten Mangonel", 
+        "Pic": "Rotten Mangonel.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 3, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 83, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Spye"
+        ], 
+        "Name": "Shilard Fitz-Oesterlen", 
+        "Pic": "Shilard Fitz-Oesterlen.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 7, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 84, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Siege Engineer", 
+        "Pic": "Siege Engineer.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 85, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Medice"
+        ], 
+        "Name": "Siege Technician", 
+        "Pic": "Siege Technician.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 0, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 86, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Spye"
+        ], 
+        "Name": "Stefan Skellen", 
+        "Pic": "Stefan Skellen.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 9, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 87, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Sweers", 
+        "Pic": "Sweers.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 88, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Tibor Eggebracht", 
+        "Pic": "Tibor Eggebracht.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 89, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Vanhemar", 
+        "Pic": "Vanhemar.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 90, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Spye"
+        ], 
+        "Name": "Vattier de Rideaux", 
+        "Pic": "Vattier de Rideaux.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 91, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Vreemde", 
+        "Pic": "Vreemde.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 92, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Young Emissary", 
+        "Pic": "Young Emissary 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 93, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Young Emissary", 
+        "Pic": "Young Emissary 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 94, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Nilfgaarian", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Zerrikanian Fire Scorpion", 
+        "Pic": "Zerrikanian Fire Scorpion.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 95, 
+        "exEffect": 0
+    }, 
+    {
         "CardSet": "Northern", 
-        "Description": "Pick an Impenetrable Fog card from your deck and play it instantly.", 
-        "Name": "Foltest: King of Temeria", 
-        "Pic": "Leader\Foltest: King of Temeria.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            ""
+        ], 
+        "Name": "Ballista", 
+        "Pic": "Ballista 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "", 
+        "UnitType": "", 
+        "WeatherType": "NullWType", 
+        "cardID": 96, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Clear_Weathear", 
         "CardSet": "Northern", 
-        "Description": "Clear any weather effects (resulting from Biting Frost, Torrential Rain or Impenetrable Fog cards) in play.", 
-        "Name": "Foltest: Lord Commander of the North", 
-        "Pic": "Leader\Foltest: Lord Commander of the North.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Ballista", 
+        "Pic": "Ballista 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 97, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Seige_Horn", 
         "CardSet": "Northern", 
-        "Description": "Doubles the strength of all your Siege units (unless a Commander's Horn is also present on that row).", 
-        "Name": "Foltest: The Siegemaster", 
-        "Pic": "Leader\Foltest: The Siegemaster.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Blue Stripes Commando", 
+        "Pic": "Blue Stripes Commando 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 98, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Seigr_Scorch", 
         "CardSet": "Northern", 
-        "Description": "Destroy your enemy's strongest Siege unit(s) if the combined strength of all his or her Siege units is 10 or more.", 
-        "Name": "Foltest: The Steel-Forged", 
-        "Pic": "Leader\Foltest: The Steel-Forged.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Blue Stripes Commando", 
+        "Pic": "Blue Stripes Commando 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 99, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Range_Scorch", 
         "CardSet": "Northern", 
-        "Description": "Destroy your enemy's strongest Ranged Combat unit(s) if the combined strength of all his or her Ranged Combat units is 10 or more.", 
-        "Name": "Foltest: Son of Medell", 
-        "Pic": "Leader\Foltest: Son of Medell.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Blue Stripes Commando", 
+        "Pic": "Blue Stripes Commando 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 100, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Pick_Frost", 
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Catapult", 
+        "Pic": "Catapult 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 8, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 101, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Catapult", 
+        "Pic": "Catapult 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 8, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 102, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Crinfrid Reavers Dragon Hunter", 
+        "Pic": "Crinfrid Reavers Dragon Hunter 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 103, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Crinfrid Reavers Dragon Hunter", 
+        "Pic": "Crinfrid Reavers Dragon Hunter 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 104, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Crinfrid Reavers Dragon Hunter", 
+        "Pic": "Crinfrid Reavers Dragon Hunter 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 105, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Dethmold", 
+        "Pic": "Dethmold.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 106, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Medice"
+        ], 
+        "Name": "Dun Banner Medic", 
+        "Pic": "Dun Banner Medic.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 107, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Esterad Thyssen", 
+        "Pic": "Esterad Thyssen.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 108, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "John Natalis", 
+        "Pic": "John Natalis.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 109, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "MoraleBooste"
+        ], 
+        "Name": "Kaedweni Siege Expert", 
+        "Pic": "Kaedweni Siege Expert 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 110, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "MoraleBooste"
+        ], 
+        "Name": "Kaedweni Siege Expert", 
+        "Pic": "Kaedweni Siege Expert 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 111, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "MoraleBooste"
+        ], 
+        "Name": "Kaedweni Siege Expert", 
+        "Pic": "Kaedweni Siege Expert 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 112, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Keira Metz", 
+        "Pic": "Keira Metz.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 113, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Philippa Eilhart", 
+        "Pic": "Philippa Eilhart.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 114, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Poor Fucking Infantry", 
+        "Pic": "Poor Fucking Infantry 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 115, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Poor Fucking Infantry", 
+        "Pic": "Poor Fucking Infantry 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 116, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 2, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "TightBonde"
+        ], 
+        "Name": "Poor Fucking Infantry", 
+        "Pic": "Poor Fucking Infantry 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 117, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Spye"
+        ], 
+        "Name": "Prince Stennis", 
+        "Pic": "Prince Stennis.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 118, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Redanian Foot Soldier", 
+        "Pic": "Redanian Foot Soldier 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 119, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Redanian Foot Soldier", 
+        "Pic": "Redanian Foot Soldier 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 120, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Sabrina Glevissig", 
+        "Pic": "Sabrina Glevissig.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 121, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Sheldon Skaggs", 
+        "Pic": "Shelden Skaggs.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 122, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Siege Tower", 
+        "Pic": "Siege Tower 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 123, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Siege Tower", 
+        "Pic": "Siege Tower 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 124, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Siegfried of Denesle", 
+        "Pic": "Siegfried of Denesle.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 125, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Spye"
+        ], 
+        "Name": "Sigismund Dijkstra", 
+        "Pic": "Sigismund Dijkstra.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 126, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Síle de Tansarville", 
+        "Pic": "Sile de Tansarville.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 127, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Spye"
+        ], 
+        "Name": "Thaler", 
+        "Pic": "Thaler.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 128, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Trebuchet", 
+        "Pic": "Trebuchet  1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 129, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Trebuchet", 
+        "Pic": "Trebuchet  2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 130, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Vernon Roche", 
+        "Pic": "Vernon Roche.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 131, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Ves", 
+        "Pic": "Ves.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 132, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Northern", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Yarpen Zigrin", 
+        "Pic": "Yarpen Zigrin.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 133, 
+        "exEffect": 0
+    }, 
+    {
         "CardSet": "Scoiateal", 
-        "Description": "Pick a Biting Frost card from your deck and play it instantly.", 
-        "Name": "Francesca Findabair: Pureblood Elf", 
-        "Pic": "Leader\Francesca Findabair: Pureblood Elf.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Agile"
+        ], 
+        "Name": "Barclay Els", 
+        "Pic": "Barclay Els.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 134, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Draw_11th", 
         "CardSet": "Scoiateal", 
-        "Description": "Draw an extra card at the beginning of the battle", 
-        "Name": "Francesca Findabair: Daisy of the Valley", 
-        "Pic": "Leader\Francesca Findabair: Daisy of the Valley.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Agile"
+        ], 
+        "Name": "Ciaran aep Easnillien", 
+        "Pic": "Ciaran aep Easnillien.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 3, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 135, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Range_Horn", 
         "CardSet": "Scoiateal", 
-        "Description": "Doubles the strength of all your Ranged Combat units (unless a Commander's Horn is also present on that row).", 
-        "Name": "Francesca Findabair: the Beautiful", 
-        "Pic": "Leader\Francesca Findabair: the Beautiful.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Dennis Cranmer", 
+        "Pic": "Dennis Cranmer.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 136, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Close_Scorch", 
         "CardSet": "Scoiateal", 
-        "Description": "Destroy your enemy's Close Combat unit(s) if the combined strength of all his or her Close Combat units is 10 or more.", 
-        "Name": "Francesca Findabair: Queen of Dol Blathanna", 
-        "Pic": "Leader\Francesca Findabair: Queen of Dol Blathanna.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Dol Blathanna Archer", 
+        "Pic": "Dol Blathanna Archer.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 137, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Move_Aglie", 
         "CardSet": "Scoiateal", 
-        "Description": "Move agile unites to whichever valid row maximizes their strength (don't move units already in optimal row).", 
-        "Name": "Francesca Findabair: Hope of the Aen Seidhe", 
-        "Pic": "Leader\Francesca Findabair: Hope of the Aen Seidhe.png"
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Agile"
+        ], 
+        "Name": "Dol Blathanna Scout", 
+        "Pic": "Dol Blathanna Scout 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 138, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Pick_Weather", 
-        "CardSet": "Monsters", 
-        "Description": "Pick any weather card from your deck and play it instantly.", 
-        "Name": "Eredin: King of the Wild Hunt", 
-        "Pic": "Leader\Eredin: King of the Wild Hunt.png"
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Agile"
+        ], 
+        "Name": "Dol Blathanna Scout", 
+        "Pic": "Dol Blathanna Scout 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 139, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Close_Horn", 
-        "CardSet": "Monsters", 
-        "Description": "Double the strength of all your Close Combat units (unless a Commander's Horn is also present on that row).", 
-        "Name": "Eredin: Commander of the Red Riders", 
-        "Pic": "Leader\Eredin: Commander of the Red Riders.png"
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Agile"
+        ], 
+        "Name": "Dol Blathanna Scout", 
+        "Pic": "Dol Blathanna Scout 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 140, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Destroy2_Draw1", 
-        "CardSet": "Monsters", 
-        "Description": "Discard 2 cards and draw 1 card of your choice from your deck.", 
-        "Name": "Eredin: Destroyer of Worlds", 
-        "Pic": "Leader\Eredin: Destroyer of Worlds.png"
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Dwarven Skirmisher", 
+        "Pic": "Dwarven Skirmisher 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 3, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 141, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Restore_Unit_ToHand", 
-        "CardSet": "Monsters", 
-        "Description": "Restore a card from your discard pile to your hand.", 
-        "Name": "Eredin: Bringer of Death", 
-        "Pic": "Leader\Eredin: Bringer of Death.png"
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Dwarven Skirmisher", 
+        "Pic": "Dwarven Skirmisher 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 3, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 142, 
+        "exEffect": 0
     }, 
     {
-        "Ability": "Double_Spies", 
-        "CardSet": "Monsters", 
-        "Description": "Doubles strength of all spies.", 
-        "Name": "Eredin Bréacc Glas: The Treacherous", 
-        "Pic": "Leader\Eredin Bréacc Glas: The Treacherous.png"
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Dwarven Skirmisher", 
+        "Pic": "Dwarven Skirmisher 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 3, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 143, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Eithné", 
+        "Pic": "Eithné.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 144, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Elven Skirmisher", 
+        "Pic": "Elven Skirmisher 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 145, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Elven Skirmisher", 
+        "Pic": "Elven Skirmisher 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 146, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Elven Skirmisher", 
+        "Pic": "Elven Skirmisher 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 147, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Agile"
+        ], 
+        "Name": "Filavandrel aen Fidhail", 
+        "Pic": "Filavandrel aen Fidhail.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 148, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Medice"
+        ], 
+        "Name": "Havekar Healer", 
+        "Pic": "Havekar Healer 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 0, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 149, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Medice"
+        ], 
+        "Name": "Havekar Healer", 
+        "Pic": "Havekar Healer 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 0, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 150, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Medice"
+        ], 
+        "Name": "Havekar Healer", 
+        "Pic": "Havekar Healer 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 0, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 151, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Havekar Smuggler", 
+        "Pic": "Havekar Smuggler 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 152, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Havekar Smuggler", 
+        "Pic": "Havekar Smuggler 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 153, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Mustere"
+        ], 
+        "Name": "Havekar Smuggler", 
+        "Pic": "Havekar Smuggler 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 154, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Ida Emean aep Sivney", 
+        "Pic": "Ida Emean aep Sivney.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 155, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Iorveth", 
+        "Pic": "Iorveth.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 156, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "MoraleBooste"
+        ], 
+        "Name": "Isengrim Faoiltiarna", 
+        "Pic": "Isengrim Faolitarna.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 157, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Mahakaman Defender", 
+        "Pic": "Mahakaman Defender 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 158, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Mahakaman Defender", 
+        "Pic": "Mahakaman Defender 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 159, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Mahakaman Defender", 
+        "Pic": "Mahakaman Defender 3.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 160, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Mahakaman Defender", 
+        "Pic": "Mahakaman Defender 4.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 161, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Mahakaman Defender", 
+        "Pic": "Mahakaman Defender 5.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 162, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "MoraleBooste"
+        ], 
+        "Name": "Milva", 
+        "Pic": "Milva.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 163, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Riordain", 
+        "Pic": "Riordain.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 1, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 164, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "UnitScorche"
+        ], 
+        "Name": "Schirru", 
+        "Pic": "Schirru.png", 
+        "SpellType": "NullSType", 
+        "Strength": 8, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
+        "WeatherType": "NullWType", 
+        "cardID": 165, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Saesenthessis", 
+        "Pic": "Saesenthessis.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 10, 
+        "UnitLevel": "Hero", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 166, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Toruviel", 
+        "Pic": "Toruviel.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 2, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 167, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "NullEType"
+        ], 
+        "Name": "Vrihedd Brigade Recruit", 
+        "Pic": "Vrihedd Brigade Recruit.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 4, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "RangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 168, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Agile"
+        ], 
+        "Name": "Vrihedd Brigade Veteran", 
+        "Pic": "Vrihedd Brigade Veteran 1.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 169, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Agile"
+        ], 
+        "Name": "Vrihedd Brigade Veteran", 
+        "Pic": "Vrihedd Brigade Veteran 2.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 5, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 170, 
+        "exEffect": 0
+    }, 
+    {
+        "CardSet": "Scoiateal", 
+        "CardType": "Unit", 
+        "CountLimit": 1, 
+        "Description": "Defualt Meseage", 
+        "EffectType": [
+            "Agile"
+        ], 
+        "Name": "Yaevinn", 
+        "Pic": "Yaevinn.png ", 
+        "SpellType": "NullSType", 
+        "Strength": 6, 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "CloseRangedCombat", 
+        "WeatherType": "NullWType", 
+        "cardID": 171, 
+        "exEffect": 0
     }
 ]
