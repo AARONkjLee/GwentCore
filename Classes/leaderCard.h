@@ -33,7 +33,8 @@ enum Ability {
 class LeaderCard {
 private:
 	int cardID;
-	std::string picDir;
+	std::string picDir;  // For leaderCards, their picDir include the full direction rather than only filename.
+						 // Cards have only filename.
 	std::string name;
 	std::string description;
 	CardSet cardSet;

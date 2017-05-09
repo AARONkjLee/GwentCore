@@ -20,7 +20,7 @@ private:
 	int cardID;
 	int countLimit;
 	int strength;
-	std::string picDir;
+	std::string picDir;  // Cards have only filename.  LeaderCards have the full dir.
 	std::string name;
 	std::string description;
 	std::string strengthStr;
