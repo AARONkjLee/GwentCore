@@ -4,6 +4,11 @@
 
 USING_NS_CC; 
 
+// To 若晴：
+// 所有图片名称请详细描述，要么新建一个目录放在目录下，要么文件名带着Collection的信息
+// 像 Left.png 这样的文件名太泛指，容易和之后的其他美术资源混淆
+// By Junce
+
 Scene* CardCollection::createScene()
 {
 	// 'scene' is an autorelease object

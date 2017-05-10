@@ -6,6 +6,7 @@
 #include "PlaySceneTest.h"
 #include "CollectionSceneTest.h"
 #include "SettingSceneTest.h"
+#include "CardCollection.h"
 
 USING_NS_CC;
 
@@ -145,6 +146,7 @@ void MainScene::replaceToPlaySceneCallback(Ref* pSender)
 
 void MainScene::replaceToCollectionSceneCallback(Ref* pSender)
 {
+	//auto Scene = CardCollection::createScene();
 	auto Scene = CollectionSceneTest::createScene();
 	Director::getInstance()->replaceScene(TransitionFade::create(transitionTime, Scene));
 }
