@@ -10,6 +10,10 @@
 
 USING_NS_CC;
 
+// To-do 加入一个可点击flag 默认true 当已经点了一个按钮的时候 这个flag为false
+// 所有按钮函数 先判断可点击flag为true再运行
+// 防止快速点击多个按钮导致的冲突
+
 //场景切换教程
 //http://www.cnblogs.com/HangZhe/p/5701019.html
 //http://blog.csdn.net/lttree/article/details/38185641
