@@ -69,8 +69,8 @@ void Card::reload(int id) {
 	else if (strUnitType == "RangedCombat") {
 		this->unitType = RangedCombat;
 	}
-	else if (strUnitType == "Seige") {
-		this->unitType = Seige;
+	else if (strUnitType == "Siege") {
+		this->unitType = Siege;
 	}
 	else if (strUnitType == "CloseRangedCombat") {
 		this->unitType = CloseRangedCombat;

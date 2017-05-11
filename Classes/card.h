@@ -7,7 +7,7 @@
 
 enum CardType { NullCType, Unit, Spell };
 enum CardSet {NullCSet, Northern, Nilfgaarian, Monster, Scoiateal, Neutral};
-enum UnitType {NullUType, CloseCombat, RangedCombat, Seige, CloseRangedCombat};
+enum UnitType {NullUType, CloseCombat, RangedCombat, Siege, CloseRangedCombat};
 enum UnitLevel {NullULevel, Ordinary, Hero };
 enum SpellType {NullSType, Weather, Horn, Decoy, Scorch};
 enum WeatherType {NullWType, Bitingfroest, Fog, Rain, ClearWeather};
