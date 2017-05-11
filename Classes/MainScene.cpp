@@ -6,7 +6,7 @@
 #include "PlaySceneTest.h"
 #include "CollectionSceneTest.h"
 #include "SettingSceneTest.h"
-#include "CardCollection.h"
+#include "CardCollectionScene.h"
 
 USING_NS_CC;
 

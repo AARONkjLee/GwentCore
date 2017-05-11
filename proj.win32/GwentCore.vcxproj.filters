@@ -69,9 +69,6 @@
     <ClCompile Include="..\Classes\CardSprite.cpp">
       <Filter>src\GUI tools</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\CardCollection.cpp">
-      <Filter>src\GUI tools</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src\Main</Filter>
     </ClCompile>
@@ -92,6 +89,9 @@
     </ClCompile>
     <ClCompile Include="..\Classes\PlayScene\CardEffectManager.cpp">
       <Filter>src\BattleInfoAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CardCollectionScene.cpp">
+      <Filter>src\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -152,9 +152,6 @@
     <ClInclude Include="..\Classes\CardSprite.h">
       <Filter>src\GUI tools</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\CardCollection.h">
-      <Filter>src\GUI tools</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\AppDelegate.h">
       <Filter>src\Main</Filter>
     </ClInclude>
@@ -175,6 +172,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\PlayScene\CardEffectManager.h">
       <Filter>src\BattleInfoAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardCollectionScene.h">
+      <Filter>src\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

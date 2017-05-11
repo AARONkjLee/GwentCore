@@ -5,7 +5,7 @@
 
 //To-do ¸ÄÃûÎª CardCollectionScene
 
-class CardCollection : public cocos2d::Layer
+class CardCollectionScene : public cocos2d::Layer
 {
 public:
 	static cocos2d::Scene* createScene();
@@ -16,7 +16,7 @@ public:
 	void menuCloseCallback(cocos2d::Ref* pSender);
 
 	// implement the "static create()" method manually
-	CREATE_FUNC(CardCollection);
+	CREATE_FUNC(CardCollectionScene);
 };
 
  
