@@ -31,6 +31,9 @@
     <Filter Include="src\Data Interface">
       <UniqueIdentifier>{d3f23db1-cf9d-4a60-bccd-6c0fc38eb13b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\GUI tools\BIMTest">
+      <UniqueIdentifier>{6e5cbf31-a193-4c63-a0d7-5b3de571abdf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -75,11 +78,14 @@
     <ClCompile Include="..\Classes\CardSpriteTest.cpp">
       <Filter>src\Scenes\SceneTest</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\PlayScene\BattleInfo.cpp">
-      <Filter>src\GUI tools</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\MainScene.cpp">
       <Filter>src\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayScene\BattleInfoManager.cpp">
+      <Filter>src\GUI tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BattleInfoManagerTest.cpp">
+      <Filter>src\GUI tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -152,11 +158,14 @@
     <ClInclude Include="..\Classes\CardSpriteTest.h">
       <Filter>src\Scenes\SceneTest</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\PlayScene\BattleInfo.h">
-      <Filter>src\GUI tools</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\MainScene.h">
       <Filter>src\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayScene\BattleInfoManager.h">
+      <Filter>src\GUI tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BattleInfoManagerTest.h">
+      <Filter>src\GUI tools</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -182,5 +191,6 @@
     <None Include="..\Resources\CardPoolDatabase.json">
       <Filter>resource</Filter>
     </None>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

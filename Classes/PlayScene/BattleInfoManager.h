@@ -28,6 +28,8 @@ struct Field {
 	std::vector<int> p1Deck;
 	std::vector<int> p0Grave;
 	std::vector<int> p1Grave;
+
+	// Won't be used in curret stage 2017.5.11
 	std::vector<int> p0Out;
 	std::vector<int> p1Out;
 
@@ -43,28 +45,43 @@ struct Field {
 };
 
 
-struct Act {
+struct ActCell {
 	ActType ActType;
 	int player;
 	int attrID0;
 	int attrID1;
 	FieldLocation attrLoc0;
 	FieldLocation attrLoc1;
-	Act* chainAct = nullptr;
 };
 
-class BattleInfo {
-public:
-	Field field;	
+
+struct Act {
+	ActCell promotor;
+	bool hasChain;
+	std::vector<ActCell> chainActCells;
+};
+
+void ActToField(const Act & act, Field & field);
+void ActCellToField(const ActCell & actCell, Field & field);
+
+
+class BattleInfoManager {
+private:
+	Field Battlefield;
 	std::vector<Act> log;
+public:
 
-	BattleInfo();
-	~BattleInfo();
+	BattleInfoManager();
+	~BattleInfoManager();
 
-	BattleInfo* getInstance();
+	static BattleInfoManager* getInstance();
 
 	bool init();
 	bool initWithDecks(const std::vector<int> & deck0, const std::vector<int> & deck1);
 	bool initWithFirstPlayer(const int & playerNo);
 	
+	void setBattlefield (const Field & f);
+	Field getBattlefield();
+	void actToBattlefield(const Act & act);
+	void actCellToBattlefield(const ActCell & actCell);
 };

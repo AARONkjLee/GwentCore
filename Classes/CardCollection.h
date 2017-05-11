@@ -3,6 +3,8 @@
 
 #include "cocos2d.h"
 
+//To-do ¸ÄÃûÎª CardCollectionScene
+
 class CardCollection : public cocos2d::Layer
 {
 public:
