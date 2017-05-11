@@ -50,8 +50,8 @@ bool CardCollectionScene::init()
 		origin.y + closeItem->getContentSize().height / 2));
 
 	auto leftLabel1 = MenuItemImage::create(
-		"label.png",
-		"label.png"
+		"CardCollectionScene/label.png",
+		"CardCollectionScene/label.png"
 	);
 	leftLabel1->setPosition(Vec2(origin.x + visibleSize.width / 10,
 		origin.y + visibleSize.height / 10 * 8));
@@ -59,8 +59,8 @@ bool CardCollectionScene::init()
 	this->addChild(leftLabel1, 1);
 
 	auto leftLabel2 = MenuItemImage::create(
-		"label.png",
-		"label.png"
+		"CardCollectionScene/label.png",
+		"CardCollectionScene/label.png"
 	);
 	leftLabel2->setPosition(Vec2(origin.x + visibleSize.width / 10,
 		origin.y + visibleSize.height / 10 * 7));
@@ -68,8 +68,8 @@ bool CardCollectionScene::init()
 	this->addChild(leftLabel2, 1);
 
 	auto leftLabel3 = MenuItemImage::create(
-		"label.png",
-		"label.png"
+		"CardCollectionScene/label.png",
+		"CardCollectionScene/label.png"
 	);
 	leftLabel3->setPosition(Vec2(origin.x + visibleSize.width / 10,
 		origin.y + visibleSize.height / 10 * 6 ));
@@ -77,8 +77,8 @@ bool CardCollectionScene::init()
 	this->addChild(leftLabel3, 1);
 
 	auto buttonb1 = MenuItemImage::create(
-		"buttonb.png",
-		"buttonb.png"
+		"CardCollectionScene/buttonb.png",
+		"CardCollectionScene/buttonb.png"
 	);
 	buttonb1->setPosition(Vec2(origin.x + visibleSize.width / 7 * 3,
 		origin.y + visibleSize.height / 11 * 2.7 ));
@@ -86,8 +86,8 @@ bool CardCollectionScene::init()
 	this->addChild(buttonb1, 1);
 
 	auto buttonb2 = MenuItemImage::create(
-		"buttonb.png",
-		"buttonb.png"
+		"CardCollectionScene/buttonb.png",
+		"CardCollectionScene/buttonb.png"
 	);
 	buttonb2->setPosition(Vec2(origin.x + visibleSize.width / 7 * 4,
 		origin.y + visibleSize.height / 11 * 2.7));
@@ -95,8 +95,8 @@ bool CardCollectionScene::init()
 	this->addChild(buttonb2, 1);
 
 	auto buttonb3 = MenuItemImage::create(
-		"buttonb.png",
-		"buttonb.png"
+		"CardCollectionScene/buttonb.png",
+		"CardCollectionScene/buttonb.png"
 	);
 	buttonb3->setPosition(Vec2(origin.x + visibleSize.width / 7 * 5,
 		origin.y + visibleSize.height / 11 * 2.7));
@@ -104,16 +104,16 @@ bool CardCollectionScene::init()
 	this->addChild(buttonb3, 1);
 
 	auto rightb = MenuItemImage::create(
-		"right.png",
-		"right.png"
+		"CardCollectionScene/right.png",
+		"CardCollectionScene/right.png"
 	);
 	rightb->setPosition(Vec2(origin.x + visibleSize.width * 0.644,
 		origin.y + visibleSize.height / 11 * 2.7));
 	this->addChild(rightb, 1);
 
 	auto leftb = MenuItemImage::create(
-		"left.png",
-		"left.png"
+		"CardCollectionScene/left.png",
+		"CardCollectionScene/left.png"
 	);
 	leftb->setPosition(Vec2(origin.x + visibleSize.width/ 2,
 		origin.y + visibleSize.height / 11 * 2.7));
@@ -131,12 +131,12 @@ bool CardCollectionScene::init()
 
 	// add a label shows "Hello World"
 	// create and initialize a label
-	auto background = Sprite::create("_BGP_1920x1080.png");
+	auto background = Sprite::create("CardCollectionScene/_BGP_1920x1080.png");
 	background->setPosition(origin.x + visibleSize.width / 2,
 		origin.y + visibleSize.height / 2);
 	this->addChild(background, 0);
 
-	auto back1 = Sprite::create("back1.png");
+	auto back1 = Sprite::create("CardCollectionScene/background_for_card_exhibition.png");
 	back1->setPosition(origin.x + visibleSize.width / 7 * 4,
 		origin.y + visibleSize.height / 2);
 	back1->setScale(1.5);
