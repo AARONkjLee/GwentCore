@@ -272,3 +272,4 @@ Resources\Gwent-master\*
 /Resources/**/*.jpg
 /Resources/**/*.otf
 /Resources/**/*.ttf
+/proj.win32/res/gwent.ico
