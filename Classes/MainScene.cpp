@@ -147,7 +147,7 @@ void MainScene::replaceToPlaySceneCallback(Ref* pSender)
 void MainScene::replaceToCollectionSceneCallback(Ref* pSender)
 {
 	//auto Scene = CardCollection::createScene();
-	auto Scene = CollectionSceneTest::createScene();
+	auto Scene = CardCollectionScene::createScene();
 	Director::getInstance()->replaceScene(TransitionFade::create(transitionTime, Scene));
 }
 
