@@ -13,25 +13,28 @@
     <Filter Include="json">
       <UniqueIdentifier>{da50dda2-3343-4179-abbf-06fcb9262faf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="SceneTest">
-      <UniqueIdentifier>{57faac95-eb91-46b5-8321-bec2576d14ea}</UniqueIdentifier>
+    <Filter Include="src\Main">
+      <UniqueIdentifier>{c6a4643a-91af-4fa5-a683-25836d228f55}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\PlayScene">
+    <Filter Include="src\AI">
+      <UniqueIdentifier>{ba5b7b10-149b-4ebe-8661-bae116db1c5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Scenes">
       <UniqueIdentifier>{d121e3cf-51fe-4c1d-b9d5-d294aaae48b8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\card">
+    <Filter Include="src\Scenes\SceneTest">
+      <UniqueIdentifier>{57faac95-eb91-46b5-8321-bec2576d14ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GUI tools">
+      <UniqueIdentifier>{0d395ab3-ebe4-4e67-bce2-2c330d3c291b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Data Interface">
       <UniqueIdentifier>{d3f23db1-cf9d-4a60-bccd-6c0fc38eb13b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\AppDelegate.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
-      <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_reader.cpp">
       <Filter>json</Filter>
@@ -42,46 +45,46 @@
     <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_writer.cpp">
       <Filter>json</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\CardSprite.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\CardSpriteTest.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\CardCollection.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\MainScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\CollectionSceneTest.cpp">
-      <Filter>SceneTest</Filter>
+      <Filter>src\Scenes\SceneTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\PlaySceneTest.cpp">
-      <Filter>SceneTest</Filter>
+      <Filter>src\Scenes\SceneTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\SettingSceneTest.cpp">
-      <Filter>SceneTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PlayScene\BattleInfo.cpp">
-      <Filter>src\PlayScene</Filter>
+      <Filter>src\Scenes\SceneTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\card.cpp">
-      <Filter>src\card</Filter>
+      <Filter>src\Data Interface</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\leaderCard.cpp">
-      <Filter>src\card</Filter>
+      <Filter>src\Data Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CardSprite.cpp">
+      <Filter>src\GUI tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CardCollection.cpp">
+      <Filter>src\GUI tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>src\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CardSpriteTest.cpp">
+      <Filter>src\Scenes\SceneTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayScene\BattleInfo.cpp">
+      <Filter>src\GUI tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainScene.cpp">
+      <Filter>src\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\jsoncpp-master\include\json\allocator.h">
       <Filter>json</Filter>
@@ -119,35 +122,41 @@
     <ClInclude Include="..\Classes\jsoncpp-master\src\lib_json\json_tool.h">
       <Filter>json</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\CardSprite.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\CardSpriteTest.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\CardCollection.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\MainScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\CollectionSceneTest.h">
-      <Filter>SceneTest</Filter>
+      <Filter>src\Scenes\SceneTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\PlaySceneTest.h">
-      <Filter>SceneTest</Filter>
+      <Filter>src\Scenes\SceneTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\SettingSceneTest.h">
-      <Filter>SceneTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PlayScene\BattleInfo.h">
-      <Filter>src\PlayScene</Filter>
+      <Filter>src\Scenes\SceneTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\card.h">
-      <Filter>src\card</Filter>
+      <Filter>src\Data Interface</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\leaderCard.h">
-      <Filter>src\card</Filter>
+      <Filter>src\Data Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardSprite.h">
+      <Filter>src\GUI tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardCollection.h">
+      <Filter>src\GUI tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>src\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardSpriteTest.h">
+      <Filter>src\Scenes\SceneTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayScene\BattleInfo.h">
+      <Filter>src\GUI tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainScene.h">
+      <Filter>src\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -171,7 +180,7 @@
       <Filter>json</Filter>
     </None>
     <None Include="..\Resources\CardPoolDatabase.json">
-      <Filter>src</Filter>
+      <Filter>resource</Filter>
     </None>
   </ItemGroup>
 </Project>
