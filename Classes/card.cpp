@@ -1,6 +1,7 @@
 #include "card.h"
 
 
+
 Card::Card(){}//defaul initalization
 
 Card::Card(int id){
@@ -8,15 +9,16 @@ Card::Card(int id){
 }
 
 void Card::reload(int id) {
-	std::ifstream cardsPool;
-	cardsPool.open("..//Resources/CardPoolDatabase.json");
-	// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
-	Json::Reader reader;
-	Json::Value cards;
-	if (!reader.parse(cardsPool, cards, false)) {
-		return;
+	if (!this->cards) {
+		std::ifstream cardsPool;
+		cardsPool.open("..//Resources/CardPoolDatabase.json");
+		// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
+		Json::Reader reader;
+		if (!reader.parse(cardsPool, *cards, false)) {
+			return;
+		}
+		cardsPool.close();
 	}
-	cardsPool.close();
 	Json::Value card = cards[id];
 	Json::Value jsonEffects = card["EffectType"];
 	this->cardID = card["cardID"].asInt();

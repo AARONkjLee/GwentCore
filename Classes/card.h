@@ -15,6 +15,8 @@ enum EffectType {NullEType, Agile, Spye, TightBonde, Decoye, Medice,
 				SpellHorne, UnitHorne, SpellScorche, UnitScorche, Mustere, 
 				MoraleBooste, BitingFroste, Foge, Raine, ClearWeathere };
 
+
+
 class Card {
 private:
 	int cardID;
@@ -31,6 +33,7 @@ private:
 	SpellType spellType;
 	WeatherType weatherType;
 	std::vector<EffectType> effects;
+	static Json::Value* cards;
 	bool exEffect;
 
 public:
