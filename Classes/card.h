@@ -33,10 +33,10 @@ private:
 	SpellType spellType;
 	WeatherType weatherType;
 	std::vector<EffectType> effects;
-	static Json::Value* cards;
 	bool exEffect;
 
 public:
+
 	Card();
 	Card(int id);
 	~Card() {}

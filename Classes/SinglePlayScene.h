@@ -4,7 +4,7 @@
 #include "MainScene.h"
 
 
-class PlayPreparationScene : public cocos2d::Layer
+class SinglePlayScene : public cocos2d::Layer
 {
 public:
     static cocos2d::Scene* createScene();
@@ -15,5 +15,5 @@ public:
     void GoBackToMainSceneCallback(cocos2d::Ref* pSender);
 
     // implement the "static create()" method manually
-    CREATE_FUNC(PlayPreparationScene);
+    CREATE_FUNC(SinglePlayScene);
 };

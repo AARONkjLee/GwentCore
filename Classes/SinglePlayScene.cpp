@@ -1,16 +1,16 @@
 #include "CardSprite.h"
 #include "SimpleAudioEngine.h"
-#include "PlayPreparationScene.h"
+#include "SinglePlayScene.h"
 
 USING_NS_CC;
 
-Scene* PlayPreparationScene::createScene()
+Scene* SinglePlayScene::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = PlayPreparationScene::create();
+    auto layer = SinglePlayScene::create();
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -20,7 +20,7 @@ Scene* PlayPreparationScene::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool PlayPreparationScene::init()
+bool SinglePlayScene::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -40,7 +40,7 @@ bool PlayPreparationScene::init()
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
                                            "CloseSelected.png",
-                                           CC_CALLBACK_1(PlayPreparationScene::GoBackToMainSceneCallback, this));
+                                           CC_CALLBACK_1(SinglePlayScene::GoBackToMainSceneCallback, this));
     
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
@@ -92,7 +92,7 @@ bool PlayPreparationScene::init()
 }
 
 
-void PlayPreparationScene::GoBackToMainSceneCallback(Ref* pSender)
+void SinglePlayScene::GoBackToMainSceneCallback(Ref* pSender)
 {
 	auto Scene = MainScene::create();
 	Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));

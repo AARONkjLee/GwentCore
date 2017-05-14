@@ -1,6 +1,6 @@
 #include "card.h"
 
-
+Json::Value cards;
 
 Card::Card(){}//defaul initalization
 
@@ -9,19 +9,19 @@ Card::Card(int id){
 }
 
 void Card::reload(int id) {
-	if (!this->cards) {
+	if (!cards) {
 		std::ifstream cardsPool;
 		cardsPool.open("..//Resources/CardPoolDatabase.json");
 		// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
 		Json::Reader reader;
-		if (!reader.parse(cardsPool, *cards, false)) {
+		if (!reader.parse(cardsPool, cards, false)) {
 			return;
 		}
 		cardsPool.close();
 	}
 	Json::Value card = cards[id];
 	Json::Value jsonEffects = card["EffectType"];
-	this->cardID = card["cardID"].asInt();
+	this->cardID = card["csardID"].asInt();
 	this->countLimit = card["CountLimit"].asInt();
 	this->strength = card["Strength"].asInt();
 	this->exEffect = card["exEffect"].asBool();
