@@ -8,6 +8,7 @@ BattleInfoManager::BattleInfoManager()
 
 BattleInfoManager::~BattleInfoManager()
 {
+	delete s_SharedBattleInfo;
 }
 
 BattleInfoManager * BattleInfoManager::getInstance()
@@ -28,7 +29,7 @@ bool BattleInfoManager::init()
 
 bool BattleInfoManager::initWithDecks(const std::vector<int>& deck0, const std::vector<int>& deck1)
 {
-	if (!deck0.size() || !deck1.size()) {
+	if (deck0.empty() || deck1.empty()) {
 		return false;
 	}
 	//deck[0] is LeaderID and then cardIDs

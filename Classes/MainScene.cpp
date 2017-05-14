@@ -21,6 +21,8 @@ USING_NS_CC;
 //²Ëµ¥½Ì³Ì
 //http://www.tuicool.com/articles/immUVn
 
+
+
 bool MainScene::init()
 {
 	if (!Scene::init())
@@ -109,6 +111,8 @@ bool MainScene::init()
 	menu->setPosition(Vec2::ZERO);
 	this->addChild(menu, 1);	
 
+	clickable = true;
+
 	return true;
 }
 
@@ -144,20 +148,29 @@ float transitionTime = 1.0;
 
 void MainScene::replaceToPlaySceneCallback(Ref* pSender)
 {
-	auto Scene = PlaySceneTest::createScene();
-	Director::getInstance()->replaceScene(TransitionFade::create(transitionTime, Scene));
+	if (clickable) {
+		clickable = false;
+		auto Scene = PlaySceneTest::createScene();
+		Director::getInstance()->replaceScene(TransitionFade::create(transitionTime, Scene));
+	}
 }
 
 void MainScene::replaceToCollectionSceneCallback(Ref* pSender)
 {
-	//auto Scene = CardCollection::createScene();
-	auto Scene = CardCollectionScene::createScene();
-	Director::getInstance()->replaceScene(TransitionFade::create(transitionTime, Scene));
+	if (clickable) {
+		clickable = false;
+		//auto Scene = CardCollection::createScene();
+		auto Scene = CardCollectionScene::createScene();
+		Director::getInstance()->replaceScene(TransitionFade::create(transitionTime, Scene));
+	}
 }
 
 void MainScene::replaceToSettingSceneCallback(Ref* pSender)
 {
-	auto Scene = SettingSceneTest::createScene();
-	Director::getInstance()->replaceScene(TransitionFade::create(transitionTime, Scene));
+	if (clickable) {
+		clickable = false;
+		auto Scene = SettingSceneTest::createScene();
+		Director::getInstance()->replaceScene(TransitionFade::create(transitionTime, Scene));
+	}
 }
 

@@ -22,6 +22,8 @@ const std::string HALISGR_FONTS = "fonts/HalisGR-SBook.otf";
 
 class MainScene : public cocos2d::Scene
 {
+private:
+	bool clickable;
 public:
 
     virtual bool init();
