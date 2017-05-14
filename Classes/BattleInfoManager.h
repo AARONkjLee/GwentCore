@@ -5,7 +5,7 @@ enum ActType {NullMType, PASS, PLAY, LEADER, MOVE};
 // {无效果， 放弃出牌， 打出卡牌， 使用领导牌， 卡牌被移动}
 // Pass, Play, Leader and Change are active action from Player.
 // Move is moving cards from place to place, which is passive action.
-enum FieldLocation {NullLocation, HAND, DECK, GRAVE, OUT, COMBAT, RANGED, SEIGE, WEATHER};
+enum FieldLocation {NullLocation, HAND, DECK, GRAVE, REMOVED, COMBAT, RANGED, SEIGE, WEATHER};
 
 
 

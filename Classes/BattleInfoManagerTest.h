@@ -1,4 +1,4 @@
 #pragma once
-#include "PlayScene\BattleInfoManager.h"
+#include "BattleInfoManager.h"
 
 void BIMTest();
