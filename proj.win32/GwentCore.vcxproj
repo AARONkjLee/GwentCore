@@ -145,9 +145,11 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\BattleInfoManager.cpp" />
     <ClCompile Include="..\Classes\BattleInfoManagerTest.cpp" />
     <ClCompile Include="..\Classes\card.cpp" />
     <ClCompile Include="..\Classes\CardCollectionScene.cpp" />
+    <ClCompile Include="..\Classes\CardEffectManager.cpp" />
     <ClCompile Include="..\Classes\CardSprite.cpp" />
     <ClCompile Include="..\Classes\CardSpriteTest.cpp" />
     <ClCompile Include="..\Classes\CollectionSceneTest.cpp" />
@@ -157,17 +159,19 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\jsoncpp-master\src\lib_json\json_writer.cpp" />
     <ClCompile Include="..\Classes\leaderCard.cpp" />
     <ClCompile Include="..\Classes\MainScene.cpp" />
+    <ClCompile Include="..\Classes\PlayPreparationScene.cpp" />
     <ClCompile Include="..\Classes\PlaySceneTest.cpp" />
-    <ClCompile Include="..\Classes\PlayScene\BattleInfoManager.cpp" />
-    <ClCompile Include="..\Classes\PlayScene\CardEffectManager.cpp" />
     <ClCompile Include="..\Classes\SettingSceneTest.cpp" />
+    <ClCompile Include="..\Classes\SinglePlayScene.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\BattleInfoManager.h" />
     <ClInclude Include="..\Classes\BattleInfoManagerTest.h" />
     <ClInclude Include="..\Classes\card.h" />
     <ClInclude Include="..\Classes\CardCollectionScene.h" />
+    <ClInclude Include="..\Classes\CardEffectManager.h" />
     <ClInclude Include="..\Classes\CardSprite.h" />
     <ClInclude Include="..\Classes\CardSpriteTest.h" />
     <ClInclude Include="..\Classes\CollectionSceneTest.h" />
@@ -186,10 +190,10 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\jsoncpp-master\src\lib_json\json_tool.h" />
     <ClInclude Include="..\Classes\leaderCard.h" />
     <ClInclude Include="..\Classes\MainScene.h" />
+    <ClInclude Include="..\Classes\PlayPreparationScene.h" />
     <ClInclude Include="..\Classes\PlaySceneTest.h" />
-    <ClInclude Include="..\Classes\PlayScene\BattleInfoManager.h" />
-    <ClInclude Include="..\Classes\PlayScene\CardEffectManager.h" />
     <ClInclude Include="..\Classes\SettingSceneTest.h" />
+    <ClInclude Include="..\Classes\SinglePlayScene.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

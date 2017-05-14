@@ -37,6 +37,9 @@
     <Filter Include="src\BattleInfoAPI">
       <UniqueIdentifier>{1f9b3a0d-118d-4ca8-b4b2-709a3c2223f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Scenes\PlayScene">
+      <UniqueIdentifier>{ff9072be-03d0-47ba-b19a-379e3b97b072}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -81,17 +84,23 @@
     <ClCompile Include="..\Classes\MainScene.cpp">
       <Filter>src\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\PlayScene\BattleInfoManager.cpp">
-      <Filter>src\BattleInfoAPI</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\BattleInfoManagerTest.cpp">
-      <Filter>src\BattleInfoAPI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PlayScene\CardEffectManager.cpp">
       <Filter>src\BattleInfoAPI</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\CardCollectionScene.cpp">
       <Filter>src\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayPreparationScene.cpp">
+      <Filter>src\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SinglePlayScene.cpp">
+      <Filter>src\Scenes\PlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CardEffectManager.cpp">
+      <Filter>src\BattleInfoAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BattleInfoManager.cpp">
+      <Filter>src\BattleInfoAPI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -164,17 +173,23 @@
     <ClInclude Include="..\Classes\MainScene.h">
       <Filter>src\Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\PlayScene\BattleInfoManager.h">
-      <Filter>src\BattleInfoAPI</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\BattleInfoManagerTest.h">
-      <Filter>src\BattleInfoAPI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PlayScene\CardEffectManager.h">
       <Filter>src\BattleInfoAPI</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\CardCollectionScene.h">
       <Filter>src\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayPreparationScene.h">
+      <Filter>src\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SinglePlayScene.h">
+      <Filter>src\Scenes\PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BattleInfoManager.h">
+      <Filter>src\BattleInfoAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardEffectManager.h">
+      <Filter>src\BattleInfoAPI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

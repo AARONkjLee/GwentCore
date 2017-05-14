@@ -4,7 +4,6 @@
 #include "MainScene.h"
 
 
-
 USING_NS_CC;
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(1280,720);
