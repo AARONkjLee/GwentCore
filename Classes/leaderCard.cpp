@@ -1,5 +1,6 @@
 #include "leaderCard.h"
 
+Json::Value leaderCards;
 
 LeaderCard::LeaderCard(){}//defaul initalization
 
@@ -8,16 +9,17 @@ LeaderCard::LeaderCard(int id){
 }
 
 void LeaderCard::reload(int id) {
-	std::ifstream cardsPool;
-	cardsPool.open("..//Resources/LeaderCardPoolDatabase.json");
-	// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
-	Json::Reader reader;
-	Json::Value cards;
-	if (!reader.parse(cardsPool, cards, false)) {
-		return;
+	if (!leaderCards) {
+		std::ifstream cardsPool;
+		cardsPool.open("..//Resources/LeaderCardPoolDatabase.json");
+		// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
+		Json::Reader reader;		
+		if (!reader.parse(cardsPool, leaderCards, false)) {
+			return;
+		}
+		cardsPool.close();
 	}
-	cardsPool.close();
-	Json::Value card = cards[id];
+	Json::Value card = leaderCards[id];
 	this->cardID = card["cardID"].asInt();
 	this->description = card["Description"].asCString();
 	this->name = card["Name"].asCString();
