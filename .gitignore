@@ -274,3 +274,4 @@ Resources\Gwent-master\*
 /Resources/**/*.ttf
 /proj.win32/res/gwent.ico
 /proj.win32/res/game.ico
+/Resources/PlayScene/Source/PlayScene.psd

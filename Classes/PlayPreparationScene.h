@@ -3,6 +3,7 @@
 #include "cocos2d.h"
 #include "MainScene.h"
 
+std::vector<int> getDeckWithSet(CardSet cardSet);
 
 class PlayPreparationScene : public cocos2d::Layer
 {

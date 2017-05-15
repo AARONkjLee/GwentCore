@@ -146,6 +146,8 @@ void MainScene::createTestSpriteCallback(cocos2d::Ref * pSender)
 
 float transitionTime = 1.0;
 
+// 据说可用map实现，见迭代的PPT
+
 void MainScene::replaceToPlaySceneCallback(Ref* pSender)
 {
 	if (clickable) {
