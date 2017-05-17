@@ -103,18 +103,19 @@ std::vector<int> getUserDeck()
 	// To-do change to read users deck
 	int deckArr[] = {3,
 		41,
-		44,
+		44,44,44,
 		45,
 		46,
 		49,
 		50,
+		
 		52,
 		53,
 		54,
 		55,
-		56,56,56,
-		57,57,57,
-		58,58,58,
+		56,56,
+		57,57,
+		58,58,
 
 		61,
 		62,
@@ -131,9 +132,6 @@ std::vector<int> getUserDeck()
 		91,
 		93,
 		94
-
-
-
 	};
 	std::vector<int> deck(deckArr, deckArr+29);
 	return ;
