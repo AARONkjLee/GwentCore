@@ -77,10 +77,12 @@ bool SettingSceneTest::init()
 
 	auto CardS1 = CardSprite::create(33);
 	CardS1->setPosition(Vec2(visibleSize.width / 4 + origin.x, visibleSize.height / 2 + origin.y));
+	CardS1->setCurrentStrength(CardS1->getInitStrength() - 2);
 	//CardS1->setScale(0.5);
 
 	auto CardS2 = CardSprite::create(44);
 	CardS2->setPosition(Vec2(visibleSize.width * 3 / 4 + origin.x, visibleSize.height / 2 + origin.y));
+	CardS2->setCurrentStrength(CardS2->getInitStrength()+2);
 	//CardS2->setScale(0.5);
 
 	this->addChild(CardS1);

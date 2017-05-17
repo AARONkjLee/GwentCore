@@ -6,22 +6,30 @@
 // A effect function should have a input of Field
 // and a input of a Act
 
-/*enum EffectType {NullEType, 
-Agile, 
-Spye, 
-TightBonde, 
-Decoye, 
-Medice, 
-SpellHorne, 
-UnitHorne, 
-SpellScorche, 
-UnitScorche, 
-Mustere, 
-MoraleBooste, 
-BitingFroste, 
-Foge, 
-Raine, 
-ClearWeathere 
+/*enum EffectType {
+	NullEType, 
+	Agile, 
+	Spye, 
+	TightBonde, 
+	Decoye, 
+	Medice, 
+	SpellHorne, 
+	UnitHorne, 
+	SpellScorche, 
+	UnitScorche, 
+	Mustere, 
+	MoraleBooste, 
+	BitingFroste, 
+	Foge, 
+	Raine, 
+	ClearWeathere 
 };*/
 
-
+//enum setEffect {
+//	NullSetEffect,
+//	NorthernE,
+//	NilfgaarianE,
+//	MonsterE,
+//	ScoiatealE,
+//	NeutralE
+//};

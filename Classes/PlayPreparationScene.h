@@ -2,8 +2,19 @@
 
 #include "cocos2d.h"
 #include "MainScene.h"
+#include "BattleInfoManager.h"
 
 std::vector<int> getDeckWithSet(CardSet cardSet);
+
+struct GUIActCell {
+	ActCell actCell;
+	std::string info;
+};
+
+struct GUICell {
+
+};
+
 
 class PlayPreparationScene : public cocos2d::Layer
 {

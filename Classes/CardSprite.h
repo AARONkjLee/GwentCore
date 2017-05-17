@@ -23,6 +23,10 @@ private:
 	std::string getStrStrength();
 	CPosition position;
 
+	// Use this->getChildByName<Sprite*>("strengthSprite")
+	// and this->getChildByName<Label*>("strengthLabel")
+	// to access its strength aprt
+
 	/*
 	Do NOT do like below!  To inherit from Sprite, see:
 	http://blog.csdn.net/while0/article/details/25615685
@@ -40,6 +44,9 @@ private:
 public:
 	void initCardPrototype(int cid);
 	static CardSprite* create(int cid);
+	void setCurrentStrength(int strength);
+	Card getCardPrototype();
+	int getInitStrength();
 
 	/*
 	Do NOT do like below!  To inherit from Sprite, see:

@@ -82,7 +82,7 @@ public:
 	bool initWithFirstPlayer(const int & playerNo);
 	
 	void setBattlefield (const Field & f);
-	Field getBattlefield();
+	Field & getBattlefield();
 	void actToBattlefield(const Act & act);
 	void actCellToBattlefield(const ActCell & actCell);
 };

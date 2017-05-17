@@ -66,6 +66,8 @@ CardSprite * CardSprite::create(int cid)
 				(heroFlag) ? CARD_HERO_STRENGTH_BACK_DIR : 
 				CARD_STRENGTH_BACK_DIR;
 			auto strengthSprite = Sprite::create(strengthBackFilename);
+			strengthSprite->setName("strengthSprite");
+
 			sprite->addChild(strengthSprite);
 			strengthSprite->setPosition(
 				((heroFlag) ? STRENGTH_HERO_BACK_COORDINATES.width :
@@ -76,11 +78,16 @@ CardSprite * CardSprite::create(int cid)
 				/ CARD_SIZE.height * (sprite->getContentSize().height));
 
 			auto strengthLabel = Label::create(
-				sprite->getStrStrength(), // to change to sprite->cardPrototype.getStrengthStr()
+				sprite->getStrStrength(), 
 				"fonts/Marker Felt.ttf", 72);
+			strengthLabel->setName("strengthLabel");
 			sprite->addChild(strengthLabel);
 			strengthLabel->setColor(
-				(heroFlag) ? Color3B(255, 255, 255) : Color3B(0, 0, 0));
+				(heroFlag) ? Color3B::WHITE : Color3B::BLACK);
+			strengthLabel->enableShadow(
+				(heroFlag) ? Color4B::BLACK : Color4B(Color3B::WHITE, 64),
+				Size(4, -4), 10);
+			
 			strengthLabel->setPosition(
 				( (heroFlag) ? STRENGTH_HERO_LABEL_COORDINATES.width : 
 					STRENGTH_LABEL_COORDINATES.width )
@@ -94,4 +101,33 @@ CardSprite * CardSprite::create(int cid)
 
 	CC_SAFE_DELETE(sprite);
 	return nullptr;
+}
+
+void CardSprite::setCurrentStrength(int strength)
+{
+	currentStrength = strength;
+	this->getChildByName<Label*>("strengthLabel")->setString(this->getStrStrength());
+	if (currentStrength > cardPrototype.getStrength()) {
+		this->getChildByName<Label*>("strengthLabel")->setColor(Color3B::GREEN);
+		this->getChildByName<Label*>("strengthLabel")->enableShadow(Color4B::BLACK, Size(4, -4), 10);
+	} else if (currentStrength < cardPrototype.getStrength()) {
+		this->getChildByName<Label*>("strengthLabel")->setColor(Color3B::RED);
+		this->getChildByName<Label*>("strengthLabel")->enableShadow(Color4B::BLACK, Size(4, -4), 10);
+	} else {
+		bool heroFlag = this->cardPrototype.getUnitLevel() == Hero;
+		this->getChildByName<Label*>("strengthLabel")->setColor(Color3B(0, 0, 0));
+		this->getChildByName<Label*>("strengthLabel")->enableShadow(
+			(heroFlag) ? Color4B::BLACK : Color4B(Color3B::WHITE, 64),
+			Size(4, -4), 10);
+	}
+}
+
+Card CardSprite::getCardPrototype()
+{
+	return cardPrototype;
+}
+
+int CardSprite::getInitStrength()
+{
+	return cardPrototype.getStrength();
 }

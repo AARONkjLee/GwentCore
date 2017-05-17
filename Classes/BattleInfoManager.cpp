@@ -70,7 +70,7 @@ void BattleInfoManager::setBattlefield(const Field & f)
 	Battlefield = f;
 }
 
-Field BattleInfoManager::getBattlefield()
+Field & BattleInfoManager::getBattlefield()
 {
 	return Battlefield;
 }
