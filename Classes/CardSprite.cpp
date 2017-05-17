@@ -120,6 +120,10 @@ void CardSprite::setCurrentStrength(int strength)
 			(heroFlag) ? Color4B::BLACK : Color4B(Color3B::WHITE, 64),
 			Size(4, -4), 10);
 	}
+	auto scale15 = CCScaleTo::create(0.5, 1.5);
+	auto scale10 = CCScaleTo::create(0.5, 1.0);
+	this->getChildByName<Label*>("strengthLabel")->runAction(scale15);
+	this->getChildByName<Label*>("strengthLabel")->runAction(scale10);
 }
 
 Card CardSprite::getCardPrototype()

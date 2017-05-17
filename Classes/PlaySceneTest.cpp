@@ -86,7 +86,45 @@ bool PlaySceneTest::init()
 	this->addChild(CardS1);
 	this->addChild(CardS2);
 
+	auto mouselistener = EventListenerMouse::create();
+	mouselistener->onMouseDown = [] (cocos2d::Event* event){};
+	mouselistener->onMouseMove = [](cocos2d::Event* event) {};
+	mouselistener->onMouseUp = [&](cocos2d::Event* event) {
+		// 获取事件所绑定的 target 
+		auto target = static_cast<CardSprite*>(event->getCurrentTarget());
+		if (target == nullptr)
+		{
+			return true;
+		}
 
+		EventMouse* mouseEvent = dynamic_cast<EventMouse*>(event);
+		//mouseEvent->getMouseButton();
+		//std::stringstream message;
+		//message << "Mouse event: Button: " << mouseEvent->getMouseButton() << "pressed at point (" <<
+		//	mouseEvent->getLocation().x << "," << mouseEvent->getLocation().y << ")";
+		//MessageBox(message.str().c_str(), "Mouse Event Details");
+
+
+		// 获取当前点击点所在相对按钮的位置坐标
+		// getLocation得到的是openGL坐标系，也就是世界坐标系
+		Vec2 locationInNode = target->convertToNodeSpace(mouseEvent->getLocation());
+		Size s = target->getContentSize();
+		Rect rect = Rect(0, 0, s.width, s.height);
+
+		// 点击范围判断检测
+		if (rect.containsPoint(locationInNode))
+		{
+			//log("sprite began... x = %f, y = %f", locationInNode.x, locationInNode.y);
+			//target->setOpacity(180);
+			target->setCurrentStrength(target->getInitStrength() + 2);
+			return true;
+		}
+		return false;
+
+	};
+
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(mouselistener, CardS1);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(mouselistener->clone(), CardS2);
 
     return true;
 }
