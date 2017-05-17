@@ -1,5 +1,4 @@
-#ifndef __card_H__ 
-#define __card_H__ 
+#pragma once
 
 #include <json/json.h>
 #include <fstream>
@@ -74,4 +73,3 @@ public:
 	Ability getAbility();
 };
 
-#endif __card_H__ 
