@@ -6,9 +6,9 @@
 
 
 const std::string MAIN_BG_DIR = "MainScene/Gwent_BackPic_1920x1080_logoless.jpg";
-const std::string BUTTON_NROMAL_DIR = "MainScene/MainButtonNormal.png";
-const std::string BUTTON_SELECTED_DIR = "MainScene/MainButtonSelectedEdged.png";
-const std::string LOGO_DIR = "MainScene/Logo.png";
+const std::string MAIN_BUTTON_NROMAL_DIR = "MainScene/MainButtonNormal.png";
+const std::string MAIN_BUTTON_SELECTED_DIR = "MainScene/MainButtonSelectedEdged.png";
+const std::string MAIN_LOGO_DIR = "MainScene/Logo.png";
 
 const std::string HALISGR_BOLD_FONTS = "fonts/HalisGR-Bold.otf";
 const std::string HALISGR_FONTS = "fonts/HalisGR-SBook.otf";

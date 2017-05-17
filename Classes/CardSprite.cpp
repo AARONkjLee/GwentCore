@@ -1,6 +1,11 @@
 #include "CardSprite.h"
 #include <sstream>
 
+//  关于Action的教程
+//  http://www.gamefromscratch.com/post/2014/10/11/Cocos2d-x-Tutorial-Series-Game-loops-Updates-and-Action-Handling.aspx
+//  49种类的Action
+//  http://blog.csdn.net/liuhong135541/article/details/24374227
+
 USING_NS_CC;
 /*
 CardSprite::CardSprite()
@@ -70,16 +75,16 @@ CardSprite * CardSprite::create(int cid)
 
 			sprite->addChild(strengthSprite);
 			strengthSprite->setPosition(
-				((heroFlag) ? STRENGTH_HERO_BACK_COORDINATES.width :
-					STRENGTH_BACK_COORDINATES.width)
-				/ CARD_SIZE.width * (sprite->getContentSize().width),
-				((heroFlag) ? STRENGTH_HERO_BACK_COORDINATES.height :
-					STRENGTH_BACK_COORDINATES.height)
-				/ CARD_SIZE.height * (sprite->getContentSize().height));
+				((heroFlag) ? CS_STRENGTH_HERO_BACK_COORDINATES.width :
+					CS_STRENGTH_BACK_COORDINATES.width)
+				/ CARD_SPRITE_SIZE.width * (sprite->getContentSize().width),
+				((heroFlag) ? CS_STRENGTH_HERO_BACK_COORDINATES.height :
+					CS_STRENGTH_BACK_COORDINATES.height)
+				/ CARD_SPRITE_SIZE.height * (sprite->getContentSize().height));
 
 			auto strengthLabel = Label::create(
 				sprite->getStrStrength(), 
-				"fonts/Marker Felt.ttf", 72);
+				"fonts/HalisGR-SBook.otf", 70);
 			strengthLabel->setName("strengthLabel");
 			sprite->addChild(strengthLabel);
 			strengthLabel->setColor(
@@ -89,12 +94,12 @@ CardSprite * CardSprite::create(int cid)
 				Size(4, -4), 10);
 			
 			strengthLabel->setPosition(
-				( (heroFlag) ? STRENGTH_HERO_LABEL_COORDINATES.width : 
-					STRENGTH_LABEL_COORDINATES.width )
-				/ CARD_SIZE.width * (sprite->getContentSize().width),
-				( (heroFlag) ? STRENGTH_HERO_LABEL_COORDINATES.height :
-					STRENGTH_LABEL_COORDINATES.height )
-				/ CARD_SIZE.height * (sprite->getContentSize().height));
+				( (heroFlag) ? CS_STRENGTH_HERO_LABEL_COORDINATES.width : 
+					CS_STRENGTH_LABEL_COORDINATES.width )
+				/ CARD_SPRITE_SIZE.width * (sprite->getContentSize().width),
+				( (heroFlag) ? CS_STRENGTH_HERO_LABEL_COORDINATES.height :
+					CS_STRENGTH_LABEL_COORDINATES.height )
+				/ CARD_SPRITE_SIZE.height * (sprite->getContentSize().height));
 		}
 		return sprite;
 	}
@@ -122,6 +127,8 @@ void CardSprite::setCurrentStrength(int strength)
 			(heroFlag) ? Color4B::BLACK : Color4B(Color3B::WHITE, 64),
 			Size(4, -4), 10);
 	}
+
+	
 	auto scale11 = ScaleTo::create(0.1, 2.0);
 	auto scale10 = ScaleTo::create(0.15, 1.0);
 	Vector<FiniteTimeAction*> actions;

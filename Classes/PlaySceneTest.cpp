@@ -2,6 +2,13 @@
 #include "SimpleAudioEngine.h"
 #include "PlaySceneTest.h"
 
+//  关于Listener和Event的教程
+//  http://www.gamefromscratch.com/post/2014/10/03/Cocos2d-x-Tutorial-Series-Handling-Touch-and-Mouse-Input.aspx
+//  http://www.jellythink.com/archives/769
+
+//  关于Lambda函数的教程
+//  http://www.jellythink.com/archives/668
+
 USING_NS_CC;
 
 Scene* PlaySceneTest::createScene()
@@ -87,6 +94,7 @@ bool PlaySceneTest::init()
 	this->addChild(CardS2);
 
 	auto mouselistener = EventListenerMouse::create();
+	// 以下三个是lambda函数 见本cpp文件开头的教程
 	mouselistener->onMouseDown = [] (cocos2d::Event* event){};
 	mouselistener->onMouseMove = [](cocos2d::Event* event) {};
 	mouselistener->onMouseUp = [=](cocos2d::Event* event) {

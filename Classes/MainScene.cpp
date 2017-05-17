@@ -8,20 +8,18 @@
 #include "SettingSceneTest.h"
 #include "CardCollectionScene.h"
 
+
+//  场景切换教程
+//  http://www.cnblogs.com/HangZhe/p/5701019.html
+// http://blog.csdn.net/lttree/article/details/38185641
+
+//  菜单教程
+//  http://www.tuicool.com/articles/immUVn
+
+//  动作和过渡教程
+//  http://blog.sina.com.cn/s/blog_621c16b10101egh3.html
+
 USING_NS_CC;
-
-// To-do 加入一个可点击flag 默认true 当已经点了一个按钮的时候 这个flag为false
-// 所有按钮函数 先判断可点击flag为true再运行
-// 防止快速点击多个按钮导致的冲突
-
-//场景切换教程
-//http://www.cnblogs.com/HangZhe/p/5701019.html
-//http://blog.csdn.net/lttree/article/details/38185641
-
-//菜单教程
-//http://www.tuicool.com/articles/immUVn
-
-
 
 bool MainScene::init()
 {
@@ -43,7 +41,7 @@ bool MainScene::init()
 	this->addChild(mainLayer);
 	
 
-	auto logoSprite = Sprite::create(LOGO_DIR);
+	auto logoSprite = Sprite::create(MAIN_LOGO_DIR);
 	logoSprite->setPosition(Vec2(origin.x + visibleSize.width*0.324,
 		origin.y + visibleSize.height*0.711));
 	logoSprite->setScale((float)655/900);
@@ -55,8 +53,8 @@ bool MainScene::init()
 		origin.y + visibleSize.height/2);
 	mainLayer->addChild(mainBGSprite);
 
-	auto playButton = MenuItemImage::create(BUTTON_NROMAL_DIR,
-		BUTTON_SELECTED_DIR,
+	auto playButton = MenuItemImage::create(MAIN_BUTTON_NROMAL_DIR,
+		MAIN_BUTTON_SELECTED_DIR,
 		CC_CALLBACK_1(MainScene::replaceToPlaySceneCallback, this));
 	playButton->setScale((float)68 / 81);
 	playButton->setPosition(Vec2(origin.x + visibleSize.width*0.324,
@@ -68,8 +66,8 @@ bool MainScene::init()
 	playButton->addChild(playLable);
 	
 
-	auto collectionButton = MenuItemImage::create(BUTTON_NROMAL_DIR,
-		BUTTON_SELECTED_DIR,
+	auto collectionButton = MenuItemImage::create(MAIN_BUTTON_NROMAL_DIR,
+		MAIN_BUTTON_SELECTED_DIR,
 		CC_CALLBACK_1(MainScene::replaceToCollectionSceneCallback, this));
 	collectionButton->setScale((float)68 / 81);
 	collectionButton->setPosition(Vec2(origin.x + visibleSize.width*0.324,
@@ -81,8 +79,8 @@ bool MainScene::init()
 	collectionButton->addChild(collectionLable);
 
 
-	auto settingButton = MenuItemImage::create(BUTTON_NROMAL_DIR,
-		BUTTON_SELECTED_DIR,
+	auto settingButton = MenuItemImage::create(MAIN_BUTTON_NROMAL_DIR,
+		MAIN_BUTTON_SELECTED_DIR,
 		CC_CALLBACK_1(MainScene::replaceToSettingSceneCallback, this));
 	settingButton->setScale((float)68 / 81);
 	settingButton->setPosition(Vec2(origin.x + visibleSize.width*0.324,
@@ -94,8 +92,8 @@ bool MainScene::init()
 	settingButton->addChild(settingLable);
 
 	
-	auto closeButton = MenuItemImage::create(BUTTON_NROMAL_DIR,
-		BUTTON_SELECTED_DIR,
+	auto closeButton = MenuItemImage::create(MAIN_BUTTON_NROMAL_DIR,
+		MAIN_BUTTON_SELECTED_DIR,
 		CC_CALLBACK_1(MainScene::menuCloseCallback, this));
 	closeButton->setScale((float)68 / 81);
 	closeButton->setPosition(Vec2(origin.x + visibleSize.width*0.324,
