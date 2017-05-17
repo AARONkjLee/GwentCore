@@ -97,3 +97,44 @@ void PlayPreparationScene::GoBackToMainSceneCallback(Ref* pSender)
 	auto Scene = MainScene::create();
 	Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));
 }
+
+std::vector<int> getUserDeck()
+{
+	// To-do change to read users deck
+	int deckArr[] = {3,
+		41,
+		44,
+		45,
+		46,
+		49,
+		50,
+		52,
+		53,
+		54,
+		55,
+		56,56,56,
+		57,57,57,
+		58,58,58,
+
+		61,
+		62,
+		65,
+		66,
+		68,
+		73,
+		74,
+		76,
+		84,
+		86,
+		87,
+		89,
+		91,
+		93,
+		94
+
+
+
+	};
+	std::vector<int> deck(deckArr, deckArr+29);
+	return ;
+}

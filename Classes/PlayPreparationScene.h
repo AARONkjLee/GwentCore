@@ -4,7 +4,7 @@
 #include "MainScene.h"
 #include "BattleInfoManager.h"
 
-std::vector<int> getDeckWithSet(CardSet cardSet);
+std::vector<int> getUserDeck();
 
 struct GUIActCell {
 	ActCell actCell;
