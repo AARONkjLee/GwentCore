@@ -89,7 +89,7 @@ bool PlaySceneTest::init()
 	auto mouselistener = EventListenerMouse::create();
 	mouselistener->onMouseDown = [] (cocos2d::Event* event){};
 	mouselistener->onMouseMove = [](cocos2d::Event* event) {};
-	mouselistener->onMouseUp = [&](cocos2d::Event* event) {
+	mouselistener->onMouseUp = [=](cocos2d::Event* event) {
 		// 获取事件所绑定的 target 
 		auto target = static_cast<CardSprite*>(event->getCurrentTarget());
 		if (target == nullptr)
@@ -116,7 +116,14 @@ bool PlaySceneTest::init()
 		{
 			//log("sprite began... x = %f, y = %f", locationInNode.x, locationInNode.y);
 			//target->setOpacity(180);
-			target->setCurrentStrength(target->getInitStrength() + 2);
+			if (mouseEvent->getMouseButton() == 0) {
+				target->setCurrentStrength(target->getInitStrength() + 2);
+			} else if (mouseEvent->getMouseButton() == 1) {
+				target->setCurrentStrength(target->getInitStrength() - 2);
+			} else {
+				target->setCurrentStrength(target->getInitStrength());
+
+			}
 			return true;
 		}
 		return false;

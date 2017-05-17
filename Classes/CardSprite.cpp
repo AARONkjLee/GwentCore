@@ -115,15 +115,21 @@ void CardSprite::setCurrentStrength(int strength)
 		this->getChildByName<Label*>("strengthLabel")->enableShadow(Color4B::BLACK, Size(4, -4), 10);
 	} else {
 		bool heroFlag = this->cardPrototype.getUnitLevel() == Hero;
-		this->getChildByName<Label*>("strengthLabel")->setColor(Color3B(0, 0, 0));
+		this->getChildByName<Label*>("strengthLabel")->setColor(
+			(heroFlag) ? Color3B::WHITE : Color3B::BLACK);
 		this->getChildByName<Label*>("strengthLabel")->enableShadow(
 			(heroFlag) ? Color4B::BLACK : Color4B(Color3B::WHITE, 64),
 			Size(4, -4), 10);
 	}
-	auto scale15 = CCScaleTo::create(0.5, 1.5);
-	auto scale10 = CCScaleTo::create(0.5, 1.0);
-	this->getChildByName<Label*>("strengthLabel")->runAction(scale15);
-	this->getChildByName<Label*>("strengthLabel")->runAction(scale10);
+	auto scale11 = ScaleTo::create(0.1, 2.0);
+	auto scale10 = ScaleTo::create(0.2, 1.0);
+	Vector<FiniteTimeAction*> actions;
+	actions.pushBack(scale11);
+	actions.pushBack(scale10);
+	auto sequence1110 = Sequence::create(actions);
+	this
+		->getChildByName<Label*>("strengthLabel")
+		->runAction(sequence1110);
 }
 
 Card CardSprite::getCardPrototype()
