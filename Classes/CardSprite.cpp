@@ -105,31 +105,30 @@ CardSprite * CardSprite::create(int cid)
 
 void CardSprite::setCurrentStrength(int strength)
 {
+	auto strengthLabel = this->getChildByName<Label*>("strengthLabel");
 	currentStrength = strength;
-	this->getChildByName<Label*>("strengthLabel")->setString(this->getStrStrength());
+	strengthLabel->setString(this->getStrStrength());
 	if (currentStrength > cardPrototype.getStrength()) {
-		this->getChildByName<Label*>("strengthLabel")->setColor(Color3B::GREEN);
-		this->getChildByName<Label*>("strengthLabel")->enableShadow(Color4B::BLACK, Size(4, -4), 10);
+		strengthLabel->setColor(Color3B::GREEN);
+		strengthLabel->enableShadow(Color4B::BLACK, Size(4, -4), 10);
 	} else if (currentStrength < cardPrototype.getStrength()) {
-		this->getChildByName<Label*>("strengthLabel")->setColor(Color3B::RED);
-		this->getChildByName<Label*>("strengthLabel")->enableShadow(Color4B::BLACK, Size(4, -4), 10);
+		strengthLabel->setColor(Color3B::RED);
+		strengthLabel->enableShadow(Color4B::BLACK, Size(4, -4), 10);
 	} else {
 		bool heroFlag = this->cardPrototype.getUnitLevel() == Hero;
-		this->getChildByName<Label*>("strengthLabel")->setColor(
+		strengthLabel->setColor(
 			(heroFlag) ? Color3B::WHITE : Color3B::BLACK);
-		this->getChildByName<Label*>("strengthLabel")->enableShadow(
+		strengthLabel->enableShadow(
 			(heroFlag) ? Color4B::BLACK : Color4B(Color3B::WHITE, 64),
 			Size(4, -4), 10);
 	}
 	auto scale11 = ScaleTo::create(0.1, 2.0);
-	auto scale10 = ScaleTo::create(0.2, 1.0);
+	auto scale10 = ScaleTo::create(0.15, 1.0);
 	Vector<FiniteTimeAction*> actions;
 	actions.pushBack(scale11);
 	actions.pushBack(scale10);
 	auto sequence1110 = Sequence::create(actions);
-	this
-		->getChildByName<Label*>("strengthLabel")
-		->runAction(sequence1110);
+	strengthLabel->runAction(sequence1110);
 }
 
 Card CardSprite::getCardPrototype()
