@@ -134,5 +134,5 @@ std::vector<int> getUserDeck()
 		94
 	};
 	std::vector<int> deck(deckArr, deckArr+33);
-	return ;
+	return deck;
 }
