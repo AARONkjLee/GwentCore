@@ -72,17 +72,35 @@ bool CardCollectionScene1::init()
 		break;
 	case Northern:
 		for (int i = 5; i < 10; i++) {
-			auto lea = LeaderCardSprite::creat(i);
-			lea ->setPosition(origin.x + visibleSize.width / 5 * 3,
+			auto leader_ = LeaderCardSprite::creat(i);
+			leader_ ->setPosition(origin.x + visibleSize.width / 6 * (i-4),
 				origin.y + visibleSize.height / 2);
-			this->addChild(lea, 1);
+			this->addChild(leader_, 1);
 		}
 		break;
 	case Nilfgaardian:
+		for (int i = 0; i < 5; i++) {
+			auto leader_ = LeaderCardSprite::creat(i);
+			leader_->setPosition(origin.x + visibleSize.width / 6 * (i+1),
+				origin.y + visibleSize.height / 2);
+			this->addChild(leader_, 1);
+		}
 		break;
 	case Monster:
+		for (int i = 15; i < 20; i++) {
+			auto leader_ = LeaderCardSprite::creat(i);
+			leader_->setPosition(origin.x + visibleSize.width / 6 * (i-14),
+				origin.y + visibleSize.height / 2);
+			this->addChild(leader_, 1);
+		}
 		break;
 	case Scoiateal:
+		for (int i = 10; i < 15; i++) {
+			auto leader_ = LeaderCardSprite::creat(i);
+			leader_->setPosition(origin.x + visibleSize.width / 6 * (i-9),
+				origin.y + visibleSize.height / 2);
+			this->addChild(leader_, 1);
+		}
 		break;
 	case Neutral:
 		break;
