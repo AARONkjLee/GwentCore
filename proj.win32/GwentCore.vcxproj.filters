@@ -40,6 +40,9 @@
     <Filter Include="src\Scenes\PlayScene">
       <UniqueIdentifier>{ff9072be-03d0-47ba-b19a-379e3b97b072}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Scenes\CardCollectionScenes">
+      <UniqueIdentifier>{ed282975-74fb-4189-aa8d-0344590739b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -87,9 +90,6 @@
     <ClCompile Include="..\Classes\BattleInfoManagerTest.cpp">
       <Filter>src\BattleInfoAPI</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\CardCollectionScene.cpp">
-      <Filter>src\Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\SinglePlayScene.cpp">
       <Filter>src\Scenes\PlayScene</Filter>
     </ClCompile>
@@ -104,6 +104,15 @@
     </ClCompile>
     <ClCompile Include="..\Classes\cardCollections.cpp">
       <Filter>src\Data Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CardCollectionScene0.cpp">
+      <Filter>src\Scenes\CardCollectionScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CardCollectionScene1.cpp">
+      <Filter>src\Scenes\CardCollectionScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CardCollectionScene2.cpp">
+      <Filter>src\Scenes\CardCollectionScenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -179,9 +188,6 @@
     <ClInclude Include="..\Classes\BattleInfoManagerTest.h">
       <Filter>src\BattleInfoAPI</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\CardCollectionScene.h">
-      <Filter>src\Scenes</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\SinglePlayScene.h">
       <Filter>src\Scenes\PlayScene</Filter>
     </ClInclude>
@@ -196,6 +202,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\cardCollections.h">
       <Filter>src\Data Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardCollectionScene0.h">
+      <Filter>src\Scenes\CardCollectionScenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardCollectionScene1.h">
+      <Filter>src\Scenes\CardCollectionScenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardCollectionScene2.h">
+      <Filter>src\Scenes\CardCollectionScenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-#include "CardCollectionScene.h"
+#include "CardCollectionScene2.h"
 #include "SimpleAudioEngine.h"
 #include "CardSprite.h"
 
@@ -9,13 +9,13 @@ USING_NS_CC;
 // 像 Left.png 这样的文件名太泛指，容易和之后的其他美术资源混淆
 // By Junce
 
-Scene* CardCollectionScene::createScene()
+Scene* CardCollectionScene2::createScene()
 {
 	// 'scene' is an autorelease object
 	auto scene = Scene::create();
 
 	// 'layer' is an autorelease object
-	auto layer = CardCollectionScene::create();
+	auto layer = CardCollectionScene2::create();
 
 	// add layer as a child to scene
 	scene->addChild(layer);
@@ -24,7 +24,7 @@ Scene* CardCollectionScene::createScene()
 	return scene;
 }
 
-bool CardCollectionScene::init()
+bool CardCollectionScene2::init()
 {
 	//////////////////////////////
 	// 1. super init first
@@ -44,7 +44,7 @@ bool CardCollectionScene::init()
 	auto closeItem = MenuItemImage::create(
 		"CloseNormal.png",
 		"CloseSelected.png",
-		CC_CALLBACK_1(CardCollectionScene::menuCloseCallback, this));
+		CC_CALLBACK_1(CardCollectionScene2::menuCloseCallback, this));
 
 	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width / 2,
 		origin.y + closeItem->getContentSize().height / 2));
@@ -186,7 +186,7 @@ bool CardCollectionScene::init()
 	return true;
 }
 
-void CardCollectionScene::menuCloseCallback(Ref* pSender)
+void CardCollectionScene2::menuCloseCallback(Ref* pSender)
 {
 	//Close the cocos2d-x game scene and quit the application
 	Director::getInstance()->end();

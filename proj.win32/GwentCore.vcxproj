@@ -149,7 +149,9 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\BattleInfoManagerTest.cpp" />
     <ClCompile Include="..\Classes\card.cpp" />
     <ClCompile Include="..\Classes\cardCollections.cpp" />
-    <ClCompile Include="..\Classes\CardCollectionScene.cpp" />
+    <ClCompile Include="..\Classes\CardCollectionScene0.cpp" />
+    <ClCompile Include="..\Classes\CardCollectionScene1.cpp" />
+    <ClCompile Include="..\Classes\CardCollectionScene2.cpp" />
     <ClCompile Include="..\Classes\CardEffectManager.cpp" />
     <ClCompile Include="..\Classes\CardSprite.cpp" />
     <ClCompile Include="..\Classes\CardSpriteTest.cpp" />
@@ -172,7 +174,9 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\BattleInfoManagerTest.h" />
     <ClInclude Include="..\Classes\card.h" />
     <ClInclude Include="..\Classes\cardCollections.h" />
-    <ClInclude Include="..\Classes\CardCollectionScene.h" />
+    <ClInclude Include="..\Classes\CardCollectionScene0.h" />
+    <ClInclude Include="..\Classes\CardCollectionScene1.h" />
+    <ClInclude Include="..\Classes\CardCollectionScene2.h" />
     <ClInclude Include="..\Classes\CardEffectManager.h" />
     <ClInclude Include="..\Classes\CardSprite.h" />
     <ClInclude Include="..\Classes\CardSpriteTest.h" />
