@@ -141,8 +141,7 @@ bool PlayPreparationScene::init()
 			passDeckBeforPassScene(Northern);
 		}
 		else if (setName == "NilfgaardianEmpireBack") {
-			//passDeckBeforPassScene(Nilfgaarian);
-			// Äá¹úÆ´Ð´¼Ó¸öd
+			passDeckBeforPassScene(Nilfgaardian);
 		}
 		else if (setName == "ScoiataelBack") {
 			passDeckBeforPassScene(Scoiateal);
@@ -150,6 +149,7 @@ bool PlayPreparationScene::init()
 		else {
 			return;
 		}
+//		Director::getInstance()->replaceScene(Transition)
 	};
 
     return true;

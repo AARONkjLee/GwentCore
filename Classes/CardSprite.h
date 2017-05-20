@@ -4,8 +4,8 @@
 #include "cocos2d.h"
 
 const std::string CARD_BACK_DIR = "GwentCardsResources/Back.jpg";
-const std::string CARD_STRENGTH_BACK_DIR = "StrengthBack.png";
-const std::string CARD_HERO_STRENGTH_BACK_DIR = "StrengthBackHero.png";
+const std::string CARD_STRENGTH_BACK_DIR = "GwentCardsResources/StrengthBack.png";
+const std::string CARD_HERO_STRENGTH_BACK_DIR = "GwentCardsResources/StrengthBackHero.png";
 
 const cocos2d::Size CARD_SPRITE_SIZE((float)674, (float)1048);
 const cocos2d::Size CS_STRENGTH_BACK_COORDINATES((float)90, (float)946);
