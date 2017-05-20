@@ -20,7 +20,7 @@ const std::string PLAY_PREPARATION_NorthernRealmsBack_PIC = "PlayScene/PlayPrepa
 const std::string PLAY_PREPARATION_NilfgaardianEmpireBack_PIC = "PlayScene/PlayPreparationScene/NilfgaardianEmpireBack.jpg";
 const std::string PLAY_PREPARATION_MonstersBack_PIC = "PlayScene/PlayPreparationScene/MonstersBack.jpg";
 
-std::vector<int> getUserDeck();
+
 
 struct GUIActCell {
 	ActCell actCell;
@@ -43,6 +43,9 @@ public:
     
     // a selector callback
     void GoBackToMainSceneCallback(cocos2d::Ref* pSender);
+
+	std::vector<int> getUserDeck();
+	void passDeckBeforPassScene(CardSet set);
 
 	void PlayPreparationScene::replaceToPlaySceneCallback(cocos2d::Ref* pSender);
 

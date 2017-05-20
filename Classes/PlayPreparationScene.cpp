@@ -104,6 +104,54 @@ bool PlayPreparationScene::init()
 	MonstersBack->setPosition(Vec2(WIN_CORDINATE_2_GL(23.9, 4.84, 4.91, 7.37)));
 	this->addChild(MonstersBack);
 
+	// Mouse listener
+
+	auto chooseSetMouseListener = EventListenerMouse::create();
+
+
+	// Naming rule for scale action:
+	// scale%Obj%way%Percent; 
+	//		%Obj = object to run the action.
+	//		%Way = By or To
+	//		%Percent = scale number in 100%
+	auto scaleBackBy110 = ScaleBy::create(0.1, 1.1);
+	auto scaleBackBy100 = ScaleBy::create(0, 1, 1.0 / 1 / 1);
+
+	chooseSetMouseListener->onMouseMove;
+
+	chooseSetMouseListener->onMouseMove = [&](Event* event) {
+		auto target = static_cast<Sprite*>(event->getCurrentTarget());
+		if (target->getName() == "background") {
+			ScoiataelBack->runAction(scaleBackBy100);
+			NorthernRealmsBack->runAction(scaleBackBy100);
+			NilfgaardianEmpireBack->runAction(scaleBackBy100);
+			MonstersBack->runAction(scaleBackBy100);
+		}
+		else {
+			target->runAction(scaleBackBy110);
+		}
+	};
+	chooseSetMouseListener->onMouseUp = [&](Event* event) {
+		auto target = static_cast<Sprite*>(event->getCurrentTarget());
+		std::string setName = target->getName();
+		if (setName == "ScoiataelBack") {
+			passDeckBeforPassScene(Scoiateal);
+		}
+		else if (setName == "NorthernRealmsBack") {
+			passDeckBeforPassScene(Northern);
+		}
+		else if (setName == "NilfgaardianEmpireBack") {
+			//passDeckBeforPassScene(Nilfgaarian);
+			// Äá¹úÆ´Ð´¼Ó¸öd
+		}
+		else if (setName == "ScoiataelBack") {
+			passDeckBeforPassScene(Scoiateal);
+		}
+		else {
+			return;
+		}
+	};
+
     return true;
 }
 
@@ -117,7 +165,11 @@ void PlayPreparationScene::GoBackToMainSceneCallback(Ref* pSender)
 	}
 }
 
-std::vector<int> getUserDeck()
+void PlayPreparationScene::passDeckBeforPassScene(CardSet set)
+{
+}
+
+std::vector<int> PlayPreparationScene::getUserDeck()
 {
 	// To-do change to read users deck
 	int deckArr[] = {3,
