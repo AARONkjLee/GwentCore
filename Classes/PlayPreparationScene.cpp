@@ -104,7 +104,7 @@ bool PlayPreparationScene::init()
 	MonstersBack->setPosition(Vec2(WIN_CORDINATE_2_GL(23.9, 4.84, 4.91, 7.37)));
 	this->addChild(MonstersBack);
 
-	// Mouse listener
+	// Mouse listeners
 
 	auto chooseSetMouseListener = EventListenerMouse::create();
 
@@ -117,10 +117,13 @@ bool PlayPreparationScene::init()
 	auto scaleBackBy110 = ScaleBy::create(0.1, 1.1);
 	auto scaleBackBy100 = ScaleBy::create(0, 1, 1.0 / 1 / 1);
 
-	chooseSetMouseListener->onMouseMove;
-
-	chooseSetMouseListener->onMouseMove = [&](Event* event) {
+	chooseSetMouseListener->onMouseDown = [](Event* event) {};
+	chooseSetMouseListener->onMouseMove = [=](Event* event) {};/*
 		auto target = static_cast<Sprite*>(event->getCurrentTarget());
+		if (target == nullptr)
+		{
+			return true;
+		}
 		if (target->getName() == "background") {
 			ScoiataelBack->runAction(scaleBackBy100);
 			NorthernRealmsBack->runAction(scaleBackBy100);
@@ -130,27 +133,52 @@ bool PlayPreparationScene::init()
 		else {
 			target->runAction(scaleBackBy110);
 		}
-	};
-	chooseSetMouseListener->onMouseUp = [&](Event* event) {
+	};*/
+	chooseSetMouseListener->onMouseUp = [=](Event* event) {
+		if (!clickable) {
+			return true;
+		}
+		clickable = false;
 		auto target = static_cast<Sprite*>(event->getCurrentTarget());
-		std::string setName = target->getName();
-		if (setName == "ScoiataelBack") {
-			passDeckBeforPassScene(Scoiateal);
+		if (target == nullptr)
+		{
+			return true;
 		}
-		else if (setName == "NorthernRealmsBack") {
-			passDeckBeforPassScene(Northern);
+
+		EventMouse* mouseEvent = dynamic_cast<EventMouse*>(event);
+
+		//Vec2 locationInNode = target->convertToNodeSpace(mouseEvent->getLocation());
+		//Size s = target->getContentSize();
+		//Rect rect = Rect(0, 0, s.width, s.height);
+
+
+		if (mouseEventOnTarget(mouseEvent, ScoiataelBack)) {
+			passDeckBeforePassScene(Scoiateal);
 		}
-		else if (setName == "NilfgaardianEmpireBack") {
-			passDeckBeforPassScene(Nilfgaardian);
+		else if (mouseEventOnTarget(mouseEvent, NorthernRealmsBack)) {
+			passDeckBeforePassScene(Northern);
 		}
-		else if (setName == "ScoiataelBack") {
-			passDeckBeforPassScene(Scoiateal);
+		else if (mouseEventOnTarget(mouseEvent, NilfgaardianEmpireBack)) {
+			passDeckBeforePassScene(Nilfgaardian);
+		}
+		else if (mouseEventOnTarget(mouseEvent, MonstersBack)) {
+			passDeckBeforePassScene(Monster);
 		}
 		else {
-			return;
+			clickable = true;
+			return true;
 		}
-//		Director::getInstance()->replaceScene(Transition)
+
+		// To 若晴 这句话你可以写为进入你自己的下一个场景 转换之前你要想办法把选好的Set传入下一个场景
+		// 你可以试试复写下一个scene的create函数，令其带一个参数，根据传入的参数创建选好阵营的scene
+		Director::getInstance()->replaceScene(TransitionShrinkGrow::create(1.0, SinglePlayScene::createScene()));
 	};
+
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener, ScoiataelBack);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), NorthernRealmsBack);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), NilfgaardianEmpireBack);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), MonstersBack);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), background);
 
     return true;
 }
@@ -165,8 +193,32 @@ void PlayPreparationScene::GoBackToMainSceneCallback(Ref* pSender)
 	}
 }
 
-void PlayPreparationScene::passDeckBeforPassScene(CardSet set)
+void PlayPreparationScene::passDeckBeforePassScene(CardSet set)
 {
+	switch (set)
+	{
+	case NullCSet:
+		cocos2d::log("NS");
+		break;
+	case Northern:
+		cocos2d::log("Northern");
+		break;
+	case Nilfgaardian:
+		cocos2d::log("Nilfgaardian");
+		break;
+	case Monster:
+		cocos2d::log("Monster");
+		break;
+	case Scoiateal:
+		cocos2d::log("Scoiateal");
+		break;
+	case Neutral:
+		cocos2d::log("Neutral");
+		break;
+	default:
+		break;
+	};
+	//To 若晴：这个函数用于准备我都下一个SinglePlayScene 也许你不需要调用
 }
 
 std::vector<int> PlayPreparationScene::getUserDeck()

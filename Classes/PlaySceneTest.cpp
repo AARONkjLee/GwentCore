@@ -123,7 +123,6 @@ bool PlaySceneTest::init()
 		if (rect.containsPoint(locationInNode))
 		{
 			//log("sprite began... x = %f, y = %f", locationInNode.x, locationInNode.y);
-			//target->setOpacity(180);
 			if (mouseEvent->getMouseButton() == 0) {
 				target->setCurrentStrength(target->getInitStrength() + 2);
 			} else if (mouseEvent->getMouseButton() == 1) {
