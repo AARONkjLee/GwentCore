@@ -1,6 +1,7 @@
 #include "SettingSceneTest.h"
 #include "SimpleAudioEngine.h"
 #include "CardSprite.h"
+#include "cardCollections.h"
 
 USING_NS_CC;
 
@@ -75,14 +76,18 @@ bool SettingSceneTest::init()
     this->addChild(sprite, 0);
 	*/
 
-	auto CardS1 = CardSprite::create(33);
+	CardCollection niff;
+	niff.initWithSet(Nilfgaarian);
+	std::vector<int> deck = niff.getDeck();
+
+	auto CardS1 = CardSprite::create(deck[0]);
 	CardS1->setPosition(Vec2(visibleSize.width / 4 + origin.x, visibleSize.height / 2 + origin.y));
-	CardS1->setCurrentStrength(CardS1->getInitStrength() - 2);
+	CardS1->setCurrentStrength(CardS1->getInitStrength());
 	//CardS1->setScale(0.5);
 
-	auto CardS2 = CardSprite::create(44);
+	auto CardS2 = CardSprite::create(deck[1]);
 	CardS2->setPosition(Vec2(visibleSize.width * 3 / 4 + origin.x, visibleSize.height / 2 + origin.y));
-	CardS2->setCurrentStrength(CardS2->getInitStrength()+2);
+	CardS2->setCurrentStrength(CardS2->getInitStrength());
 	//CardS2->setScale(0.5);
 
 	this->addChild(CardS1);

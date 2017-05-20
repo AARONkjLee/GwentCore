@@ -84,7 +84,7 @@
         "SpellType": "NullSType", 
         "Strength": 6, 
         "UnitLevel": "Ordinary", 
-        "UnitType": "Seige", 
+        "UnitType": "Siege", 
         "WeatherType": "NullWType", 
         "cardID": 4, 
         "exEffect": 0
@@ -228,7 +228,7 @@
         "SpellType": "NullSType", 
         "Strength": 6, 
         "UnitLevel": "Ordinary", 
-        "UnitType": "Seige", 
+        "UnitType": "Siege", 
         "WeatherType": "NullWType", 
         "cardID": 12, 
         "exEffect": 0
@@ -282,7 +282,7 @@
         "SpellType": "NullSType", 
         "Strength": 6, 
         "UnitLevel": "Ordinary", 
-        "UnitType": "Seige", 
+        "UnitType": "Siege", 
         "WeatherType": "NullWType", 
         "cardID": 15, 
         "exEffect": 0
@@ -480,7 +480,7 @@
         "SpellType": "NullSType", 
         "Strength": 6, 
         "UnitLevel": "Ordinary", 
-        "UnitType": "Seige", 
+        "UnitType": "Siege", 
         "WeatherType": "NullWType", 
         "cardID": 26, 
         "exEffect": 0
@@ -746,8 +746,8 @@
         "EffectType": [
             "NullEType"
         ], 
-        "Name": "Cirilla Finoa Elen Riannon", 
-        "Pic": "Cirilla Finoa Elen Riannon 2.png", 
+        "Name": "Cirilla Fiona Elen Riannon", 
+        "Pic": "Cirilla Fiona Elen Riannon 2.png", 
         "SpellType": "NullSType", 
         "Strength": 15, 
         "UnitLevel": "Hero", 
@@ -1066,7 +1066,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "A fireball? Of course. Whatever Your Imperial Majesty wishes.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1084,7 +1084,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Niflgaardian mages do have a choice: servile submission, or the gallows.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1102,7 +1102,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I aim for the knee. Always.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1120,7 +1120,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I aim for the knee. Always.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1138,7 +1138,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "His eyes flashed under his winged helmet. Fire gleamed from his sword's blade.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1156,7 +1156,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Cynthia's talents can be deadly. She needs a thight leash.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1174,7 +1174,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Double or nothing, aim for his cock.", 
         "EffectType": [
             "Medice"
         ], 
@@ -1192,7 +1192,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Double or nothing, aim for his cock.", 
         "EffectType": [
             "Medice"
         ], 
@@ -1210,7 +1210,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Magic is the highest good. It transcends all borders and divisions.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1228,7 +1228,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Not the best for taking cities, but great for razing them to the ground.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1246,7 +1246,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The Impera Brigade never surrenders. Ever.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1264,7 +1264,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The Impera Brigade never surrenders. Ever.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1282,7 +1282,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The Impera Brigade never surrenders. Ever.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1300,7 +1300,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The Impera Brigade never surrenders. Ever.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1318,7 +1318,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Witchers never die in their beds.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1336,7 +1336,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I'll take an attentive reconnaissance unit over a fine cavalry brigade any day.", 
         "EffectType": [
             "Medice"
         ], 
@@ -1354,7 +1354,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "No Nordling pikemen or dwarven spearbearers can hope to best trained cavalry.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1372,7 +1372,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Summer sun reflecting in the quiet waters of the Alba - that's Nilfgaard to me.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1390,7 +1390,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The Emperor will teach the North discipline.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1408,7 +1408,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The Emperor will teach the North discipline.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1426,7 +1426,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The Emperor will teach the North discipline.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1444,7 +1444,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Learned a lot at Braibant Military Academy. How to scrub potatoes, for instance.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1462,7 +1462,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "You 'll die a painfully as that pathetic traitor Windhalm did.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1480,7 +1480,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "They say the Impera fear nothing. Untrue. Renuald scares them shitless.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1498,7 +1498,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The rotten smell brings back childhood memories.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1516,7 +1516,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Warfare is mere sound and fury diplomacy is what truly shapes·history.", 
         "EffectType": [
             "Spye"
         ], 
@@ -1534,7 +1534,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Wielded correctly, a protractor can be a deadly weapon.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1552,7 +1552,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I never miss twice.", 
         "EffectType": [
             "Medice"
         ], 
@@ -1570,7 +1570,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "My mark scars the face of our future empress. That is my proudest achievement.", 
         "EffectType": [
             "Spye"
         ], 
@@ -1588,7 +1588,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "And hands off the girl! Whatever we may be, we're not savages.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1606,7 +1606,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Albaaaa! Forward!! Alba! Long live the Emperor!", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1624,7 +1624,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "For a fire mage , he's not very ... flamboyant.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1642,7 +1642,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "There's never been a problem a well-planned assassination couldn't solve.", 
         "EffectType": [
             "Spye"
         ], 
@@ -1660,7 +1660,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Discipline is the Empire's deadliest weapon.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1678,7 +1678,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "If I acquit myself well, perhaps next they' ll post me somewhere civilized.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1696,7 +1696,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "If I acquit myself well, perhaps next they' ll post me somewhere civilized.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1714,7 +1714,7 @@
         "CardSet": "Nilfgaarian", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The Zerrikanian Desert used to be a lush garden. Then these came along.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1732,16 +1732,16 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Usually we give 'em female nanes. -Like Jenny? -More like Bertha.", 
         "EffectType": [
-            ""
+            "NullEType"
         ], 
         "Name": "Ballista", 
         "Pic": "Ballista 1.png ", 
         "SpellType": "NullSType", 
         "Strength": 6, 
-        "UnitLevel": "", 
-        "UnitType": "", 
+        "UnitLevel": "Ordinary", 
+        "UnitType": "Siege", 
         "WeatherType": "NullWType", 
         "cardID": 96, 
         "exEffect": 0
@@ -1750,7 +1750,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Usually we give 'em female nanes. -Like Jenny? -More like Bertha.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1768,7 +1768,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I'd anyhing for Temeria. Mostly, though, 1 kill for her.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1786,7 +1786,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I'd anyhing for Temeria. Mostly, though, 1 kill for her.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1803,8 +1803,8 @@
     {
         "CardSet": "Northern", 
         "CardType": "Unit", 
-        "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "CountLimit": 2, 
+        "Description": "I'd anyhing for Temeria. Mostly, though, 1 kill for her.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1822,7 +1822,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The gods help those who have better catapults.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1840,7 +1840,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The gods help those who have better catapults.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1858,7 +1858,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Haven't had much luck with monsters of late, -so we enlisted.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1876,7 +1876,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Haven't had much luck with monsters of late, -so we enlisted.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1894,7 +1894,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Haven't had much luck with monsters of late, -so we enlisted.", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -1912,7 +1912,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I once made a prisoner vomit his own entrails. . . Ah, good times. . .", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1930,7 +1930,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Stitch red to red, white to white, and everything will be all right.", 
         "EffectType": [
             "Medice"
         ], 
@@ -1948,7 +1948,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Like all Thyssen men, he was tall, powerfully built and criminally handsome.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1966,7 +1966,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Thlat square should bear the names of my soldiers, of the dead. Not mine.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -1984,7 +1984,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "You gota recalihrate the arm hy five degrees. - Do what by the what now?", 
         "EffectType": [
             "MoraleBooste"
         ], 
@@ -2002,7 +2002,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "You gota recalihrate the arm hy five degrees. - Do what by the what now?", 
         "EffectType": [
             "MoraleBooste"
         ], 
@@ -2020,7 +2020,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "You gota recalihrate the arm hy five degrees. - Do what by the what now?", 
         "EffectType": [
             "MoraleBooste"
         ], 
@@ -2038,7 +2038,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "If I'm to die today, I wish to look smashing for the occasion.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2056,7 +2056,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Soon the power of kings will wither，and the Lodge shall seize its rightful place.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2074,7 +2074,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I's a war veteran! ... spare me a crown?", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -2092,7 +2092,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I's a war veteran! ... spare me a crown?", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -2110,7 +2110,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 2, 
-        "Description": "Defualt Meseage", 
+        "Description": "I's a war veteran! ... spare me a crown?", 
         "EffectType": [
             "TightBonde"
         ], 
@@ -2128,7 +2128,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "He ploughin' wears golden armor. Golden. Course he's an arsehole.", 
         "EffectType": [
             "Spye"
         ], 
@@ -2146,7 +2146,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I've bled for Redania! I've killed for Redania. .. Dammit, I've even raped for Redania!", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2164,7 +2164,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I've bled for Redania! I've killed for Redania. .. Dammit, I've even raped for Redania!", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2182,7 +2182,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The Daughter of the Kaedweni Wilderness.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2200,7 +2200,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I was there， on the front lines! Right where the fightin' was the thickest!", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2218,7 +2218,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I love the clamor of siege towers in the morning. Sounds like victory.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2236,7 +2236,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I love the clamor of siege towers in the morning. Sounds like victory.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2254,7 +2254,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "We're on the same side, witcher. You'll realize this one day.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2272,7 +2272,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Gwent's like politics, just more honest.", 
         "EffectType": [
             "Spye"
         ], 
@@ -2290,7 +2290,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The Lodge lacks humility: Our lust for power may yet be our undoing.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2308,7 +2308,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Fuck off! We aren't all ploughin'philanderers. Some of us have depth. . . ", 
         "EffectType": [
             "Spye"
         ], 
@@ -2326,7 +2326,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Castle won't batter itself down, now will it? Get them trebuchets rollin'!", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2344,7 +2344,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Castle won't batter itself down, now will it? Get them trebuchets rollin'!", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2362,7 +2362,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "A patriot... and a real son of a bitch.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2380,7 +2380,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Better to live one day as a king than a whole life as a beggar.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2398,7 +2398,7 @@
         "CardSet": "Northern", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The world belongs to whoever's best at crackin' skulls and impregnatin' lasses.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2416,7 +2416,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Our mead smells like piss, do it? Easy to fix - I'll break your fuckin' nose!", 
         "EffectType": [
             "Agile"
         ], 
@@ -2434,7 +2434,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The path to freedom is paved in blood, not ink.", 
         "EffectType": [
             "Agile"
         ], 
@@ -2452,7 +2452,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I know how to carry out orders, so you can shove you advice up your coal chute.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2470,7 +2470,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Take another step, dh'oine. You a look better with an arrow between your eyes.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2488,7 +2488,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "They track like hounds, run like deer and kill like cold -hearted bastards.", 
         "EffectType": [
             "Agile"
         ], 
@@ -2506,7 +2506,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "They track like hounds, run like deer and kill like cold -hearted bastards.", 
         "EffectType": [
             "Agile"
         ], 
@@ -2524,7 +2524,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "They track like hounds, run like deer and kill like cold -hearted bastards.", 
         "EffectType": [
             "Agile"
         ], 
@@ -2542,7 +2542,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Worked a pickaxe all me life. Battleaxe won't be any trouble.", 
         "EffectType": [
             "Mustere"
         ], 
@@ -2560,7 +2560,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Worked a pickaxe all me life. Battleaxe won't be any trouble.", 
         "EffectType": [
             "Mustere"
         ], 
@@ -2578,7 +2578,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Worked a pickaxe all me life. Battleaxe won't be any trouble.", 
         "EffectType": [
             "Mustere"
         ], 
@@ -2596,7 +2596,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "The dryad queen has eyes of molten silver, and a heart of cold -forged steel.", 
         "EffectType": [
             "Mustere"
         ], 
@@ -2614,7 +2614,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "No matter what you may have heard, elves don't take human scalps. Too much lice.", 
         "EffectType": [
             "Mustere"
         ], 
@@ -2632,7 +2632,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "No matter what you may have heard, elves don't take human scalps. Too much lice.", 
         "EffectType": [
             "Mustere"
         ], 
@@ -2650,7 +2650,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "No matter what you may have heard, elves don't take human scalps. Too much lice.", 
         "EffectType": [
             "Mustere"
         ], 
@@ -2668,7 +2668,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Though we are now few and scattered, our hearts burn brighter than ever.", 
         "EffectType": [
             "Agile"
         ], 
@@ -2686,7 +2686,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Sure, I'll patch you up. Gonna cost you, though.", 
         "EffectType": [
             "Medice"
         ], 
@@ -2704,7 +2704,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Sure, I'll patch you up. Gonna cost you, though.", 
         "EffectType": [
             "Medice"
         ], 
@@ -2722,7 +2722,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Sure, I'll patch you up. Gonna cost you, though.", 
         "EffectType": [
             "Medice"
         ], 
@@ -2740,7 +2740,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I fight for whoever's paying the best. Or whoever's easiest to rob.", 
         "EffectType": [
             "Mustere"
         ], 
@@ -2758,7 +2758,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I fight for whoever's paying the best. Or whoever's easiest to rob.", 
         "EffectType": [
             "Mustere"
         ], 
@@ -2776,7 +2776,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I fight for whoever's paying the best. Or whoever's easiest to rob.", 
         "EffectType": [
             "Mustere"
         ], 
@@ -2794,7 +2794,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I am a Sage. My power lies in possessing knowledge. Not sharing it.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2812,7 +2812,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "King or beggar, what's the difference? One dh'oine less.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2830,7 +2830,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "It dawns on them once they notice my scar: a realization of imminent death.", 
         "EffectType": [
             "MoraleBooste"
         ], 
@@ -2848,7 +2848,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I'm telling ye, we're born fer battle - we slash straight at their knees!", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2866,7 +2866,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I'm telling ye, we're born fer battle - we slash straight at their knees!", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2884,7 +2884,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I'm telling ye, we're born fer battle - we slash straight at their knees!", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2902,7 +2902,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I'm telling ye, we're born fer battle - we slash straight at their knees!", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2920,7 +2920,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I'm telling ye, we're born fer battle - we slash straight at their knees!", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2938,7 +2938,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "With each arrow I loose, I think of my da. Heli be proud. I think.", 
         "EffectType": [
             "MoraleBooste"
         ], 
@@ -2956,7 +2956,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Stare into their eyes , feast on their terror. Then go in for the kill.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -2974,7 +2974,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Beautiful, pure, fierce - the perfect icon for a rebellion.", 
         "EffectType": [
             "UnitScorche"
         ], 
@@ -2992,7 +2992,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Time to look death in the face.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -3010,7 +3010,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "I'd gladly kill you from up close, stare in your eyes ... But you reek, human.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -3028,7 +3028,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Vrihedd? What's that mean? - Trouble.", 
         "EffectType": [
             "NullEType"
         ], 
@@ -3046,7 +3046,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Vrihedd? What's that mean? - Trouble.", 
         "EffectType": [
             "Agile"
         ], 
@@ -3064,7 +3064,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "Vrihedd? What's that mean? - Trouble.", 
         "EffectType": [
             "Agile"
         ], 
@@ -3082,7 +3082,7 @@
         "CardSet": "Scoiateal", 
         "CardType": "Unit", 
         "CountLimit": 1, 
-        "Description": "Defualt Meseage", 
+        "Description": "We are the drops of rain that together make a ferocious storm.", 
         "EffectType": [
             "Agile"
         ], 

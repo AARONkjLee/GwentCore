@@ -11,14 +11,13 @@ class CardCollection {
 		int LeaderID ;
 		std::vector<int> deck;
 	public:
+		CardCollection();
 		CardCollection(CardSet set);
 		~CardCollection() {}
 		void initWithSet(CardSet set);
 		void setLeader(LeaderCard leader);
-		void setDeck(CardSet set);
-
-
-
+		bool addCard(Card card);
+		std::vector<int> getDeck();
 
 };
 

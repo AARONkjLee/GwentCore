@@ -177,6 +177,11 @@ void Card::reload(int id) {
 
 }
 
+int Card::getID()
+{
+	return this->cardID;
+}
+
 int Card::getCountLimit(){
 	return this->countLimit;
 }

@@ -3,9 +3,8 @@
 #include <json/json.h>
 #include <fstream>
 #include <string>
+#include "card.h"
 
-
-enum CardSet {NullCSet, Northern, Nilfgaarian, Monster, Scoiateal, Neutral};
 enum Ability {
 	Pick_Rain, //Pick a Torrential Rain card from your deck and play it instantly.
 		// 待测试：没雨时能否空发，类似领导牌同样待测试
@@ -77,6 +76,8 @@ public:
 	void reload(int id);
 
 
+/*return the ID*/
+	int getID();
 /*return the direction of the picture*/
 	std::string getPicDir();
 /*return the card name*/
@@ -87,5 +88,7 @@ public:
 	CardSet getSet();
 /*return the Ability*/
 	Ability getAbility();
+
+
 };
 
