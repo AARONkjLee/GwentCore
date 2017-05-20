@@ -134,7 +134,7 @@ bool PlayPreparationScene::init()
 			target->runAction(scaleBackBy110);
 		}
 	};*/
-	chooseSetMouseListener->onMouseUp = [=](Event* event) {
+	chooseSetMouseListener->onMouseUp = [&](Event* event) {
 		if (!clickable) {
 			return true;
 		}
@@ -264,7 +264,7 @@ std::vector<int> PlayPreparationScene::getUserDeck()
 void PlayPreparationScene::replaceToPlaySceneCallback(Ref* pSender)
 {
 	if (clickable) {
-		clickable = false;
+		clickable = false; 
 		auto Scene = SinglePlayScene::createScene();
 		Director::getInstance()->replaceScene(TransitionFade::create(1.0, Scene));
 	}

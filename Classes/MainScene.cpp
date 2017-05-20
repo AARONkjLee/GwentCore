@@ -6,7 +6,7 @@
 #include "PlaySceneTest.h"
 #include "CollectionSceneTest.h"
 #include "SettingSceneTest.h"
-#include "CardCollectionScene2.h"
+#include "CardCollectionScene0.h"
 #include "PlayPreparationScene.h"
 
 
@@ -161,7 +161,7 @@ void MainScene::replaceToCollectionSceneCallback(Ref* pSender)
 	if (clickable) {
 		clickable = false;
 		//auto Scene = CardCollection::createScene();
-		auto Scene = CardCollectionScene2::createScene();
+		auto Scene = CardCollectionScene0::createScene();
 		Director::getInstance()->replaceScene(TransitionFade::create(transitionTime, Scene));
 	}
 }

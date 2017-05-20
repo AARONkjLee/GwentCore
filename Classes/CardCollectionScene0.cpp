@@ -1,8 +1,8 @@
-#include "CardCollectionScene0.h" 
-#include "SimpleAudioEngine.h"
-#include "CardSprite.h"
+#include "CardCollectionScene0.h"
 
 USING_NS_CC;
+
+//card collection is global for all cardCollectionScenes.
 
 
 Scene* CardCollectionScene0::createScene()
@@ -32,6 +32,8 @@ bool CardCollectionScene0::init()
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
+	bool clickable = true;
+
 	/////////////////////////////
 	// 2. add a menu item with "X" image, which is clicked to quit the program
 	//    you may modify it.
@@ -40,20 +42,169 @@ bool CardCollectionScene0::init()
 	auto closeItem = MenuItemImage::create(
 		"CloseNormal.png",
 		"CloseSelected.png",
-		CC_CALLBACK_1(CardCollectionScene0::menuCloseCallback, this));
+		CC_CALLBACK_1(CardCollectionScene0::GoBackToMainSceneCallback, this));
 
 	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width / 2,
 		origin.y + closeItem->getContentSize().height / 2));
+
+	auto background = Sprite::create("CardCollectionScene/_BGP_1920x1080.png");
+	background->setPosition(origin.x + visibleSize.width / 2,
+		origin.y + visibleSize.height / 2);
+	this->addChild(background, 0);
+
+	auto title = Label::createWithTTF("CHOOSE A FACTION", "fonts/Marker Felt.ttf", 48);
+	title->setPosition(Vec2(origin.x + visibleSize.width / 2,
+		origin.y + visibleSize.height - title->getContentSize().height* 1.5));
+	title->setColor(ccc3(192, 192, 192));
+	this->addChild(title, 0);
+
+	auto northernRealmText = Label::createWithTTF("NORTHERN REALMS", "fonts/Marker Felt.ttf", 24);
+	northernRealmText->setPosition(Vec2(origin.x + visibleSize.width / 5 * 1,
+		origin.y + visibleSize.height / 7* 5));
+	northernRealmText->setColor(ccc3(192, 192, 192));
+	this->addChild(northernRealmText, 0);
+
+	auto northernRealmBack = Sprite::create("PlayScene/PlayPreparationScene/NorthernRealmsBack.jpg");
+	northernRealmBack->setPosition(origin.x + visibleSize.width / 5 * 1,
+		origin.y + visibleSize.height / 2);
+	northernRealmBack->setScale(0.25 * 1080 / visibleSize.height);
+	this->addChild(northernRealmBack, 0);
+
+	auto monstersText = Label::createWithTTF("MONSTERS", "fonts/Marker Felt.ttf", 24);
+	monstersText->setPosition(Vec2(origin.x + visibleSize.width / 5 * 2,
+		origin.y + visibleSize.height / 7 * 5));
+	monstersText->setColor(ccc3(192, 192, 192));
+	this->addChild(monstersText, 0);
+
+	auto monstersBack = Sprite::create("PlayScene/PlayPreparationScene/MonstersBack.jpg");
+	monstersBack->setPosition(origin.x + visibleSize.width / 5 * 2,
+		origin.y + visibleSize.height / 2);
+	monstersBack->setScale(0.25 * 1080 / visibleSize.height);
+	this->addChild(monstersBack, 0);
+
+	auto scoiataelText = Label::createWithTTF("SCOIA`TAEL", "fonts/Marker Felt.ttf", 24);
+	scoiataelText->setPosition(Vec2(origin.x + visibleSize.width / 5 * 3,
+		origin.y + visibleSize.height / 7 * 5));
+	scoiataelText->setColor(ccc3(192, 192, 192));
+	this->addChild(scoiataelText, 0);
+
+	auto scoiataelBack = Sprite::create("PlayScene/PlayPreparationScene/ScoiataelBack.jpg");
+	scoiataelBack->setPosition(origin.x + visibleSize.width / 5 * 3,
+		origin.y + visibleSize.height / 2);
+	scoiataelBack->setScale(0.25 * 1080 / visibleSize.height);
+	this->addChild(scoiataelBack, 0);
+
+	auto nilfgaardText = Label::createWithTTF("NILFGAARD", "fonts/Marker Felt.ttf", 24);
+	nilfgaardText->setPosition(Vec2(origin.x + visibleSize.width / 5 * 4,
+		origin.y + visibleSize.height / 7 * 5));
+	nilfgaardText->setColor(ccc3(192, 192, 192));
+	this->addChild(nilfgaardText, 0);
+
+	auto nilfgaardBack = Sprite::create("PlayScene/PlayPreparationScene/NilfgaardianEmpireBack.jpg");
+	nilfgaardBack->setPosition(origin.x + visibleSize.width / 5 * 4,
+		origin.y + visibleSize.height / 2);
+	nilfgaardBack->setScale(0.25 * 1080 / visibleSize.height);
+	this->addChild(nilfgaardBack, 0);
+
+	// Mouse listeners
+
+	auto chooseSetMouseListener = EventListenerMouse::create();
+
+
+	// Naming rule for scale action:
+	// scale%Obj%way%Percent; 
+	//		%Obj = object to run the action.
+	//		%Way = By or To
+	//		%Percent = scale number in 100%
+	auto scaleBackBy110 = ScaleBy::create(0.1, 1.1);
+	auto scaleBackBy100 = ScaleBy::create(0, 1, 1.0 / 1 / 1);
+
+	chooseSetMouseListener->onMouseDown = [](Event* event) {};
+	chooseSetMouseListener->onMouseMove = [=](Event* event) {};/*
+															   auto target = static_cast<Sprite*>(event->getCurrentTarget());
+															   if (target == nullptr)
+															   {
+															   return true;
+															   }
+															   if (target->getName() == "background") {
+															   ScoiataelBack->runAction(scaleBackBy100);
+															   NorthernRealmsBack->runAction(scaleBackBy100);
+															   NilfgaardianEmpireBack->runAction(scaleBackBy100);
+															   MonstersBack->runAction(scaleBackBy100);
+															   }
+															   else {
+															   target->runAction(scaleBackBy110);
+															   }
+															   };*/
+	chooseSetMouseListener->onMouseUp = [=,  &clickable](Event* event) {
+		if (!clickable) {
+			return true;
+		}
+		clickable = false;
+		auto target = static_cast<Sprite*>(event->getCurrentTarget());
+		if (target == nullptr)
+		{
+			return true;
+		}
+
+		EventMouse* mouseEvent = dynamic_cast<EventMouse*>(event);
+
+		//Vec2 locationInNode = target->convertToNodeSpace(mouseEvent->getLocation());
+		//Size s = target->getContentSize();
+		//Rect rect = Rect(0, 0, s.width, s.height);
+
+
+		if (mouseEventOnTarget_(mouseEvent, scoiataelBack)) {
+			passDeckBeforePassScene(Scoiateal);
+		}
+		else if (mouseEventOnTarget_(mouseEvent, northernRealmBack)) {
+			passDeckBeforePassScene(Northern);
+		}
+		else if (mouseEventOnTarget_(mouseEvent, nilfgaardBack)) {
+			passDeckBeforePassScene(Nilfgaardian);
+		}
+		else if (mouseEventOnTarget_(mouseEvent, monstersBack)) {
+			passDeckBeforePassScene(Monster);
+		}
+		else {
+			clickable = true;
+			return true;
+		}
+
+		// To 若晴 这句话你可以写为进入你自己的下一个场景 转换之前你要想办法把选好的Set传入下一个场景
+		// 你可以试试复写下一个scene的create函数，令其带一个参数，根据传入的参数创建选好阵营的scene
+		Director::getInstance()->replaceScene(TransitionShrinkGrow::create(1.0, CardCollectionScene1::createScene(collection)));
+	};
+
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener, scoiataelBack);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), northernRealmBack);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), nilfgaardBack);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), monstersBack);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), background);
+
+	return true;
 }
 
 
-void CardCollectionScene0::menuCloseCallback(Ref* pSender)
+void CardCollectionScene0::GoBackToMainSceneCallback(Ref* pSender)
 {
-	//Close the cocos2d-x game scene and quit the application
-	Director::getInstance()->end();
-
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-	exit(0);
-#endif
-
+	if (clickable) {
+		clickable = false;
+		auto Scene = MainScene::create();
+		Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));
+	}
 }
+
+void CardCollectionScene0::passDeckBeforePassScene(CardSet set)
+{
+	if (!(set == NullCSet)) {
+		collection.initWithSet(set);
+	}
+}
+
+std::vector<int> CardCollectionScene0 ::getUserDeck()
+{
+	std::vector<int> deck = {};
+	return deck;
+}
+
