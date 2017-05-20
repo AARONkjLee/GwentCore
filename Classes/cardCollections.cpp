@@ -12,31 +12,31 @@ CardCollection::CardCollection(CardSet set){
 }
 
 void CardCollection::initWithSet(CardSet set){
-	std::ifstream cardsPool;
+	std::ifstream cardsCollectionPool;
 	this->CollectionSet = set;
 	switch (set) {
 	case NullCSet:
 		return;
 	case Northern:
-		cardsPool.open("..//Resources/cardCollection/Northern.json");
+		cardsCollectionPool.open("..//Resources/cardCollection/Northern.json");
 		// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
 		break;
 	case Nilfgaarian:
-		cardsPool.open("..//Resources/cardCollection/Nilfgaarian.json");
+		cardsCollectionPool.open("..//Resources/cardCollection/Nilfgaarian.json");
 		break;
 	case Monster:
-		cardsPool.open("..//Resources/cardCollection/Monster.json");
+		cardsCollectionPool.open("..//Resources/cardCollection/Monster.json");
 		break;
 	case Scoiateal:
-		cardsPool.open("..//Resources/cardCollection/Scoiateal.json");
+		cardsCollectionPool.open("..//Resources/cardCollection/Scoiateal.json");
 		break;
 	case Neutral:
-		cardsPool.open("..//Resources/cardCollection/Neutral.json");
+		cardsCollectionPool.open("..//Resources/cardCollection/Neutral.json");
 		break;
 	}	
 	Json::Reader reader;
 	Json::Value J_set;
-	if (!reader.parse(cardsPool, J_set, false)) {
+	if (!reader.parse(cardsCollectionPool, J_set, false)) {
 		return;
 	}
 	this->LeaderID = J_set["leader"].asInt();
@@ -45,7 +45,7 @@ void CardCollection::initWithSet(CardSet set){
 	for (int i = 0; i < J_deck.size(); i++) {
 		this->deck.push_back(J_deck[i].asInt());
 	}
-	cardsPool.close();
+	cardsCollectionPool.close();
 }
 
 void CardCollection::setLeader(LeaderCard leader){
@@ -68,6 +68,41 @@ bool CardCollection::addCard(Card card){
 	}
  	this -> deck.push_back(id);
 	return false;
+}
+
+void CardCollection::dumpCollection(){
+	std::ofstream cardsCollectionPool;
+	switch (CollectionSet) {
+	case NullCSet:
+		return;
+	case Northern:
+		cardsCollectionPool.open("..//Resources/cardCollection/Northern.json", std::ios::trunc);
+		// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
+		break;
+	case Nilfgaarian:
+		cardsCollectionPool.open("..//Resources/cardCollection/Nilfgaarian.json", std::ios::trunc);
+		break;
+	case Monster:
+		cardsCollectionPool.open("..//Resources/cardCollection/Monster.json", std::ios::trunc);
+		break;
+	case Scoiateal:
+		cardsCollectionPool.open("..//Resources/cardCollection/Scoiateal.json", std::ios::trunc);
+		break;
+	case Neutral:
+		cardsCollectionPool.open("..//Resources/cardCollection/Neutral.json", std::ios::trunc);
+		break;
+	}
+	Json::StyledWriter writer;
+	Json::Value J_set;
+	Json::Value J_deck;
+	J_set["leader"] = this->LeaderID;
+	for (int i = 0; i < deck.size(); i++) {
+		J_deck.append(deck[i]);
+	}
+	J_set["deck"] = J_deck;
+	std::string S_set = writer.write(J_set);
+	cardsCollectionPool << S_set;
+	cardsCollectionPool.close();
 }
 
 int CardCollection::getLeader()
