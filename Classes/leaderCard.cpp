@@ -134,3 +134,8 @@ Ability LeaderCard::getAbility()
 {
 	return this->ability;
 }
+
+int LeaderCard::getID()
+{
+	return cardID;
+}

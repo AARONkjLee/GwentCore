@@ -45,6 +45,8 @@ public:
 	void reload(int id);
 
 /*return the collection limit of this card*/
+	int getID();
+/*return the collection limit of this card*/
 	int getCountLimit();
 /*return the direction of the picture*/
 	std::string getPicDir();
