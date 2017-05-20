@@ -55,7 +55,7 @@ void CardCollection::setLeader(LeaderCard leader){
 bool CardCollection::addCard(Card card){
 	int id = card.getID();
 	int count = 0;
-	if (card.getSet == this->CollectionSet) {
+	if (card.getSet() == this->CollectionSet) {
 		return false;
 	}
 	for (int i = 0; i < deck.size(); i++) {
