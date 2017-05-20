@@ -37,6 +37,9 @@ bool PlayPreparationScene::init()
     //    you may modify it.
 
     // add a "close" icon to exit the progress. it's an autorelease object
+
+	clickable = true;
+
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
                                            "CloseSelected.png",
@@ -53,40 +56,53 @@ bool PlayPreparationScene::init()
     /////////////////////////////
     // 3. add your codes below...
 
-    // add a label shows "Hello World"
-    // create and initialize a label
-    
-    auto label = Label::createWithTTF("Play Preparation Scene Test", "fonts/Marker Felt.ttf", 24);
-    
-    // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
+	//Texts:
 
-    // add the label as a child to this layer
-    this->addChild(label, 1);
-	/*
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("CardSpriteTest.png");
+	auto background = Sprite::create(PLAY_PREPARATION_BG);
+	background->setPosition(visibleSize / 2);
+	this->addChild(background);
 
-    // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+	auto title = Sprite::create(PLAY_PREPARATION_TITLE_PIC);
+	title->setPosition(Vec2(WIN_CORDINATE_2_GL(6.75, 1.96, 20.37, 2.39)));
+	this->addChild(title);
 
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
-	*/
+	auto scoiataelText = Sprite::create(PLAY_PREPARATION_ScoiataelText_PIC);
+	scoiataelText->setPosition(Vec2(WIN_CORDINATE_2_GL(4.51, 12.75, 5.99, 3.85)));
+	this->addChild(scoiataelText);
 
-	auto CardS1 = CardSprite::create(11);
-	CardS1->setPosition(Vec2(visibleSize.width / 4 + origin.x, visibleSize.height / 2 + origin.y));
-	//CardS1->setScale(0.5);
+	auto northernKingdomsText = Sprite::create(PLAY_PREPARATION_NorthernKingdomsText_PIC);
+	northernKingdomsText->setPosition(Vec2(WIN_CORDINATE_2_GL(10.8, 12.75, 5.99, 5.04)));
+	this->addChild(northernKingdomsText);
 
-	auto CardS2 = CardSprite::create(1);
-	CardS2->setPosition(Vec2(visibleSize.width * 3 / 4 + origin.x, visibleSize.height / 2 + origin.y));
-	//CardS2->setScale(0.5);
+	auto nilfgaardianEmpireText = Sprite::create(PLAY_PREPARATION_NilfgaardianEmpireText_PIC);
+	nilfgaardianEmpireText->setPosition(Vec2(WIN_CORDINATE_2_GL(17.09, 12.75, 5.99, 4.36)));
+	this->addChild(nilfgaardianEmpireText);
 
-	this->addChild(CardS1);
-	this->addChild(CardS2);
+	auto monsterText = Sprite::create(PLAY_PREPARATION_MonsterText_PIC);
+	monsterText->setPosition(Vec2(WIN_CORDINATE_2_GL(23.37, 12.75, 5.99, 4.53)));
+	this->addChild(monsterText);
 
+	// SetSprites:
 
+	auto ScoiataelBack = Sprite::create(PLAY_PREPARATION_ScoiataelBack_PIC);
+	ScoiataelBack->setScale(0.25*1080/visibleSize.height);
+	ScoiataelBack->setPosition(Vec2(WIN_CORDINATE_2_GL(5.06, 4.84, 4.91, 7.37)));
+	this->addChild(ScoiataelBack);
+
+	auto NorthernRealmsBack = Sprite::create(PLAY_PREPARATION_NorthernRealmsBack_PIC);
+	NorthernRealmsBack->setScale(0.25 * 1080 / visibleSize.height);
+	NorthernRealmsBack->setPosition(Vec2(WIN_CORDINATE_2_GL(11.34, 4.84, 4.91, 7.37)));
+	this->addChild(NorthernRealmsBack);
+
+	auto NilfgaardianEmpireBack = Sprite::create(PLAY_PREPARATION_NilfgaardianEmpireBack_PIC);
+	NilfgaardianEmpireBack->setScale(0.25 * 1080 / visibleSize.height);
+	NilfgaardianEmpireBack->setPosition(Vec2(WIN_CORDINATE_2_GL(17.62,  4.84, 4.91, 7.37)));
+	this->addChild(NilfgaardianEmpireBack);
+
+	auto MonstersBack = Sprite::create(PLAY_PREPARATION_MonstersBack_PIC);
+	MonstersBack->setScale(0.25 * 1080 / visibleSize.height);
+	MonstersBack->setPosition(Vec2(WIN_CORDINATE_2_GL(23.9, 4.84, 4.91, 7.37)));
+	this->addChild(MonstersBack);
 
     return true;
 }
@@ -94,8 +110,11 @@ bool PlayPreparationScene::init()
 
 void PlayPreparationScene::GoBackToMainSceneCallback(Ref* pSender)
 {
-	auto Scene = MainScene::create();
-	Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));
+	if (clickable) {
+		clickable = false;
+		auto Scene = MainScene::create();
+		Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));
+	}
 }
 
 std::vector<int> getUserDeck()
@@ -135,4 +154,14 @@ std::vector<int> getUserDeck()
 	};
 	std::vector<int> deck(deckArr, deckArr+33);
 	return deck;
+}
+
+
+void PlayPreparationScene::replaceToPlaySceneCallback(Ref* pSender)
+{
+	if (clickable) {
+		clickable = false;
+		auto Scene = SinglePlayScene::createScene();
+		Director::getInstance()->replaceScene(TransitionFade::create(1.0, Scene));
+	}
 }
