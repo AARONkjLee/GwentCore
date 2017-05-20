@@ -102,6 +102,9 @@
     <ClCompile Include="..\Classes\PlayPreparationScene.cpp">
       <Filter>src\Scenes\PlayScene</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\cardCollections.cpp">
+      <Filter>src\Data Interface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -190,6 +193,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\PlayPreparationScene.h">
       <Filter>src\Scenes\PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cardCollections.h">
+      <Filter>src\Data Interface</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -148,6 +148,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\BattleInfoManager.cpp" />
     <ClCompile Include="..\Classes\BattleInfoManagerTest.cpp" />
     <ClCompile Include="..\Classes\card.cpp" />
+    <ClCompile Include="..\Classes\cardCollections.cpp" />
     <ClCompile Include="..\Classes\CardCollectionScene.cpp" />
     <ClCompile Include="..\Classes\CardEffectManager.cpp" />
     <ClCompile Include="..\Classes\CardSprite.cpp" />
@@ -170,6 +171,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\BattleInfoManager.h" />
     <ClInclude Include="..\Classes\BattleInfoManagerTest.h" />
     <ClInclude Include="..\Classes\card.h" />
+    <ClInclude Include="..\Classes\cardCollections.h" />
     <ClInclude Include="..\Classes\CardCollectionScene.h" />
     <ClInclude Include="..\Classes\CardEffectManager.h" />
     <ClInclude Include="..\Classes\CardSprite.h" />
