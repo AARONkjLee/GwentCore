@@ -13,6 +13,7 @@ CardCollection::CardCollection(CardSet set){
 
 void CardCollection::initWithSet(CardSet set){
 	std::ifstream cardsPool;
+	this->CollectionSet = set;
 	switch (set) {
 	case NullCSet:
 		return;
@@ -54,6 +55,9 @@ void CardCollection::setLeader(LeaderCard leader){
 bool CardCollection::addCard(Card card){
 	int id = card.getID();
 	int count = 0;
+	if (card.getSet == this->CollectionSet) {
+		return false;
+	}
 	for (int i = 0; i < deck.size(); i++) {
 		if (deck[i] == id) {
 			count++;
@@ -64,6 +68,11 @@ bool CardCollection::addCard(Card card){
 	}
  	this -> deck.push_back(id);
 	return false;
+}
+
+int CardCollection::getLeader()
+{
+	return this->LeaderID;
 }
 
 std::vector<int> CardCollection::getDeck()

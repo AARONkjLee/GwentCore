@@ -9,6 +9,7 @@
 class CardCollection {
 	private:
 		int LeaderID ;
+		CardSet CollectionSet;
 		std::vector<int> deck;
 	public:
 		CardCollection();
@@ -16,7 +17,12 @@ class CardCollection {
 		~CardCollection() {}
 		void initWithSet(CardSet set);
 		void setLeader(LeaderCard leader);
+//it is a boollen type because that if it is a illegal 
+//card for deck it will returen false ratherr than add 
+//it into deck
 		bool addCard(Card card);
+		void dumpCollection();
+		int getLeader();
 		std::vector<int> getDeck();
 
 };
