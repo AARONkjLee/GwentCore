@@ -77,7 +77,7 @@ bool SettingSceneTest::init()
 	*/
 
 	CardCollection niff;
-	niff.initWithSet(Nilfgaarian);
+	niff.initWithSet(Nilfgaardian);
 	std::vector<int> deck = niff.getDeck();
 
 	auto CardS1 = CardSprite::create(deck[0]);

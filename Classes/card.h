@@ -6,7 +6,7 @@
 #include <string>
 
 enum CardType { NullCType, Unit, Spell };
-enum CardSet {NullCSet, Northern, Nilfgaarian, Monster, Scoiateal, Neutral};
+enum CardSet {NullCSet, Northern, Nilfgaardian, Monster, Scoiateal, Neutral};
 enum UnitType {NullUType, CloseCombat, RangedCombat, Siege, CloseRangedCombat};
 enum UnitLevel {NullULevel, Ordinary, Hero };
 enum SpellType {NullSType, Weather, Horn, Decoy, Scorch};

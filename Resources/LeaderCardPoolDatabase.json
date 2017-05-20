@@ -1,142 +1,162 @@
 [
     {
         "Ability": "Pick_Rain", 
-        "CardSet": "Nilfgaarian", 
+        "CardSet": "Nilfgaardian", 
         "Description": "Pick a Torrential Rain card from your deck and play it instantly.", 
         "Name": "Emhyr var Emreis: His Imperial Majesty", 
-        "Pic": "Leader\Emhyr var Emreis: His Imperial Majesty.png"
+        "Pic": "Leader\Emhyr var Emreis: His Imperial Majesty.png", 
+        "leaderID": 0
     }, 
     {
         "Ability": "Read_Hand_Card", 
-        "CardSet": "Nilfgaarian", 
+        "CardSet": "Nilfgaardian", 
         "Description": "Look at 3 random cards from your opponent's hand.", 
-        "Name": "Emhyr var Emreis: Emperor of Nilfgaarian", 
-        "Pic": "Leader\Emhyr var Emreis: Emperor of Nilfgaarian.png"
+        "Name": "Emhyr var Emreis: Emperor of Nilfgaardian", 
+        "Pic": "Leader\Emhyr var Emreis: Emperor of Nilfgaardian.png", 
+        "leaderID": 1
     }, 
     {
         "Ability": "Cancel_Ability", 
-        "CardSet": "Nilfgaarian", 
+        "CardSet": "Nilfgaardian", 
         "Description": "Cancel your opponent's Leader Ability.", 
         "Name": "Emhyr var Emreis: the White Flame", 
-        "Pic": "Leader\Emhyr var Emreis: the White Flame.png"
+        "Pic": "Leader\Emhyr var Emreis: the White Flame.png", 
+        "leaderID": 2
     }, 
     {
         "Ability": "Rraw_From_Opponent", 
-        "CardSet": "Nilfgaarian", 
+        "CardSet": "Nilfgaardian", 
         "Description": "Draw a card from your opponent's discard pile.", 
         "Name": "Emhyr var Emreis: The Relentless", 
-        "Pic": "Leader\Emhyr var Emreis: The Relentless.png"
+        "Pic": "Leader\Emhyr var Emreis: The Relentless.png", 
+        "leaderID": 3
     }, 
     {
         "Ability": "Restore_Unit", 
-        "CardSet": "Nilfgaarian", 
+        "CardSet": "Nilfgaardian", 
         "Description": "Abilities that restore a unit to the battlefield restore a randomly-chosen unit. Affects both players.", 
         "Name": "Emhyr var Emreis: Invader of the North", 
-        "Pic": "Leader\Emhyr var Emreis: Invader of the North.png"
+        "Pic": "Leader\Emhyr var Emreis: Invader of the North.png", 
+        "leaderID": 4
     }, 
     {
         "Ability": "Pick_Fog", 
         "CardSet": "Northern", 
         "Description": "Pick an Impenetrable Fog card from your deck and play it instantly.", 
         "Name": "Foltest: King of Temeria", 
-        "Pic": "Leader\Foltest: King of Temeria.png"
+        "Pic": "Leader\Foltest: King of Temeria.png", 
+        "leaderID": 5
     }, 
     {
         "Ability": "Clear_Weathear", 
         "CardSet": "Northern", 
         "Description": "Clear any weather effects (resulting from Biting Frost, Torrential Rain or Impenetrable Fog cards) in play.", 
         "Name": "Foltest: Lord Commander of the North", 
-        "Pic": "Leader\Foltest: Lord Commander of the North.png"
+        "Pic": "Leader\Foltest: Lord Commander of the North.png", 
+        "leaderID": 6
     }, 
     {
         "Ability": "Seige_Horn", 
         "CardSet": "Northern", 
         "Description": "Doubles the strength of all your Siege units (unless a Commander's Horn is also present on that row).", 
         "Name": "Foltest: The Siegemaster", 
-        "Pic": "Leader\Foltest: The Siegemaster.png"
+        "Pic": "Leader\Foltest: The Siegemaster.png", 
+        "leaderID": 7
     }, 
     {
         "Ability": "Seigr_Scorch", 
         "CardSet": "Northern", 
         "Description": "Destroy your enemy's strongest Siege unit(s) if the combined strength of all his or her Siege units is 10 or more.", 
         "Name": "Foltest: The Steel-Forged", 
-        "Pic": "Leader\Foltest: The Steel-Forged.png"
+        "Pic": "Leader\Foltest: The Steel-Forged.png", 
+        "leaderID": 8
     }, 
     {
         "Ability": "Range_Scorch", 
         "CardSet": "Northern", 
         "Description": "Destroy your enemy's strongest Ranged Combat unit(s) if the combined strength of all his or her Ranged Combat units is 10 or more.", 
         "Name": "Foltest: Son of Medell", 
-        "Pic": "Leader\Foltest: Son of Medell.png"
+        "Pic": "Leader\Foltest: Son of Medell.png", 
+        "leaderID": 9
     }, 
     {
         "Ability": "Pick_Frost", 
         "CardSet": "Scoiateal", 
         "Description": "Pick a Biting Frost card from your deck and play it instantly.", 
         "Name": "Francesca Findabair: Pureblood Elf", 
-        "Pic": "Leader\Francesca Findabair: Pureblood Elf.png"
+        "Pic": "Leader\Francesca Findabair: Pureblood Elf.png", 
+        "leaderID": 10
     }, 
     {
         "Ability": "Draw_11th", 
         "CardSet": "Scoiateal", 
         "Description": "Draw an extra card at the beginning of the battle", 
         "Name": "Francesca Findabair: Daisy of the Valley", 
-        "Pic": "Leader\Francesca Findabair: Daisy of the Valley.png"
+        "Pic": "Leader\Francesca Findabair: Daisy of the Valley.png", 
+        "leaderID": 11
     }, 
     {
         "Ability": "Range_Horn", 
         "CardSet": "Scoiateal", 
         "Description": "Doubles the strength of all your Ranged Combat units (unless a Commander's Horn is also present on that row).", 
         "Name": "Francesca Findabair: the Beautiful", 
-        "Pic": "Leader\Francesca Findabair: the Beautiful.png"
+        "Pic": "Leader\Francesca Findabair: the Beautiful.png", 
+        "leaderID": 12
     }, 
     {
         "Ability": "Close_Scorch", 
         "CardSet": "Scoiateal", 
         "Description": "Destroy your enemy's Close Combat unit(s) if the combined strength of all his or her Close Combat units is 10 or more.", 
         "Name": "Francesca Findabair: Queen of Dol Blathanna", 
-        "Pic": "Leader\Francesca Findabair: Queen of Dol Blathanna.png"
+        "Pic": "Leader\Francesca Findabair: Queen of Dol Blathanna.png", 
+        "leaderID": 13
     }, 
     {
         "Ability": "Move_Aglie", 
         "CardSet": "Scoiateal", 
         "Description": "Move agile unites to whichever valid row maximizes their strength (don't move units already in optimal row).", 
         "Name": "Francesca Findabair: Hope of the Aen Seidhe", 
-        "Pic": "Leader\Francesca Findabair: Hope of the Aen Seidhe.png"
+        "Pic": "Leader\Francesca Findabair: Hope of the Aen Seidhe.png", 
+        "leaderID": 14
     }, 
     {
         "Ability": "Pick_Weather", 
         "CardSet": "Monsters", 
         "Description": "Pick any weather card from your deck and play it instantly.", 
         "Name": "Eredin: King of the Wild Hunt", 
-        "Pic": "Leader\Eredin: King of the Wild Hunt.png"
+        "Pic": "Leader\Eredin: King of the Wild Hunt.png", 
+        "leaderID": 15
     }, 
     {
         "Ability": "Close_Horn", 
         "CardSet": "Monsters", 
         "Description": "Double the strength of all your Close Combat units (unless a Commander's Horn is also present on that row).", 
         "Name": "Eredin: Commander of the Red Riders", 
-        "Pic": "Leader\Eredin: Commander of the Red Riders.png"
+        "Pic": "Leader\Eredin: Commander of the Red Riders.png", 
+        "leaderID": 16
     }, 
     {
         "Ability": "Destroy2_Draw1", 
         "CardSet": "Monsters", 
         "Description": "Discard 2 cards and draw 1 card of your choice from your deck.", 
         "Name": "Eredin: Destroyer of Worlds", 
-        "Pic": "Leader\Eredin: Destroyer of Worlds.png"
+        "Pic": "Leader\Eredin: Destroyer of Worlds.png", 
+        "leaderID": 17
     }, 
     {
         "Ability": "Restore_Unit_ToHand", 
         "CardSet": "Monsters", 
         "Description": "Restore a card from your discard pile to your hand.", 
         "Name": "Eredin: Bringer of Death", 
-        "Pic": "Leader\Eredin: Bringer of Death.png"
+        "Pic": "Leader\Eredin: Bringer of Death.png", 
+        "leaderID": 18
     }, 
     {
         "Ability": "Double_Spies", 
         "CardSet": "Monsters", 
         "Description": "Doubles strength of all spies.", 
         "Name": "Eredin Bréacc Glas: The Treacherous", 
-        "Pic": "Leader\Eredin Bréacc Glas: The Treacherous.png"
+        "Pic": "Leader\Eredin Bréacc Glas: The Treacherous.png", 
+        "leaderID": 19
     }
 ]

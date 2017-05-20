@@ -1,5 +1,5 @@
 # To run this python 2.x script, please use pip to install xlrd.
-
+# -*- coding: utf-8 -*-
 
 import xlrd  
 import json  

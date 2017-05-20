@@ -48,8 +48,8 @@ void Card::reload(int id) {
 	else if (strCardSet == "Northern") {
 		this->cardSet = Northern;
 	}
-	else if (strCardSet == "Nilfgaarian") {
-		this->cardSet = Nilfgaarian;
+	else if (strCardSet == "Nilfgaardian") {
+		this->cardSet = Nilfgaardian;
 	}
 	else if (strCardSet == "Monster") {
 		this->cardSet = Monster;
@@ -195,7 +195,7 @@ std::string Card::getPicDir(){
 		case Northern:
 			return "GwentCardsResources/Northern Realms/" + picDir;
 			break;
-		case Nilfgaarian:
+		case Nilfgaardian:
 			return "GwentCardsResources/Nilfgaardian Empire/" + picDir;
 			break;
 		case Monster:

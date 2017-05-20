@@ -21,8 +21,8 @@ void CardCollection::initWithSet(CardSet set){
 		cardsCollectionPool.open("..//Resources/cardCollection/Northern.json");
 		// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
 		break;
-	case Nilfgaarian:
-		cardsCollectionPool.open("..//Resources/cardCollection/Nilfgaarian.json");
+	case Nilfgaardian:
+		cardsCollectionPool.open("..//Resources/cardCollection/Nilfgaardian.json");
 		break;
 	case Monster:
 		cardsCollectionPool.open("..//Resources/cardCollection/Monster.json");
@@ -79,8 +79,8 @@ void CardCollection::dumpCollection(){
 		cardsCollectionPool.open("..//Resources/cardCollection/Northern.json", std::ios::trunc);
 		// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
 		break;
-	case Nilfgaarian:
-		cardsCollectionPool.open("..//Resources/cardCollection/Nilfgaarian.json", std::ios::trunc);
+	case Nilfgaardian:
+		cardsCollectionPool.open("..//Resources/cardCollection/Nilfgaardian.json", std::ios::trunc);
 		break;
 	case Monster:
 		cardsCollectionPool.open("..//Resources/cardCollection/Monster.json", std::ios::trunc);

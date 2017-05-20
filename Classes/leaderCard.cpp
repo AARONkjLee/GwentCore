@@ -102,7 +102,7 @@ std::string LeaderCard::getPicDir(){
 		case Northern:
 			return "GwentCardsResources/Northern Realms/" + picDir;
 			break;
-		case Nilfgaarian:
+		case Nilfgaardian:
 			return "GwentCardsResources/Nilfgaardian Empire/" + picDir;
 			break;
 		case Monster:
