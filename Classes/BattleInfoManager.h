@@ -112,4 +112,6 @@ public:
 	static bool cPositionOnField(CPosition cPosi);
 	static CardSet getCardSetFromLeaderID(int leaderID);
 	void playCardFromHand(int player, int CID, CPosition targetZone);
+
+	void moveAllCardsToGrave();
 };

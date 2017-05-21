@@ -258,7 +258,7 @@ void BattleInfoManager::playCardFromHand(int player, int CID, CPosition targetZo
 	else {
 		for (std::vector<int>::iterator i = Battlefield.p1Hand.begin(); i == Battlefield.p1Hand.end(); i++) {
 			if (*i == CID) {
-				Battlefield.p0Hand.erase(i);
+				Battlefield.p1Hand.erase(i);
 				break;
 			}
 		}
@@ -317,6 +317,50 @@ void BattleInfoManager::playCardFromHand(int player, int CID, CPosition targetZo
 	default:
 		break;
 	}
+}
+
+void BattleInfoManager::moveAllCardsToGrave()
+{
+	for (int i : Battlefield.p0Combat) {
+		Battlefield.p0Grave.push_back(i);
+	}
+	Battlefield.p0Combat.clear();
+
+	for (int i : Battlefield.p1Combat) {
+		Battlefield.p1Grave.push_back(i);
+	}
+	Battlefield.p1Combat.clear();
+
+	for (int i : Battlefield.p0Ranged) {
+		Battlefield.p0Grave.push_back(i);
+	}
+	Battlefield.p0Ranged.clear();
+
+	for (int i : Battlefield.p1Ranged) {
+		Battlefield.p1Grave.push_back(i);
+	}
+	Battlefield.p1Ranged.clear();
+
+	for (int i : Battlefield.p0Siege) {
+		Battlefield.p0Grave.push_back(i);
+	}
+	Battlefield.p0Siege.clear();
+
+	for (int i : Battlefield.p1Siege) {
+		Battlefield.p1Grave.push_back(i);
+	}
+	Battlefield.p1Siege.clear();
+
+	for (int i : Battlefield.p0Weather) {
+		Battlefield.p0Grave.push_back(i);
+	}
+	Battlefield.p0Weather.clear();
+
+	for (int i : Battlefield.p1Weather) {
+		Battlefield.p1Grave.push_back(i);
+	}
+	Battlefield.p1Weather.clear();
+
 }
 
 void ActToField(const Act & act, Field & field)

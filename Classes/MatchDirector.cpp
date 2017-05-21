@@ -44,6 +44,7 @@ void MatchDirector::MainMatchLoop()
 void MatchDirector::init()
 {
 	updateField();
+	AI ai();
 }
 
 void MatchDirector::BeforeGame()
@@ -90,9 +91,8 @@ void MatchDirector::StarterModel()
 			Starter = 1;
 		}
 		else {
-			//Starter = ai.selectStarterByAI();
-			Starter = 0;
-		}
+			Starter = ai.selectStarter();
+			}
 	}
 	else {
 		Starter = rand() % 2;
@@ -144,11 +144,12 @@ void MatchDirector::SwitchHands()
 			field->p1Deck.pop_back();
 		}
 	}
+	// 下版本再做
 	//GUI->select1stHandToSwitch();
 	//GUI->select2ndHandToSwitch();
 }
 
-void MatchDirector::InitMatch()
+void MatchDirector::InitMatch()  //下版本再做
 {
 	//所有游戏开局初始效果
 	updateField();
@@ -248,13 +249,14 @@ void MatchDirector::P1Turn()
 	while (played) {
 		int promptCID;
 		CPosition promptZone;
-			int promptTargetCID;
+		int promptTargetCID;
+		
 		if (field->p1Hand.size() == 0 && field->p1LeaderAviable == false) {
 			promptCID = -1; // 没手牌没领导牌自动结束回合
 		}
 		else {
 			
-			// promptCID = ai.promptPlayCard(promptZone, promptTargetCID);
+			promptCID = ai.selectCardToPlay(Hand1, promptZone, promptTargetCID);
 			
 			// -2 为领导牌，不过如果已经使用过了领导牌，GUI不让点领导牌
 			// -1 为回合结束
@@ -357,15 +359,17 @@ void MatchDirector::roundResult(int winner)
 	updateField();
 	//GUI->announceRoundResult(int winner);
 
-	//BattleInfoManager::getInstance()->moveAllCardsToGrave();
+	BattleInfoManager::getInstance()->moveAllCardsToGrave();
 	field->whosTurn = winner;
+	field->p0Pass = false;
+	field->p1Pass = false;
 	updateField();
 
 	//GUI->clearFieldToGrave();
+	//记得清理天气
 
 	//To-do Monster阵营效果
 	//To-do 北方阵营效果
-	field->whosTurn = winner;
 }
 
 void MatchDirector::matchResult()
