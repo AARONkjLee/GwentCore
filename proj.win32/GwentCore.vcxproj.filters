@@ -123,6 +123,9 @@
     <ClCompile Include="..\Classes\MatchDirector.cpp">
       <Filter>src\BattleInfoAPI</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\AI.cpp">
+      <Filter>src\AI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -229,6 +232,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\MatchDirector.h">
       <Filter>src\BattleInfoAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AI.h">
+      <Filter>src\AI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
