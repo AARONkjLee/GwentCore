@@ -111,5 +111,5 @@ public:
 	static int getPlayerFromCPosition(CPosition cPosi);
 	static bool cPositionOnField(CPosition cPosi);
 	static CardSet getCardSetFromLeaderID(int leaderID);
-	void playCardFromHand(int player, int CID, CPosition targetZone); //todo
+	void playCardFromHand(int player, int CID, CPosition targetZone);
 };

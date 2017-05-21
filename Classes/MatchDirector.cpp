@@ -117,7 +117,7 @@ CardSet MatchDirector::getCardSetOfPlayer(int player)
 
 
 void MatchDirector::SwitchHands()
-{                         
+{
 	updateField();
 	// Init Deck Shuffle Here Below
 	std::random_shuffle(field->p0Deck.begin(), field->p0Deck.end());
@@ -128,19 +128,22 @@ void MatchDirector::SwitchHands()
 		field->p0Deck.pop_back();
 		field->p1Hand.push_back(field->p1Deck.back());
 		field->p1Deck.pop_back();
-	}	
+	}
 	int cardIDToSwitch;
-	//cardIDToSwitch = ai.selectSwitchHand();
-	field->p1Deck.push_back(cardIDToSwitch);
-	std::random_shuffle(field->p1Deck.begin(), field->p1Deck.end());
-	field->p1Hand.push_back(field->p1Deck.back());
-	field->p1Deck.pop_back();
-	//cardIDToSwitch = ai.selectSwitchHand();
-	field->p1Deck.push_back(cardIDToSwitch);
-	std::random_shuffle(field->p1Deck.begin(), field->p1Deck.end());
-	field->p1Hand.push_back(field->p1Deck.back());
-	field->p1Deck.pop_back();
-
+	cardIDToSwitch = ai.selectSwitchHand();
+	if (cardIDToSwitch != -1) {
+		field->p1Deck.push_back(cardIDToSwitch);
+		std::random_shuffle(field->p1Deck.begin(), field->p1Deck.end());
+		field->p1Hand.push_back(field->p1Deck.back());
+		field->p1Deck.pop_back();
+		cardIDToSwitch = ai.selectSwitchHand();
+		if (cardIDToSwitch != -1) {
+			field->p1Deck.push_back(cardIDToSwitch);
+			std::random_shuffle(field->p1Deck.begin(), field->p1Deck.end());
+			field->p1Hand.push_back(field->p1Deck.back());
+			field->p1Deck.pop_back();
+		}
+	}
 	//GUI->select1stHandToSwitch();
 	//GUI->select2ndHandToSwitch();
 }
@@ -187,6 +190,7 @@ void MatchDirector::P0Turn()
 		if (promptCID == -1) {
 			field->p0Pass = true;
 			//GUI->PlayerPassing();
+			break;
 		}
 
 		std::vector<CPosition> leaglPlayTargetZones;
@@ -202,6 +206,19 @@ void MatchDirector::P0Turn()
 
 		bool legalPlay;
 		// to-do 合法的判断
+		if (std::count(leaglPlayTargetZones.begin(), leaglPlayTargetZones.end(), promptZone) == 0) {
+			legalPlay = false;
+		}
+		else {
+			if (std::count(leaglPlayTargetCIDs.begin(), leaglPlayTargetCIDs.end(), promptTargetCID) == 0 &&
+				leaglPlayTargetCIDs.size() > 0) {
+				legalPlay = false;
+			}
+			else {
+				legalPlay = true;
+			}
+		}
+
 		if (!legalPlay) {
 			//GUI->illegalPrompt();
 			continue;
@@ -230,34 +247,35 @@ void MatchDirector::P1Turn()
 	bool played = false;
 	while (played) {
 		int promptCID;
-
+		CPosition promptZone;
+			int promptTargetCID;
 		if (field->p1Hand.size() == 0 && field->p1LeaderAviable == false) {
 			promptCID = -1; // 没手牌没领导牌自动结束回合
 		}
 		else {
-			// promptCID = ai.promptPlayCard();
+			
+			// promptCID = ai.promptPlayCard(promptZone, promptTargetCID);
+			
 			// -2 为领导牌，不过如果已经使用过了领导牌，GUI不让点领导牌
 			// -1 为回合结束
+			
+			// 上一个函数的两个para是pass by reference
+			// 对于及时Spell Zone回是墓地
 		}
 
 		if (promptCID == -1) {
 			field->p1Pass = true;
 			//GUI->OppentPassing();
+			break;
 		}
 
 		std::vector<CPosition> leaglPlayTargetZones;
 		std::vector<int> leaglPlayTargetCIDs;
 		//CardEffectManager::checkPrompt(1， promptCID, leaglPlayTargetZones,leaglPlayTargetCIDs);
-		// 上一个函数的后两个para是pass by reference
+		// 上一个函数的后两个para是pass by reference		
 
-		CPosition promptZone;
-		int promptTargetCID;
-		// ai.setPromptPlayCardZoneAndCID(promptZone, promptTargetCID);
-		// 上一个函数的两个para是pass by reference
-		// 对于及时Spell Zone回是墓地
-
-		bool legalPlay;
-		// to-do 合法的判断
+		bool legalPlay=true;
+		// 默认AI一定正确
 		if (!legalPlay) {
 			cocos2d::log("AI doing illegal play.  Forced to end its turn.");
 			field->p1Pass = true;
