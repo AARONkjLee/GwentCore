@@ -247,6 +247,76 @@ CardSet BattleInfoManager::getCardSetFromLeaderID(int leaderID)
 
 void BattleInfoManager::playCardFromHand(int player, int CID, CPosition targetZone)
 {
+	if (player == 0) {
+		for (std::vector<int>::iterator i = Battlefield.p0Hand.begin(); i == Battlefield.p0Hand.end(); i++) {
+			if (*i == CID) {
+				Battlefield.p0Hand.erase(i);
+				break;
+			}
+		}
+	}
+	else {
+		for (std::vector<int>::iterator i = Battlefield.p1Hand.begin(); i == Battlefield.p1Hand.end(); i++) {
+			if (*i == CID) {
+				Battlefield.p0Hand.erase(i);
+				break;
+			}
+		}
+	}
+
+	switch (targetZone)
+	{
+	case Hand1:
+		Battlefield.p0Hand.push_back(CID);
+		break;
+	case Hand2:
+		Battlefield.p1Hand.push_back(CID);
+		break;
+	case Grave1:
+		Battlefield.p0Grave.push_back(CID);
+		break;
+	case Grave2:
+		Battlefield.p1Grave.push_back(CID);
+		break;
+	case Deck1:
+		Battlefield.p0Deck.push_back(CID);
+		break;
+	case Deck2:
+		Battlefield.p1Deck.push_back(CID);
+		break;
+	case Weather1:
+		Battlefield.p0Weather.push_back(CID);
+		break;
+	case Weather2:
+		Battlefield.p1Weather.push_back(CID);
+		break;
+	case Combat1:
+		Battlefield.p0Combat.push_back(CID);
+		break;
+	case Combat2:
+		Battlefield.p1Combat.push_back(CID);
+		break;
+	case Ranged1:
+		Battlefield.p0Ranged.push_back(CID);
+		break;
+	case Ranged2:
+		Battlefield.p1Ranged.push_back(CID);
+		break;
+	case Siege1:
+		Battlefield.p0Siege.push_back(CID);
+		break;
+	case Siege2:
+		Battlefield.p1Siege.push_back(CID);
+		break;
+	case Void1:
+		Battlefield.p0Out.push_back(CID);
+		break;
+	case Void2:
+		Battlefield.p1Out.push_back(CID);
+		break;
+	default:
+		break;
+	}
 }
 
 void ActToField(const Act & act, Field & field)

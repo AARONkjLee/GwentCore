@@ -3,6 +3,7 @@
 #include "BattleInfoManager.h"
 #include "SinglePlayScene.h"
 #include "CardEffectManager.h"
+#include "AI.h"
 #include <algorithm>
 
 
@@ -16,7 +17,7 @@ private:
 	
 
 	//to-do define the AI class 
-	//AI ai;
+	AI ai;
 public:
 	// This two vectors are used for passing deck from PlayPreparationScene ot SinglePlayScene
 	std::vector<int> initDeck0;
