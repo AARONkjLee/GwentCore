@@ -2,6 +2,12 @@
 #define _CARDCOLLECTIONSCENE2__H__ 
 
 #include "cocos2d.h"
+#include "SimpleAudioEngine.h"
+#include "CardSprite.h"
+#include "cardCollections.h"
+#include "LeaderCardSprite.h"
+#include "collectionInstance.h"
+#include "leaderCard.h"
 
 //To-do ¸ÄÃûÎª CardCollectionScene
 
@@ -14,6 +20,8 @@ public:
 
 	// a selector callback
 	void menuCloseCallback(cocos2d::Ref* pSender);
+
+	void GoBackToMainSceneCallback(Ref* pSender);
 
 	// implement the "static create()" method manually
 	CREATE_FUNC(CardCollectionScene2);

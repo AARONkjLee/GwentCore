@@ -47,6 +47,11 @@ bool CardCollectionScene0::init()
 	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width / 2,
 		origin.y + closeItem->getContentSize().height / 2));
 
+	auto menu = Menu::create(closeItem, NULL);
+	menu->setPosition(Vec2::ZERO);
+	this->addChild(menu, 1);
+
+
 	auto background = Sprite::create("CardCollectionScene/_BGP_1920x1080.png");
 	background->setPosition(origin.x + visibleSize.width / 2,
 		origin.y + visibleSize.height / 2);
@@ -188,15 +193,6 @@ bool CardCollectionScene0::init()
 }
 
 
-void CardCollectionScene0::GoBackToMainSceneCallback(Ref* pSender)
-{
-	if (clickable) {
-		clickable = false;
-		auto Scene = MainScene::create();
-		Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));
-	}
-}
-
 void CardCollectionScene0::passDeckBeforePassScene(CardSet set)
 {
 	if (!(set == NullCSet)) {
@@ -208,5 +204,11 @@ std::vector<int> CardCollectionScene0 ::getUserDeck()
 {
 	std::vector<int> deck = {};
 	return deck;
+}
+
+void CardCollectionScene0::GoBackToMainSceneCallback(Ref* pSender)
+{
+	auto Scene = MainScene::create();
+	Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));
 }
 

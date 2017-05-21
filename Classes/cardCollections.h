@@ -17,6 +17,7 @@ class CardCollection {
 		~CardCollection() {}
 		void initWithSet(CardSet set);
 		void setLeader(LeaderCard leader);
+		void setLeadId(int leaderid);
 //it is a boollen type because that if it is a illegal 
 //card for deck it will returen false ratherr than add 
 //it into deck

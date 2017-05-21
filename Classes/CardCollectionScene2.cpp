@@ -44,7 +44,7 @@ bool CardCollectionScene2::init()
 	auto closeItem = MenuItemImage::create(
 		"CloseNormal.png",
 		"CloseSelected.png",
-		CC_CALLBACK_1(CardCollectionScene2::menuCloseCallback, this));
+		CC_CALLBACK_1(CardCollectionScene2::GoBackToMainSceneCallback, this));
 
 	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width / 2,
 		origin.y + closeItem->getContentSize().height / 2));
@@ -164,24 +164,82 @@ bool CardCollectionScene2::init()
 	// add the sprite as a child to this layer
 	this->addChild(sprite, 0);
 	*/
-	for (int i = 1; i < 7; i++) {
-		auto CardS1 = CardSprite::create(i);
-		CardS1->setPosition(Vec2(visibleSize.width / 9 * (1.587+i) + origin.x, visibleSize.height / 2.53  + origin.y));
-		CardS1->setScale(0.23);
-		this->addChild(CardS1);
+	CardCollection mCardset = collectionInstance::getInstance()->collection;
+	CardSet hhhset = mCardset.getSet();
+	int mLeader_id = mCardset.getLeader();
+	auto ns="";
 
+	switch (hhhset)
+	{
+	case NullCSet:
+		break;
+	case Northern:
+		ns="PlayScene/PlayPreparationScene/NorthernRealmsBack.jpg";
+		break;
+	case Nilfgaardian:
+		ns="PlayScene/PlayPreparationScene/NilfgaardianEmpireBack.jpg";
+		break;
+	case Monster:
+		ns="PlayScene/PlayPreparationScene/MonstersBack.jpg";
+		break;
+	case Scoiateal:
+		ns="PlayScene/PlayPreparationScene/ScoiataelBack.jpg";
+		break;
+	case Neutral:
+		ns = "PlayScene/PlayPreparationScene/NorthernRealmsBack.jpg";
+		break;
+	default:
+		break;
 	}
 
-	for (int i = 7; i < 13; i++) {
-		auto CardS1 = CardSprite::create(i);
-	    CardS1->setPosition(Vec2(visibleSize.width / 9 * (1.587 + (i-6)) + origin.x, visibleSize.height / 1.47 + origin.y));
-		CardS1->setScale(0.23);
-		this->addChild(CardS1);
+	auto mset = Sprite::create(ns);
+	mset->setPosition(origin.x + 90,
+		origin.y + visibleSize.height / 4);
+	mset->setScale(0.2);
+	this->addChild(mset, 1);
 
+	auto leader_label = LeaderCardSprite::create(mLeader_id);
+	leader_label->setPosition(origin.x + 200 ,
+		origin.y + visibleSize.height / 4);
+	leader_label->setScale(0.2);
+	this->addChild(leader_label, 1);
+
+
+
+	switch (hhhset)
+	{
+	case NullCSet:
+		break;
+	case Northern:
+
+		break;
+	case Nilfgaardian:
+		
+		for (int i = 0; i < mCardset.getDeck().size() ; i++) {
+			int pos = mCardset.getDeck().at(i);
+			auto CardS1 = CardSprite::create(pos);
+			if (CardS1) {
+				CardS1->setPosition(Vec2(visibleSize.width / 9 * (1.587 + (i + 7 - 6)) + origin.x, visibleSize.height / 1.47 + origin.y));
+				CardS1->setScale(0.23);
+				this->addChild(CardS1);
+			}
+		}
+		break;
+	case Monster:
+		for (int i = 1; i <= 40; i++) {
+			auto CardS1 = CardSprite::create(i);
+			CardS1->setPosition(Vec2(origin.x + 20, origin.y + 20));
+			CardS1->setScale(0.05);
+			this->addChild(CardS1);
+		}
+		break;
+	case Scoiateal:
+		break;
+	case Neutral:
+		break;
+	default:
+		break;
 	}
-
-
-
 
 	return true;
 }
@@ -201,4 +259,11 @@ void CardCollectionScene2::menuCloseCallback(Ref* pSender)
 	//_eventDispatcher->dispatchEvent(&customEndEvent);
 
 
+}
+
+
+void CardCollectionScene2::GoBackToMainSceneCallback(Ref* pSender)
+{
+	auto Scene = MainScene::create();
+	Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));
 }

@@ -52,6 +52,10 @@ void CardCollection::setLeader(LeaderCard leader){
 	this->LeaderID = leader.getID();
 }
 
+void CardCollection::setLeadId(int leaderid) {
+	this->LeaderID = leaderid;
+}
+
 bool CardCollection::addCard(Card card){
 	int id = card.getID();
 	int count = 0;
@@ -76,7 +80,8 @@ void CardCollection::dumpCollection(){
 	case NullCSet:
 		return;
 	case Northern:
-		cardsCollectionPool.open("..//Resources/cardCollection/Northern.json", std::ios::trunc);
+//		cardsCollectionPool.open("..//Resources/cardCollection/Northern.json", std::ios::trunc);
+		cardsCollectionPool.open("..//Resources/CardPoolDatabase.json", std::ios::trunc);
 		// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
 		break;
 	case Nilfgaardian:
@@ -114,6 +119,7 @@ int CardCollection::getLeader()
 {
 	return this->LeaderID;
 }
+
 
 std::vector<int> CardCollection::getDeck()
 {

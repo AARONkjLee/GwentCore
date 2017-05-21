@@ -45,6 +45,11 @@ bool CardCollectionScene1::init()
 	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width / 2,
 		origin.y + closeItem->getContentSize().height / 2));
 
+	auto menu = Menu::create(closeItem, NULL);
+	menu->setPosition(Vec2::ZERO);
+	this->addChild(menu, 1);
+
+
 	auto background = Sprite::create("CardCollectionScene/_BGP_1920x1080.png");
 	background->setPosition(origin.x + visibleSize.width / 2,
 		origin.y + visibleSize.height / 2);
@@ -62,7 +67,10 @@ bool CardCollectionScene1::init()
 	sub_title->setColor(ccc3(192, 192, 192));
 	this->addChild(sub_title, 0);
 
+
 	std::vector<LeaderCardSprite*> Leaders;
+	std::vector<int> _id;
+
 	switch (collectionInstance::getInstance()->collection.getSet())
 	{
 	case NullCSet:
@@ -71,6 +79,7 @@ bool CardCollectionScene1::init()
 		for (int i = 0; i < 5; i++) {
 
 			Leaders.push_back(LeaderCardSprite::create(i+5));
+			_id.push_back(i + 5);
 			Leaders[i]->setPosition(origin.x + 200 + (visibleSize.width - 200) / 5 * i,
 				origin.y + visibleSize.height / 2);
 			Leaders[i]->setScale(0.4);
@@ -80,6 +89,8 @@ bool CardCollectionScene1::init()
 	case Nilfgaardian:
 		for (int i = 0; i < 5; i++) {
 			Leaders.push_back(LeaderCardSprite::create(i));
+			_id.push_back(i);
+
 			Leaders[i]->setPosition(origin.x+200 + (visibleSize.width-200) / 5 * i,
 				origin.y + visibleSize.height / 2);
 			Leaders[i]->setScale(0.4);
@@ -89,6 +100,7 @@ bool CardCollectionScene1::init()
 	case Monster:
 		for (int i = 0; i < 5; i++) {
 			Leaders.push_back(LeaderCardSprite::create(i + 15));
+			_id.push_back(i + 15);
 			Leaders[i]->setPosition(origin.x + 200 + (visibleSize.width - 200) / 5 * i,
 				origin.y + visibleSize.height / 2);
 			Leaders[i]->setScale(0.4);
@@ -98,6 +110,7 @@ bool CardCollectionScene1::init()
 	case Scoiateal:
 		for (int i = 0; i < 5; i++) {
 			Leaders.push_back(LeaderCardSprite::create(i + 10));
+			_id.push_back(i + 10);
 			Leaders[i]->setPosition(origin.x + 200 + (visibleSize.width - 200) / 5 * i,
 				origin.y + visibleSize.height / 2);
 			Leaders[i]->setScale(0.4);
@@ -107,6 +120,7 @@ bool CardCollectionScene1::init()
 	case Neutral:
 		for (int i = 0; i < 5; i++) {
 			Leaders.push_back(LeaderCardSprite::create(i + 5));
+			_id.push_back(i + 5);
 			Leaders[i]->setPosition(origin.x + 200 + (visibleSize.width - 200) / 5 * i,
 				origin.y + visibleSize.height / 2);
 			Leaders[i]->setScale(0.4);
@@ -146,11 +160,12 @@ bool CardCollectionScene1::init()
 															   target->runAction(scaleBackBy110);
 															   }
 															   };*/
-	chooseSetMouseListener->onMouseUp = [&](Event* event) {
-		if (!clickable) {
-			return true;
-		}
-		clickable = false;
+	chooseSetMouseListener->onMouseUp = [=, &clickable](Event* event) {
+
+	    //if (!clickable) {
+		//    return true;
+	    //}
+	    //clickable = false;
 		auto target = static_cast<Sprite*>(event->getCurrentTarget());
 		if (target == nullptr)
 		{
@@ -163,21 +178,21 @@ bool CardCollectionScene1::init()
 		//Size s = target->getContentSize();
 		//Rect rect = Rect(0, 0, s.width, s.height);
 
-
+		   
 		if (mouseEventOnTarget__(mouseEvent, Leaders[0])) {
-			passLeaderBeforePassScene(Leaders[0]->getLeader());
+			passLeaderBeforePassScene(_id[0]);
 		}
 		else if (mouseEventOnTarget__(mouseEvent, Leaders[1])) {
-			passLeaderBeforePassScene(Leaders[1]->getLeader());
+			passLeaderBeforePassScene(_id[1]);
 		}
 		else if (mouseEventOnTarget__(mouseEvent, Leaders[2])) {
-			passLeaderBeforePassScene(Leaders[2]->getLeader());
+			passLeaderBeforePassScene(_id[2]);
 		}
 		else if (mouseEventOnTarget__(mouseEvent, Leaders[3])) {
-			passLeaderBeforePassScene(Leaders[3]->getLeader());
+			passLeaderBeforePassScene(_id[3]);
 		}
 		else if (mouseEventOnTarget__(mouseEvent, Leaders[4])) {
-			passLeaderBeforePassScene(Leaders[4]->getLeader());
+			passLeaderBeforePassScene(_id[4]);
 		}
 		else {
 			clickable = true;
@@ -199,18 +214,10 @@ bool CardCollectionScene1::init()
 }
 
 
-void CardCollectionScene1::GoBackToMainSceneCallback(Ref* pSender)
-{
-	if (clickable) {
-		clickable = false;
-		auto Scene = MainScene::create();
-		Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));
-	}
-}
 
-void CardCollectionScene1::passLeaderBeforePassScene(LeaderCard leader)
+void CardCollectionScene1::passLeaderBeforePassScene(int leaderId)
 {
-	collectionInstance::getInstance()->collection.setLeader(leader);
+	collectionInstance::getInstance()->collection.setLeadId(leaderId);
 }
 
 std::vector<int> CardCollectionScene1::getUserDeck()
@@ -219,4 +226,8 @@ std::vector<int> CardCollectionScene1::getUserDeck()
 	return deck;
 }
 
-
+void CardCollectionScene1::GoBackToMainSceneCallback(Ref* pSender)
+{
+	auto Scene = MainScene::create();
+	Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));
+}

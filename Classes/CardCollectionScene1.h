@@ -24,7 +24,7 @@ public:
 	void GoBackToMainSceneCallback(cocos2d::Ref* pSender);
 
 	std::vector<int> getUserDeck();
-	void passLeaderBeforePassScene(LeaderCard leader);
+	void passLeaderBeforePassScene(int leaderId);
 
 	void CardCollectionScene1::replaceToPlaySceneCallback(cocos2d::Ref* pSender);
 

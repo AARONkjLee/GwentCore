@@ -43,6 +43,9 @@
     <Filter Include="src\Scenes\CardCollectionScenes">
       <UniqueIdentifier>{ed282975-74fb-4189-aa8d-0344590739b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="resource\cardCollection">
+      <UniqueIdentifier>{cb8b2dba-3400-472b-8e54-e05a6d4e81ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -255,5 +258,20 @@
       <Filter>resource</Filter>
     </None>
     <None Include="ClassDiagram.cd" />
+    <None Include="..\Resources\LeaderCardPoolDatabase.json">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\cardCollection\Monster.json">
+      <Filter>resource\cardCollection</Filter>
+    </None>
+    <None Include="..\Resources\cardCollection\Nilfgaardian.json">
+      <Filter>resource\cardCollection</Filter>
+    </None>
+    <None Include="..\Resources\cardCollection\Northern.json">
+      <Filter>resource\cardCollection</Filter>
+    </None>
+    <None Include="..\Resources\cardCollection\Scoiateal.json">
+      <Filter>resource\cardCollection</Filter>
+    </None>
   </ItemGroup>
 </Project>

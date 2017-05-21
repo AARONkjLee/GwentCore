@@ -230,7 +230,12 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <None Include="..\Classes\jsoncpp-master\src\lib_json\json_valueiterator.inl" />
     <None Include="..\Classes\jsoncpp-master\src\lib_json\sconscript" />
     <None Include="..\Classes\jsoncpp-master\src\lib_json\version.h.in" />
+    <None Include="..\Resources\cardCollection\Monster.json" />
+    <None Include="..\Resources\cardCollection\Nilfgaardian.json" />
+    <None Include="..\Resources\cardCollection\Northern.json" />
+    <None Include="..\Resources\cardCollection\Scoiateal.json" />
     <None Include="..\Resources\CardPoolDatabase.json" />
+    <None Include="..\Resources\LeaderCardPoolDatabase.json" />
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
