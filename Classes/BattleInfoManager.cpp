@@ -167,7 +167,7 @@ int BattleInfoManager::getPlayerFromCPosition(CPosition cPosi)
 	case Weather1:
 	case Combat1:
 	case Ranged1:
-	case Seige1:
+	case Siege1:
 	case Void1:
 		return 0;
 		break;
@@ -177,7 +177,7 @@ int BattleInfoManager::getPlayerFromCPosition(CPosition cPosi)
 	case Weather2:
 	case Combat2:
 	case Ranged2:
-	case Seige2:
+	case Siege2:
 	case Void2:
 		return 1;
 		break;
@@ -193,10 +193,10 @@ bool BattleInfoManager::cPositionOnField(CPosition cPosi)
 	{
 	case Combat1:
 	case Ranged1:
-	case Seige1:
+	case Siege1:
 	case Combat2:
 	case Ranged2:
-	case Seige2:
+	case Siege2:
 		return true;
 		break;
 	default:
@@ -243,6 +243,10 @@ CardSet BattleInfoManager::getCardSetFromLeaderID(int leaderID)
 		break;
 	}
 	return NullCSet;
+}
+
+void BattleInfoManager::playCardFromHand(int player, int CID, CPosition targetZone)
+{
 }
 
 void ActToField(const Act & act, Field & field)

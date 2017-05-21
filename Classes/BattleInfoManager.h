@@ -9,7 +9,7 @@ enum FieldLocation {NullLocation, HAND, DECK, GRAVE, REMOVED, COMBAT, RANGED, SE
 enum CPosition {
 	Hand1, Hand2, Grave1, Grave2, Deck1, Deck2,
 	Weather1, Weather2, Combat1, Combat2, Ranged1, Ranged2,
-	Seige1, Seige2, Void1, Void2
+	Siege1, Siege2, Void1, Void2
 };
 
 
@@ -111,4 +111,5 @@ public:
 	static int getPlayerFromCPosition(CPosition cPosi);
 	static bool cPositionOnField(CPosition cPosi);
 	static CardSet getCardSetFromLeaderID(int leaderID);
+	void playCardFromHand(int player, int CID, CPosition targetZone); //todo
 };
