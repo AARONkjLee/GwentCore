@@ -203,7 +203,7 @@ bool PlayPreparationScene::init()
 
 		EventMouse* mouseEvent = dynamic_cast<EventMouse*>(event);
 
-		// To 若晴 这些 passDeckBeforePassScene 方法你应该是不用调用的
+		
 		if (mouseEventOnTarget(mouseEvent, ScoiataelBack)) {
 			passDeckBeforePassScene(Scoiateal);
 		}
@@ -221,8 +221,7 @@ bool PlayPreparationScene::init()
 			return true;
 		}
 
-		// To 若晴 这句话你可以写为进入你自己的下一个场景 转换之前你要想办法把选好的Set传入下一个场景
-		// 你可以试试复写下一个scene的create函数，令其带一个参数，根据传入的参数创建选好阵营的scene
+	
 		Director::getInstance()->replaceScene(TransitionFadeTR::create(1, SinglePlayScene::createScene()));
 	};
 
@@ -282,7 +281,7 @@ void PlayPreparationScene::passDeckBeforePassScene(CardSet set)
 	default:
 		break;
 	};*/
-	//To 若晴：这个函数用于准备我都下一个SinglePlayScene 也许你不需要调用
+	
 }
 
 std::vector<int> PlayPreparationScene::getUserDeck()
