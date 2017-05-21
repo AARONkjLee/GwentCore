@@ -95,7 +95,7 @@ bool SinglePlayScene::init()
 	{
 		cocos2d::log("%i", i);
 	}
-
+	MatchDirector::getInstance()->SwitchHands();
     return true;
 }
 

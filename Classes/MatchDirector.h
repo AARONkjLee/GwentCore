@@ -2,6 +2,7 @@
 
 #include "BattleInfoManager.h"
 #include "SinglePlayScene.h"
+#include "CardEffectManager.h"
 #include <algorithm>
 
 
@@ -9,7 +10,7 @@ class MatchDirector {
 private:
 	// All GUI methods called in this class should be created in SinglePlayScene
 	cocos2d::Layer* GUI;
-	int Player;
+	//int fieldwhosturn;
 	Field* field;
 	void updateField();
 	
@@ -34,8 +35,13 @@ public:
 	void Turn(int Player);
 	void AfterGame();
 	void StarterModel();
-	CardSet getCardSet(int player);
+	CardSet getCardSetOfPlayer(int player);
 	void SwitchHands();
+	void InitMatch();
 	void P0Turn();
 	void P1Turn();
+	void IndicatingWinning();
+	void roundResult(int winner);
+	void matchResult();
+
 };
