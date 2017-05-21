@@ -70,6 +70,43 @@ void AI::update(int current, int &max, int &result, int coefficient) {
 	}
 }
 
+int AI::valueDifference() {
+	Field field = BattleInfoManager::getInstance()->getBattlefield();
+	int p0Total = 0;
+	int p1Total = 0;
+	for (int i : field.p0Combat) {
+		p0Total += CardEffectManager::getInstance()->getCardCurrentStrengthWithPositon(i, Combat1);
+	}
+	for (int i : field.p1Combat) {
+		p1Total += CardEffectManager::getInstance()->getCardCurrentStrengthWithPositon(i, Combat2);
+	}
+	for (int i : field.p0Ranged) {
+		p0Total += CardEffectManager::getInstance()->getCardCurrentStrengthWithPositon(i, Ranged1);
+	}
+	for (int i : field.p1Ranged) {
+		p0Total += CardEffectManager::getInstance()->getCardCurrentStrengthWithPositon(i, Ranged2);
+	}
+	for (int i : field.p0Siege) {
+		p0Total += CardEffectManager::getInstance()->getCardCurrentStrengthWithPositon(i, Siege1);
+	}
+	for (int i : field.p1Siege) {
+		p0Total += CardEffectManager::getInstance()->getCardCurrentStrengthWithPositon(i, Siege2);
+	}
+	return p1Total - p0Total;
+}
+
+void changeTargetZone(Card card, CPosition &zone) {
+	if (card.getUnitType() == CloseCombat) {
+		zone = Combat2;
+	}
+	else if (card.getUnitType() == RangedCombat) {
+			zone = Ranged2;
+	} 
+	else {
+		zone = Siege2;
+	}
+}
+
 void AI::selectDeck(CardSet set) {
 	LeaderID = 2;
 	CollectionSet = Nilfgaardian;
@@ -78,10 +115,7 @@ void AI::selectDeck(CardSet set) {
 		44, 44, 44,
 		45,
 		46,
-		49,
 		50,
-		56, 56,
-		58, 58,
 		61,
 		62,
 		65,
@@ -92,6 +126,7 @@ void AI::selectDeck(CardSet set) {
 		76,
 		84,
 		86,
+		87,
 		89,
 		91,
 		93,
@@ -105,7 +140,7 @@ int AI::selectStarter() {
 
 int AI::selectSwitchHand() {
 	std::vector<int> currentHand = BattleInfoManager::getInstance()->getBattlefield().p1Hand;
-	if (std::count(currentHand.begin(), currentHand.end(), 44) > 1) {
+	if (std::count(currentHand.begin(), currentHand.end(), 44) > 0) {
 		return 44;
 	}
 	/*if (BattleInfoManager::getInstance()->getBattlefield().p0LeaderID >= 10 && std::count(currentHand.begin(), currentHand.end(), 57) > 0) {
@@ -114,25 +149,55 @@ int AI::selectSwitchHand() {
 	return -1;
 }
 
-int AI::selectCardToPlay(CPosition pos) {
+int AI::selectCardToPlay(CPosition pos, CPosition &targetZone, int &nextID) {
 	std::vector<int> currentArea;
 	std::vector<Card> targetCards;
-	if (pos == Hand1) {
+	if (pos == Hand2) {
 		currentArea = BattleInfoManager::getInstance()->getBattlefield().p1Hand;
 	}
 	else {
 		currentArea = BattleInfoManager::getInstance()->getBattlefield().p1Grave;
 	}
+	if (currentArea.size()==0) {
+		return -1;
+	}
 	targetCards = searchEffect(currentArea, Spye);
 	if (targetCards.size()) {
+		changeTargetZone(targetCards[0], targetZone);
 		return targetCards[0].getID();
 	} //最优先：直接打出的间谍
 	targetCards = searchEffect(BattleInfoManager::getInstance()->getBattlefield().p1Grave, Spye);
 	if (targetCards.size()) {
 		targetCards = searchEffect(currentArea, Medice);
 		if (targetCards.size()) {
+			changeTargetZone(targetCards[0], targetZone);
 			return targetCards[0].getID();
 		}
 	} //次优先：能复活间谍的医生
-	return 0;
+	if (valueDifference() > 0 && BattleInfoManager::getInstance()->getBattlefield().p0Pass) {
+		return -1;
+	}
+	if (valueDifference() < -15 && BattleInfoManager::getInstance()->getBattlefield().p0Wins < 1) {
+		return -1;
+	}
+	std::vector<Card> finalVector;
+	targetCards = searchEffect(currentArea, Mustere);
+	finalVector.insert(finalVector.end(), targetCards.begin(), targetCards.end());
+	targetCards = searchEffect(currentArea, NullEType);
+	finalVector.insert(finalVector.end(), targetCards.begin(), targetCards.end());
+	targetCards = searchEffect(currentArea, TightBonde);
+	finalVector.insert(finalVector.end(), targetCards.begin(), targetCards.end());
+	if (BattleInfoManager::getInstance()->getBattlefield().p1Grave.size()) {
+		targetCards = searchEffect(currentArea, Medice);
+		finalVector.insert(finalVector.end(), targetCards.begin(), targetCards.end());
+	}
+	if (pos == Hand2) {
+		if (searchEffect(currentArea, SpellScorche).size() && scorchValue() > finalVector[0].getStrength()) {
+			return 58;
+		}
+		changeTargetZone(finalVector[0], targetZone);
+		return finalVector[0].getID();
+	}
+	changeTargetZone(finalVector[finalVector.size() - 1], targetZone);
+	return finalVector[finalVector.size() - 1].getID();
 }

@@ -15,11 +15,13 @@ private:
 	std::vector<Card> searchEffect(std::vector<int> &range, EffectType effect);
 	int scorchValue();
 	void update(int current, int &max, int &result, int coefficient);
+	int valueDifference();
+	void changeTargetZone(Card card, CPosition &targetZone);
 public:
 	AI();
 	~AI();
 	int selectStarter();
 	int selectSwitchHand();
 	void selectDeck(CardSet set);
-	int selectCardToPlay(CPosition pos);
+	int selectCardToPlay(CPosition pos, CPosition &targetZone, int &nextID);
 };
