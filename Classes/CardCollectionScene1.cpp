@@ -117,6 +117,7 @@ bool CardCollectionScene1::init()
 			this->addChild(Leaders[i], 1);
 		}
 		break;
+
 	default:
 		break;
 	}

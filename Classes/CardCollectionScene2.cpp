@@ -4,10 +4,6 @@
 
 USING_NS_CC; 
 
-// To 若晴：
-// 所有图片名称请详细描述，要么新建一个目录放在目录下，要么文件名带着Collection的信息
-// 像 Left.png 这样的文件名太泛指，容易和之后的其他美术资源混淆
-// By Junce
 
 Scene* CardCollectionScene2::createScene()
 {
@@ -67,14 +63,6 @@ bool CardCollectionScene2::init()
 	leftLabel2->setScale(0.7);
 	this->addChild(leftLabel2, 1);
 
-	auto leftLabel3 = MenuItemImage::create(
-		"CardCollectionScene/label.png",
-		"CardCollectionScene/label.png"
-	);
-	leftLabel3->setPosition(Vec2(origin.x + visibleSize.width / 10,
-		origin.y + visibleSize.height / 10 * 6 ));
-	leftLabel3->setScale(0.7);
-	this->addChild(leftLabel3, 1);
 
 	auto buttonb1 = MenuItemImage::create(
 		"CardCollectionScene/buttonb.png",
@@ -98,9 +86,9 @@ bool CardCollectionScene2::init()
 		"CardCollectionScene/buttonb.png",
 		"CardCollectionScene/buttonb.png"
 	);
-	buttonb3->setPosition(Vec2(origin.x + visibleSize.width / 7 * 5,
+	buttonb2->setPosition(Vec2(origin.x + visibleSize.width / 7 * 5,
 		origin.y + visibleSize.height / 11 * 2.7));
-	buttonb3->setScale(0.7);
+	buttonb2->setScale(0.7);
 	this->addChild(buttonb3, 1);
 
 	auto rightb = MenuItemImage::create(
@@ -185,6 +173,9 @@ bool CardCollectionScene2::init()
 	case Scoiateal:
 		ns="PlayScene/PlayPreparationScene/ScoiataelBack.jpg";
 		break;
+	case Neutral:
+		ns = "PlayScene/PlayPreparationScene/NorthernRealmsBack.jpg";
+		break;
 	default:
 		break;
 	}
@@ -211,13 +202,16 @@ bool CardCollectionScene2::init()
 
 		break;
 	case Nilfgaardian:
-		
-		for (int i = 0; i < mCardset.getDeck().size() ; i++) {
+		// mCardset.getDeck().size()
+		for (int i = 0; i < 35 ; i++) {
 			int pos = mCardset.getDeck().at(i);
 			auto CardS1 = CardSprite::create(pos);
 			if (CardS1) {
-				CardS1->setPosition(Vec2(visibleSize.width / 9 * (1.587 + (i + 7 - 6)) + origin.x, visibleSize.height / 1.47 + origin.y));
-				CardS1->setScale(0.23);
+				int y = i / 7;
+				int x = i - y * 7;
+				
+				CardS1->setPosition(Vec2(340+ visibleSize.width / 12 * (0.6 + x) + origin.x, origin.y+80+ y*130));
+				CardS1->setScale(0.18);
 				this->addChild(CardS1);
 			}
 		}
