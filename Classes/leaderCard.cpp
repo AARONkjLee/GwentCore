@@ -98,7 +98,7 @@ void LeaderCard::reload(int id) {
 	else if (strCardSet == "Nilfgaardian") {
 		this->cardSet = Nilfgaardian;
 	}
-	else if (strCardSet == "Monster") {
+	else if (strCardSet == "Monsters") {
 		this->cardSet = Monster;
 	}
 	else if (strCardSet == "Scoiateal") {
