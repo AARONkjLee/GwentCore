@@ -93,7 +93,7 @@
         "Description": "Draw an extra card at the beginning of the battle", 
         "LeadersID": 11, 
         "Name": "Francesca Findabair: Daisy of the Valley", 
-        "Pic": "Leaders/Francesca Findabair Daisy of the Valley.png"
+        "Pic": "Leaders/Francesca Findabair Daisy of The Valle.png"
     }, 
     {
         "Ability": "Range_Horn", 
@@ -157,6 +157,6 @@
         "Description": "Doubles strength of all spies.", 
         "LeadersID": 19, 
         "Name": "Eredin Bréacc Glas: The Treacherous", 
-        "Pic": "Leaders/Eredin Bréacc Glas The Treacherous.png"
+        "Pic": "Leaders/Eredin Breacc Glas The Treacherous.png"
     }
 ]
