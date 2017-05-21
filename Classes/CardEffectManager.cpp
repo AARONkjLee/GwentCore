@@ -87,3 +87,37 @@ int CardEffectManager::getCardCurrentStrengthWithPositon(int cid, CPosition cPos
 		return result;
 	}
 }
+
+void CardEffectManager::checkPrompt(int Player, int promptCid, std::vector<CPosition>& leaglPlayTargetZones, std::vector<int>& leaglPlayTargetCIDs)
+{
+	//下版本改进带效果
+	if (Player == 0) {
+		UnitType cut = BattleInfoManager::getCardWithID(promptCid).getUnitType();
+		switch (cut)
+		{
+		case NullUType:
+			if (BattleInfoManager::getCardWithID(promptCid).getSpellType() == Weather) {
+				leaglPlayTargetZones = { Weather1 };
+			}
+			else {
+				leaglPlayTargetZones = { Grave1 };
+			}
+			break;
+		case CloseCombat:
+			leaglPlayTargetZones = { Combat1 };
+			break;
+		case RangedCombat:
+			leaglPlayTargetZones = { Ranged1 };
+			break;
+		case Siege:
+			leaglPlayTargetZones = { Siege1 };
+			break;
+		case CloseRangedCombat:
+			leaglPlayTargetZones = { Combat1, Ranged1 };
+			break;
+		default:
+			leaglPlayTargetZones = { Grave1 };
+			break;
+		}
+	}
+}

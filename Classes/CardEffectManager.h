@@ -46,4 +46,5 @@ public:
 	static CardEffectManager* getInstance();
 
 	int getCardCurrentStrengthWithPositon(int cid, CPosition cPosi);
+	static void checkPrompt(int Player, int promptCid, std::vector<CPosition> &leaglPlayTargetZones, std::vector<int> &leaglPlayTargetCIDs);
 };

@@ -196,7 +196,7 @@ void MatchDirector::P0Turn()
 
 		std::vector<CPosition> leaglPlayTargetZones;
 		std::vector<int> leaglPlayTargetCIDs;
-		//CardEffectManager::checkPrompt(0， promptCID,leaglPlayTargetZones,leaglPlayTargetCIDs);
+		CardEffectManager::checkPrompt(0, promptCID, leaglPlayTargetZones,leaglPlayTargetCIDs);
 		// 上一个函数的后两个para是pass by reference
 
 		CPosition promptZone;
@@ -206,7 +206,6 @@ void MatchDirector::P0Turn()
 		// 对于及时Spell Zone回是墓地
 
 		bool legalPlay;
-		// to-do 合法的判断
 		if (std::count(leaglPlayTargetZones.begin(), leaglPlayTargetZones.end(), promptZone) == 0) {
 			legalPlay = false;
 		}
@@ -229,6 +228,7 @@ void MatchDirector::P0Turn()
 			// GUI->PlayAnimation(0, promptCID, promptZone);
 			played = true;
 		}
+		//下版本再做
 		//CardEffectManager::checkEffect(0, promptCID, promptZone， promptTarget);
 	}
 	
