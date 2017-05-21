@@ -1,6 +1,8 @@
 #include "BattleInfoManager.h"
 
 static BattleInfoManager* s_SharedBattleInfo = nullptr;
+std::map<int, Card> BattleInfoManager::CardMap;
+
 
 BattleInfoManager::BattleInfoManager()
 {

@@ -22,6 +22,7 @@ class CardCollection {
 //it into deck
 		bool addCard(Card card);
 		void dumpCollection();
+		CardSet getSet();
 		int getLeader();
 		std::vector<int> getDeck();
 
