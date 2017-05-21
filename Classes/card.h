@@ -59,7 +59,7 @@ public:
 /*return the card set*/
 	CardSet getSet();
 /*return the card set*/
-	UnitType getCardSet();
+	UnitType getUnitType();
 /*return the strength*/
 	int getStrength();
 /*return the strength*/
@@ -70,6 +70,8 @@ public:
 	SpellType getSpellType();
 /*return the weather type*/
 	WeatherType getWeatherType();
+/*return the effects*/
+	std::vector<EffectType> getEffects();
 /*return whether there is extral effect(this is under constraction)*/
 	bool existEx();
 /*change strenth*/

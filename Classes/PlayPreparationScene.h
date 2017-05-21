@@ -4,6 +4,8 @@
 #include "MainScene.h"
 #include "BattleInfoManager.h"
 #include "SinglePlayScene.h"
+#include "MatchDirector.h"
+#include "cardCollections.h"
 
 #define WIN_CORDINATE_2_GL(xc, yc, w, l) visibleSize.width/33.867*(xc+w/2), visibleSize.height/19.05*(19.05-yc-l/2)
 
@@ -54,7 +56,7 @@ public:
 
 
 template <typename typeValue>
-bool mouseEventOnTarget(cocos2d::EventMouse* mouseEvent, typeValue target) {
+bool mouseEventOnTarget(cocos2d::EventMouse* & mouseEvent, typeValue & target) {
 	Vec2 locationInNode = target->convertToNodeSpace(mouseEvent->getLocation());
 	Size s = target->getContentSize();
 	Rect rect = Rect(0, 0, s.width, s.height);

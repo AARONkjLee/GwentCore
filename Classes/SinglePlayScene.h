@@ -2,6 +2,7 @@
 
 #include "cocos2d.h"
 #include "MainScene.h"
+#include "PlayPreparationScene.h"
 
 
 class SinglePlayScene : public cocos2d::Layer

@@ -41,7 +41,7 @@
       <UniqueIdentifier>{ff9072be-03d0-47ba-b19a-379e3b97b072}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Scenes\CardCollectionScenes">
-      <UniqueIdentifier>{ed282975-74fb-4189-aa8d-0344590739b8}</UniqueIdentifier>
+      <UniqueIdentifier>{7ee1aa2a-a9cf-4a9b-bf9e-9c48ff0c0a8b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -105,13 +105,16 @@
     <ClCompile Include="..\Classes\cardCollections.cpp">
       <Filter>src\Data Interface</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\CardCollectionScene0.cpp">
+    <ClCompile Include="..\Classes\MatchDirector.cpp">
+      <Filter>src\BattleInfoAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CardCollectionScene2.cpp">
       <Filter>src\Scenes\CardCollectionScenes</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\CardCollectionScene1.cpp">
       <Filter>src\Scenes\CardCollectionScenes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\CardCollectionScene2.cpp">
+    <ClCompile Include="..\Classes\CardCollectionScene0.cpp">
       <Filter>src\Scenes\CardCollectionScenes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -203,13 +206,16 @@
     <ClInclude Include="..\Classes\cardCollections.h">
       <Filter>src\Data Interface</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\MatchDirector.h">
+      <Filter>src\BattleInfoAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardCollectionScene2.h">
+      <Filter>src\Scenes\CardCollectionScenes</Filter>
+    </ClInclude>
     <ClInclude Include="..\Classes\CardCollectionScene0.h">
       <Filter>src\Scenes\CardCollectionScenes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\CardCollectionScene1.h">
-      <Filter>src\Scenes\CardCollectionScenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\CardCollectionScene2.h">
       <Filter>src\Scenes\CardCollectionScenes</Filter>
     </ClInclude>
   </ItemGroup>

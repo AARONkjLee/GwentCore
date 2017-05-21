@@ -6,7 +6,11 @@ enum ActType {NullMType, PASS, PLAY, LEADER, MOVE};
 // Pass, Play, Leader and Change are active action from Player.
 // Move is moving cards from place to place, which is passive action.
 enum FieldLocation {NullLocation, HAND, DECK, GRAVE, REMOVED, COMBAT, RANGED, SEIGE, WEATHER};
-
+enum CPosition {
+	Hand1, Hand2, Grave1, Grave2, Deck1, Deck2,
+	Weather1, Weather2, Combat1, Combat2, Ranged1, Ranged2,
+	Seige1, Seige2, Void1, Void2
+};
 
 
 struct Field {
@@ -37,21 +41,31 @@ struct Field {
 	std::vector<int> p1Combat;
 	std::vector<int> p0Ranged;
 	std::vector<int> p1Ranged;
-	std::vector<int> p0Seige;
-	std::vector<int> p1Seige;
+	std::vector<int> p0Siege;
+	std::vector<int> p1Siege;
 
 	std::vector<int> p0Weather;
 	std::vector<int> p1Weather;
 };
 
+//struct CardWithPosition {
+//	Card card;
+//	CPosition position;
+//};
 
 struct ActCell {
-	ActType actType;
+	ActType actType;  
+		// 见 ActType 的定义
 	EffectType effectType;
+		// 当前这个play是否连锁的effect
 	int player;
+		// 操作的玩家
 	int attrID0;
+		// 默认参数，即操作的主题卡牌
 	int attrID1;
+		// 比如医生选择的卡牌ID
 	FieldLocation attrLoc0;
+		// 位置参数，比如医生复活出来的agile所站的位置，或者
 	FieldLocation attrLoc1;
 };
 
@@ -69,6 +83,7 @@ void ActCellToField(const ActCell & actCell, Field & field);
 class BattleInfoManager {
 private:
 	Field Battlefield;
+	static std::map<int, Card> CardMap;
 	std::vector<Act> log;
 public:
 
@@ -76,6 +91,7 @@ public:
 	~BattleInfoManager();
 
 	static BattleInfoManager* getInstance();
+	void clear();  //手动析构
 
 	bool init();
 	bool initWithDecks(const std::vector<int> & deck0, const std::vector<int> & deck1);
@@ -85,4 +101,13 @@ public:
 	Field & getBattlefield();
 	void actToBattlefield(const Act & act);
 	void actCellToBattlefield(const ActCell & actCell);
+	
+	bool isFrosting();
+	bool isFogging();
+	bool isRaining();
+	bool isClearWeather();
+
+	static Card & getCardWithID(int id);
+	static int getPlayerFromCPosition(CPosition cPosi);
+	static bool cPositionOnField(CPosition cPosi);
 };

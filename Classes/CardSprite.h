@@ -2,6 +2,7 @@
 
 #include "card.h"
 #include "cocos2d.h"
+#include "CardEffectManager.h"
 
 const std::string CARD_BACK_DIR = "GwentCardsResources/Back.jpg";
 const std::string CARD_STRENGTH_BACK_DIR = "GwentCardsResources/StrengthBack.png";
@@ -12,10 +13,6 @@ const cocos2d::Size CS_STRENGTH_BACK_COORDINATES((float)90, (float)946);
 const cocos2d::Size CS_STRENGTH_HERO_BACK_COORDINATES((float)92, (float)944);
 const cocos2d::Size CS_STRENGTH_LABEL_COORDINATES((float)88, (float)939);
 const cocos2d::Size CS_STRENGTH_HERO_LABEL_COORDINATES((float)92, (float)939);
-
-enum CPosition {Hand1, Hand2, Grave1, Grave2, Deck1, Deck2, 
-	Weather1, Weather2, Combat1, Combat2, Ranged1, Ranged2, 
-	Seige1, Seige2, Void1, Void2};
 
 class CardSprite : public cocos2d::Sprite{
 private:

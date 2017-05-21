@@ -8,7 +8,7 @@ BattleInfoManager::BattleInfoManager()
 
 BattleInfoManager::~BattleInfoManager()
 {
-	delete s_SharedBattleInfo;
+	//delete s_SharedBattleInfo;
 }
 
 BattleInfoManager * BattleInfoManager::getInstance()
@@ -20,6 +20,13 @@ BattleInfoManager * BattleInfoManager::getInstance()
 	}
 
 	return s_SharedBattleInfo;
+}
+
+void BattleInfoManager::clear()
+{
+	/*for (std::map<int, Card*>::iterator ptcp = CardMap.begin(); ptcp != CardMap.end(); ++ptcp) {
+		delete ptcp*;
+	}*/
 }
 
 bool BattleInfoManager::init()
@@ -37,15 +44,10 @@ bool BattleInfoManager::initWithDecks(const std::vector<int>& deck0, const std::
 	Battlefield.p0LeaderAviable = true;
 	Battlefield.p1LeaderID = deck1[0];
 	Battlefield.p1LeaderAviable = true;
-	Battlefield.p0Deck = std::vector<int> (-1, deck0.size() - 1);
-	Battlefield.p1Deck = std::vector<int> (-1, deck1.size() - 1);
-
-	for (int i = 1; i < deck0.size(); i++) {
-		Battlefield.p0Deck[i-1] = (deck0[i], 0);
-	}
-	for (int i = 1; i < deck1.size(); i++) {
-		Battlefield.p1Deck[i - 1] = (deck1[i], 0);
-	}
+	Battlefield.p0Deck = deck0;
+	Battlefield.p0Deck.erase(Battlefield.p0Deck.begin());
+	Battlefield.p1Deck = deck1;
+	Battlefield.p1Deck.erase(Battlefield.p1Deck.begin());
 
 	return true;
 }
@@ -83,6 +85,123 @@ void BattleInfoManager::actToBattlefield(const Act & act)
 void BattleInfoManager::actCellToBattlefield(const ActCell & actCell)
 {
 	ActCellToField(actCell, this->Battlefield);
+}
+
+
+const int FROST_CID = 52;
+bool BattleInfoManager::isFrosting()
+{
+	for (int cid : Battlefield.p0Weather) {
+		if (cid == FROST_CID) {
+			return true;
+		}
+	}
+	for (int cid : Battlefield.p1Weather) {
+		if (cid == FROST_CID) {
+			return true;
+		}
+	}
+	return false;
+}
+
+
+const int FOG_CID = 54;
+bool BattleInfoManager::isFogging()
+{
+	for (int cid : Battlefield.p0Weather) {
+		if (cid == FOG_CID) {
+			return true;
+		}
+	}
+	for (int cid : Battlefield.p1Weather) {
+		if (cid == FOG_CID) {
+			return true;
+		}
+	}
+	return false;
+}
+
+
+const int RAIN_CID = 55;
+bool BattleInfoManager::isRaining()
+{
+	for (int cid : Battlefield.p0Weather) {
+		if (cid == RAIN_CID) {
+			return true;
+		}
+	}
+	for (int cid : Battlefield.p1Weather) {
+		if (cid == RAIN_CID) {
+			return true;
+		}
+	}
+	return false;
+}
+
+bool BattleInfoManager::isClearWeather()
+{
+	return !(isFrosting() || isFogging() || isRaining());
+}
+
+Card & BattleInfoManager::getCardWithID(int id)
+{
+	if (CardMap.find(id) != CardMap.end()) {
+		return CardMap[id];
+	}
+	else {
+		Card c(id);
+		CardMap[id] = c;
+		return CardMap[id];
+	}
+}
+
+int BattleInfoManager::getPlayerFromCPosition(CPosition cPosi)
+{
+	switch (cPosi)
+	{
+	case Hand1:
+	case Grave1:
+	case Deck1:
+	case Weather1:
+	case Combat1:
+	case Ranged1:
+	case Seige1:
+	case Void1:
+		return 0;
+		break;
+	case Hand2:
+	case Grave2:
+	case Deck2:
+	case Weather2:
+	case Combat2:
+	case Ranged2:
+	case Seige2:
+	case Void2:
+		return 1;
+		break;
+	default:
+		break;
+	}
+	return 0;
+}
+
+bool BattleInfoManager::cPositionOnField(CPosition cPosi)
+{
+	switch (cPosi)
+	{
+	case Combat1:
+	case Ranged1:
+	case Seige1:
+	case Combat2:
+	case Ranged2:
+	case Seige2:
+		return true;
+		break;
+	default:
+		return false;
+		break;
+	}
+	return false;
 }
 
 void ActToField(const Act & act, Field & field)

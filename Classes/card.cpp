@@ -234,7 +234,7 @@ CardSet Card::getSet(){
 	return this->cardSet;
 }
 
-UnitType Card::getCardSet(){
+UnitType Card::getUnitType(){
 	return this->unitType;
 }
 
@@ -258,6 +258,11 @@ SpellType Card::getSpellType(){
 
 WeatherType Card::getWeatherType(){
 	return this->weatherType;
+}
+
+std::vector<EffectType> Card::getEffects()
+{
+	return this->effects;
 }
 
 bool Card::existEx(){

@@ -86,7 +86,15 @@ bool SinglePlayScene::init()
 	this->addChild(CardS1);
 	this->addChild(CardS2);
 
+	MatchDirector::getInstance()->setGUILayer(this);
 
+	// Test Code
+	MatchDirector::getInstance()->StarterModel();
+	std::vector<int> DeckTemp = BattleInfoManager::getInstance()->getBattlefield().p0Deck;
+	for (int i : DeckTemp)
+	{
+		cocos2d::log("%i", i);
+	}
 
     return true;
 }
