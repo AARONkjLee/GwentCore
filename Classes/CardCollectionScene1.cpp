@@ -117,16 +117,6 @@ bool CardCollectionScene1::init()
 			this->addChild(Leaders[i], 1);
 		}
 		break;
-	case Neutral:
-		for (int i = 0; i < 5; i++) {
-			Leaders.push_back(LeaderCardSprite::create(i + 5));
-			_id.push_back(i + 5);
-			Leaders[i]->setPosition(origin.x + 200 + (visibleSize.width - 200) / 5 * i,
-				origin.y + visibleSize.height / 2);
-			Leaders[i]->setScale(0.4);
-			this->addChild(Leaders[i], 1);
-		}
-		break;
 	default:
 		break;
 	}

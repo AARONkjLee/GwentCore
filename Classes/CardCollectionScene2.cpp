@@ -185,9 +185,6 @@ bool CardCollectionScene2::init()
 	case Scoiateal:
 		ns="PlayScene/PlayPreparationScene/ScoiataelBack.jpg";
 		break;
-	case Neutral:
-		ns = "PlayScene/PlayPreparationScene/NorthernRealmsBack.jpg";
-		break;
 	default:
 		break;
 	}

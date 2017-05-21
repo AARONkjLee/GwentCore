@@ -30,9 +30,6 @@ void CardCollection::initWithSet(CardSet set){
 	case Scoiateal:
 		cardsCollectionPool.open("..//Resources/cardCollection/Scoiateal.json");
 		break;
-	case Neutral:
-		cardsCollectionPool.open("..//Resources/cardCollection/Neutral.json");
-		break;
 	}	
 	Json::Reader reader;
 	Json::Value J_set;
