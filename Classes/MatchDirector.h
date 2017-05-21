@@ -34,7 +34,7 @@ public:
 	void Turn(int Player);
 	void AfterGame();
 	void StarterModel();
-	CardSet getCardSet(int player);
+	CardSet getCardSetOfPlayer(int player);
 	void SwitchHands();
 	void P0Turn();
 	void P1Turn();

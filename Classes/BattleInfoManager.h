@@ -110,4 +110,5 @@ public:
 	static Card & getCardWithID(int id);
 	static int getPlayerFromCPosition(CPosition cPosi);
 	static bool cPositionOnField(CPosition cPosi);
+	static CardSet getCardSetFromLeaderID(int leaderID);
 };
