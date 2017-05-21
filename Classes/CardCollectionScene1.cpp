@@ -1,18 +1,17 @@
 #include "CardCollectionScene1.h"
+#include <vector>
 
 USING_NS_CC;
 
 //card collection is global for all cardCollectionScenes.
 
-Scene* CardCollectionScene1::createScene(CardCollection collection_)
+Scene* CardCollectionScene1::createScene()
 {
 	// 'scene' is an autorelease object
 	auto scene = Scene::create();
 
 	// 'layer' is an autorelease object
 	auto layer = CardCollectionScene1::create();
-
-	layer->collection = collection_;
 
 	// add layer as a child to scene
 	scene->addChild(layer);
@@ -29,10 +28,8 @@ bool CardCollectionScene1::init()
 	{
 		return false;
 	}
-
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
 	bool clickable = true;
 	
 	/////////////////////////////
@@ -65,60 +62,64 @@ bool CardCollectionScene1::init()
 	sub_title->setColor(ccc3(192, 192, 192));
 	this->addChild(sub_title, 0);
 
-	CardSet set;
-	switch (set)
+	std::vector<LeaderCardSprite*> Leaders;
+	switch (collectionInstance::getInstance()->collection.getSet())
 	{
 	case NullCSet:
 		break;
 	case Northern:
-		for (int i = 5; i < 10; i++) {
-			auto leader_ = LeaderCardSprite::creat(i);
-			leader_ ->setPosition(origin.x + visibleSize.width / 6 * (i-4),
+		for (int i = 0; i < 5; i++) {
+
+			Leaders.push_back(LeaderCardSprite::create(i+5));
+			Leaders[i]->setPosition(origin.x + 200 + (visibleSize.width - 200) / 5 * i,
 				origin.y + visibleSize.height / 2);
-			this->addChild(leader_, 1);
+			Leaders[i]->setScale(0.4);
+			this->addChild(Leaders[i], 1);
 		}
 		break;
 	case Nilfgaardian:
 		for (int i = 0; i < 5; i++) {
-			auto leader_ = LeaderCardSprite::creat(i);
-			leader_->setPosition(origin.x + visibleSize.width / 6 * (i+1),
+			Leaders.push_back(LeaderCardSprite::create(i));
+			Leaders[i]->setPosition(origin.x+200 + (visibleSize.width-200) / 5 * i,
 				origin.y + visibleSize.height / 2);
-			this->addChild(leader_, 1);
+			Leaders[i]->setScale(0.4);
+			this->addChild(Leaders[i], 1);
 		}
 		break;
 	case Monster:
-		for (int i = 15; i < 20; i++) {
-			auto leader_ = LeaderCardSprite::creat(i);
-			leader_->setPosition(origin.x + visibleSize.width / 6 * (i-14),
+		for (int i = 0; i < 5; i++) {
+			Leaders.push_back(LeaderCardSprite::create(i + 15));
+			Leaders[i]->setPosition(origin.x + 200 + (visibleSize.width - 200) / 5 * i,
 				origin.y + visibleSize.height / 2);
-			this->addChild(leader_, 1);
+			Leaders[i]->setScale(0.4);
+			this->addChild(Leaders[i], 1);
 		}
 		break;
 	case Scoiateal:
-		for (int i = 10; i < 15; i++) {
-			auto leader_ = LeaderCardSprite::creat(i);
-			leader_->setPosition(origin.x + visibleSize.width / 6 * (i-9),
+		for (int i = 0; i < 5; i++) {
+			Leaders.push_back(LeaderCardSprite::create(i + 10));
+			Leaders[i]->setPosition(origin.x + 200 + (visibleSize.width - 200) / 5 * i,
 				origin.y + visibleSize.height / 2);
-			this->addChild(leader_, 1);
+			Leaders[i]->setScale(0.4);
+			this->addChild(Leaders[i], 1);
 		}
 		break;
 	case Neutral:
+		for (int i = 0; i < 5; i++) {
+			Leaders.push_back(LeaderCardSprite::create(i + 5));
+			Leaders[i]->setPosition(origin.x + 200 + (visibleSize.width - 200) / 5 * i,
+				origin.y + visibleSize.height / 2);
+			Leaders[i]->setScale(0.4);
+			this->addChild(Leaders[i], 1);
+		}
 		break;
 	default:
 		break;
 	}
 
-
-
-
-
-	
-
-
 	// Mouse listeners
 
 	auto chooseSetMouseListener = EventListenerMouse::create();
-
 
 	// Naming rule for scale action:
 	// scale%Obj%way%Percent; 
@@ -163,32 +164,35 @@ bool CardCollectionScene1::init()
 		//Rect rect = Rect(0, 0, s.width, s.height);
 
 
-		if (mouseEventOnTarget__(mouseEvent, scoiataelBack)) {
-			passLeaderBeforePassScene(Scoiateal);
+		if (mouseEventOnTarget__(mouseEvent, Leaders[0])) {
+			passLeaderBeforePassScene(Leaders[0]->getLeader());
 		}
-		else if (mouseEventOnTarget__(mouseEvent, northernRealmBack)) {
-			passLeaderBeforePassScene(Northern);
+		else if (mouseEventOnTarget__(mouseEvent, Leaders[1])) {
+			passLeaderBeforePassScene(Leaders[1]->getLeader());
 		}
-		else if (mouseEventOnTarget__(mouseEvent, nilfgaardBack)) {
-			passLeaderBeforePassScene(Nilfgaardian);
+		else if (mouseEventOnTarget__(mouseEvent, Leaders[2])) {
+			passLeaderBeforePassScene(Leaders[2]->getLeader());
 		}
-		else if (mouseEventOnTarget__(mouseEvent, monstersBack)) {
-			passLeaderBeforePassScene(Monster);
+		else if (mouseEventOnTarget__(mouseEvent, Leaders[3])) {
+			passLeaderBeforePassScene(Leaders[3]->getLeader());
+		}
+		else if (mouseEventOnTarget__(mouseEvent, Leaders[4])) {
+			passLeaderBeforePassScene(Leaders[4]->getLeader());
 		}
 		else {
 			clickable = true;
 			return true;
 		}
 
-		// To 若晴 这句话你可以写为进入你自己的下一个场景 转换之前你要想办法把选好的Set传入下一个场景
-		// 你可以试试复写下一个scene的create函数，令其带一个参数，根据传入的参数创建选好阵营的scene
+
 		Director::getInstance()->replaceScene(TransitionShrinkGrow::create(1.0, CardCollectionScene2::createScene()));
 	};
 
-	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener, scoiataelBack);
-	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), northernRealmBack);
-	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), nilfgaardBack);
-	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), monstersBack);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener, Leaders[0]);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), Leaders[1]);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), Leaders[2]);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), Leaders[3]);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), Leaders[4]);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), background);
 
 	return true;
@@ -206,7 +210,7 @@ void CardCollectionScene1::GoBackToMainSceneCallback(Ref* pSender)
 
 void CardCollectionScene1::passLeaderBeforePassScene(LeaderCard leader)
 {
-	collection.setLeader(leader);
+	collectionInstance::getInstance()->collection.setLeader(leader);
 }
 
 std::vector<int> CardCollectionScene1::getUserDeck()

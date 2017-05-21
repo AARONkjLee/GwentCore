@@ -105,6 +105,11 @@ void CardCollection::dumpCollection(){
 	cardsCollectionPool.close();
 }
 
+CardSet CardCollection::getSet()
+{
+	return this->CollectionSet;
+}
+
 int CardCollection::getLeader()
 {
 	return this->LeaderID;

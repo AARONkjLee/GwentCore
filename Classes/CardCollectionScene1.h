@@ -7,7 +7,8 @@
 #include "SimpleAudioEngine.h"
 #include "CardSprite.h"
 #include "cardCollections.h"
-#include "leaderCardSprite.h"
+#include "LeaderCardSprite.h"
+#include "collectionInstance.h"
 
 //To-do ¸ÄÃûÎª CardCollectionScene
 
@@ -15,9 +16,8 @@ class CardCollectionScene1 : public cocos2d::Layer
 {
 private:
 	bool clickable;
-	CardCollection collection;
 public:
-	static cocos2d::Scene* createScene(CardCollection collection_);
+	static cocos2d::Scene* createScene();
 	virtual bool init();
 
 	// a selector callback

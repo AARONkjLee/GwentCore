@@ -14,13 +14,14 @@ void LeaderCard::reload(int id) {
 		cardsPool.open("..//Resources/LeaderCardPoolDatabase.json");
 		// In Card.cpp, direction system is not consist with Cocos. "..//" means upper dir to ($ProjectDir), which is ($SolutionDir)
 		Json::Reader reader;		
-		if (!reader.parse(cardsPool, leaderCards, false)) {
-			return;
-		}
+	if (!reader.parse(cardsPool, leaderCards, false)) {
+		return;
+	}
+//		reader.parse(cardsPool, leaderCards, false);
 		cardsPool.close();
 	}
 	Json::Value card = leaderCards[id];
-	this->cardID = card["cardID"].asInt();
+	this->cardID = card["leaderID"].asInt();
 	this->description = card["Description"].asCString();
 	this->name = card["Name"].asCString();
 	this->picDir = card["Pic"].asCString();
@@ -87,6 +88,22 @@ void LeaderCard::reload(int id) {
 	else if (strAbility == "Double_Spies") {
 		this->ability = Double_Spies;
 	}
+	std::string strCardSet = card["CardSet"].asCString();
+	if (strCardSet == "NullCSet") {
+		this->cardSet = NullCSet;
+	}
+	else if (strCardSet == "Northern") {
+		this->cardSet = Northern;
+	}
+	else if (strCardSet == "Nilfgaardian") {
+		this->cardSet = Nilfgaardian;
+	}
+	else if (strCardSet == "Monster") {
+		this->cardSet = Monster;
+	}
+	else if (strCardSet == "Scoiateal") {
+		this->cardSet = Scoiateal;
+	}
 
 
 }
@@ -137,5 +154,5 @@ Ability LeaderCard::getAbility()
 
 int LeaderCard::getID()
 {
-	return cardID;
+	return this->cardID;
 }
