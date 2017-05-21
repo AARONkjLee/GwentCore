@@ -1,8 +1,25 @@
 #include "CardSprite.h"
 #include "SimpleAudioEngine.h"
 #include "SinglePlayScene.h"
+#include "PlayPreparationScene.h"
 
 USING_NS_CC;
+
+auto visibleSize = Director::getInstance()->getVisibleSize();
+
+void SinglePlayScene::initWithStarter(int Starter)
+{
+	leader0 = LeaderCardSprite::create(BattleInfoManager::getInstance()->getBattlefield().p0LeaderID);
+	leader0->setScale(0.08);
+	leader0->setPosition(Vec2(WIN_CORDINATE_2_GL(3.06, 0.22, 2.11, 1.36)));
+	leader1 = LeaderCardSprite::create(BattleInfoManager::getInstance()->getBattlefield().p1LeaderID);
+	leader1->setScale(0.08);
+	leader1->setPosition(Vec2(WIN_CORDINATE_2_GL(3.06,16.62, 2.11, 1.36)));
+	this->addChild(leader0);
+	this->addChild(leader1);
+
+
+}
 
 Scene* SinglePlayScene::createScene()
 {
@@ -29,8 +46,8 @@ bool SinglePlayScene::init()
         return false;
     }
     
-    auto visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    //auto visibleSize = Director::getInstance()->getVisibleSize();
+    auto origin = Director::getInstance()->getVisibleOrigin();
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
@@ -53,55 +70,22 @@ bool SinglePlayScene::init()
     /////////////////////////////
     // 3. add your codes below...
 
-    // add a label shows "Hello World"
-    // create and initialize a label
-    
-    auto label = Label::createWithTTF("Play Scene Test", "fonts/Marker Felt.ttf", 24);
-    
-    // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
-
-    // add the label as a child to this layer
-    this->addChild(label, 1);
-	/*
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("CardSpriteTest.png");
-
-    // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
-	*/
-
-	auto CardS1 = CardSprite::create(11);
-	CardS1->setPosition(Vec2(visibleSize.width / 4 + origin.x, visibleSize.height / 2 + origin.y));
-	//CardS1->setScale(0.5);
-
-	auto CardS2 = CardSprite::create(1);
-	CardS2->setPosition(Vec2(visibleSize.width * 3 / 4 + origin.x, visibleSize.height / 2 + origin.y));
-	//CardS2->setScale(0.5);
-
-	this->addChild(CardS1);
-	this->addChild(CardS2);
+	auto background = Sprite::create(PLAY_SCENE_BG_DIR);
+	background->setPosition(Vec2(visibleSize.width/2, visibleSize.height/2));
+	this->addChild(background);
 
 	MatchDirector::getInstance()->setGUILayer(this);
+	MatchDirector::getInstance()->MainMatchLoop();
 
-	// Test Code
-	MatchDirector::getInstance()->StarterModel();
-	std::vector<int> DeckTemp = BattleInfoManager::getInstance()->getBattlefield().p0Deck;
-	for (int i : DeckTemp)
-	{
-		cocos2d::log("%i", i);
-	}
-	MatchDirector::getInstance()->SwitchHands();
     return true;
 }
 
 
 void SinglePlayScene::GoBackToMainSceneCallback(Ref* pSender)
 {
-	auto Scene = MainScene::create();
-	Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));
+	if (clickable) {
+		clickable = false;
+		auto Scene = MainScene::create();
+		Director::getInstance()->replaceScene(TransitionFade::create(1, Scene));
+	}
 }

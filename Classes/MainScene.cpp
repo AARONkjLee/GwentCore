@@ -170,7 +170,7 @@ void MainScene::replaceToSettingSceneCallback(Ref* pSender)
 {
 	if (clickable) {
 		clickable = false;
-		auto Scene = SettingSceneTest::createScene();
+		auto Scene = PlaySceneTest::createScene();
 		Director::getInstance()->replaceScene(TransitionFade::create(transitionTime, Scene));
 	}
 }

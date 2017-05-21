@@ -10,14 +10,10 @@
 class MatchDirector {
 private:
 	// All GUI methods called in this class should be created in SinglePlayScene
-	cocos2d::Layer* GUI;
+	SinglePlayScene* GUI;
 	//int fieldwhosturn;
 	Field* field;
 	void updateField();
-	
-
-	//to-do define the AI class 
-	AI ai;
 public:
 	// This two vectors are used for passing deck from PlayPreparationScene ot SinglePlayScene
 	std::vector<int> initDeck0;
@@ -27,7 +23,7 @@ public:
 	~MatchDirector();
 
 	static MatchDirector* getInstance();
-	void setGUILayer(cocos2d::Layer* gui);
+	void setGUILayer(SinglePlayScene* gui);
 	void MainMatchLoop();
 
 	void init();

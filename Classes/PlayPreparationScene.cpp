@@ -1,6 +1,7 @@
 #include "CardSprite.h"
 #include "SimpleAudioEngine.h"
 #include "PlayPreparationScene.h"
+#include "MatchDirector.h"
 
 USING_NS_CC;
 
@@ -232,12 +233,14 @@ bool PlayPreparationScene::init()
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), MonstersBack);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(chooseSetMouseListener->clone(), background);
 
+	/*
+	TO-DO 让这些的Action可用
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(scaleSetSpriteMouseListener, ScoiataelBack);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(scaleSetSpriteMouseListener->clone(), NorthernRealmsBack);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(scaleSetSpriteMouseListener->clone(), NilfgaardianEmpireBack);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(scaleSetSpriteMouseListener->clone(), MonstersBack);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(scaleSetSpriteMouseListener->clone(), background);
-
+*/
     return true;
 }
 
@@ -257,7 +260,9 @@ void PlayPreparationScene::passDeckBeforePassScene(CardSet set)
 	std::vector<int> deckT = ccoll.getDeck();
 	deckT.insert(deckT.begin(), ccoll.getLeader());
 	MatchDirector::getInstance()->initDeck0 = deckT;
-	MatchDirector::getInstance()->initDeck1 = deckT;
+	MatchDirector::getInstance()->initDeck1 = AI::getInstance()->getDeck();
+//	AIobj ais();
+	//MatchDirector::getInstance()->initDeck1 = ;
 	/*switch (set)
 	{
 	case NullCSet:

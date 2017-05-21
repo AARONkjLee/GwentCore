@@ -1,9 +1,19 @@
 #include "AI.h"
 
+static AI* s_SharedAI = nullptr;
+
 AI::AI() {
 }
 
 AI::~AI() {
+}
+
+AI * AI::getInstance()
+{
+	if (!s_SharedAI) {
+		s_SharedAI = new AI();
+	}
+	return s_SharedAI;
 }
 
 bool AI::compareCardsByStrength(Card card1, Card card2) {
@@ -95,7 +105,7 @@ int AI::valueDifference() {
 	return p1Total - p0Total;
 }
 
-void changeTargetZone(Card card, CPosition &zone) {
+void AI::changeTargetZone(Card card, CPosition &zone) {
 	if (card.getUnitType() == CloseCombat) {
 		zone = Combat2;
 	}
@@ -147,6 +157,13 @@ int AI::selectSwitchHand() {
 		return 57;
 	}*/
 	return -1;
+}
+
+std::vector<int> AI::getDeck()
+{
+	std::vector<int> d = deck;
+	d.insert(d.begin(), LeaderID);
+	return d;
 }
 
 int AI::selectCardToPlay(CPosition pos, CPosition &targetZone, int &nextID) {

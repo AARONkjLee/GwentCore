@@ -27,7 +27,7 @@ MatchDirector * MatchDirector::getInstance()
 	return s_SharedMatchDirector;
 }
 
-void MatchDirector::setGUILayer(cocos2d::Layer * gui)
+void MatchDirector::setGUILayer(SinglePlayScene * gui)
 {
 	GUI = gui;
 }
@@ -37,6 +37,7 @@ void MatchDirector::MainMatchLoop()
 	BeforeGame();
 	while (!GameOver()) {
 		Turn(field->whosTurn);
+		break;
 	}
 	AfterGame();
 }
@@ -44,7 +45,7 @@ void MatchDirector::MainMatchLoop()
 void MatchDirector::init()
 {
 	updateField();
-	AI ai();
+	AI::getInstance()->selectDeck(Nilfgaardian);
 }
 
 void MatchDirector::BeforeGame()
@@ -87,11 +88,12 @@ void MatchDirector::StarterModel()
 	int Starter;
 	if ((getCardSetOfPlayer(0) == Scoiateal) ^ (getCardSetOfPlayer(1) == Scoiateal)) {
 		if (getCardSetOfPlayer(1) == Scoiateal) {
+			//下版本再做
 			//Starter = GUI->selectStarterByUser();
 			Starter = 1;
 		}
 		else {
-			Starter = ai.selectStarter();
+			Starter = AI::getInstance()->selectStarter();
 			}
 	}
 	else {
@@ -99,7 +101,7 @@ void MatchDirector::StarterModel()
 	}
 	field->whosTurn = Starter;
 	BattleInfoManager::getInstance()->initWithFirstPlayer(Starter);
-	//GUI->initWithStarter(Starter);
+	GUI->initWithStarter(Starter);
 	
 }
 
@@ -130,13 +132,13 @@ void MatchDirector::SwitchHands()
 		field->p1Deck.pop_back();
 	}
 	int cardIDToSwitch;
-	cardIDToSwitch = ai.selectSwitchHand();
+	cardIDToSwitch = AI::getInstance()->selectSwitchHand();
 	if (cardIDToSwitch != -1) {
 		field->p1Deck.push_back(cardIDToSwitch);
 		std::random_shuffle(field->p1Deck.begin(), field->p1Deck.end());
 		field->p1Hand.push_back(field->p1Deck.back());
 		field->p1Deck.pop_back();
-		cardIDToSwitch = ai.selectSwitchHand();
+		cardIDToSwitch = AI::getInstance()->selectSwitchHand();
 		if (cardIDToSwitch != -1) {
 			field->p1Deck.push_back(cardIDToSwitch);
 			std::random_shuffle(field->p1Deck.begin(), field->p1Deck.end());
@@ -256,7 +258,7 @@ void MatchDirector::P1Turn()
 		}
 		else {
 			
-			promptCID = ai.selectCardToPlay(Hand1, promptZone, promptTargetCID);
+			promptCID = AI::getInstance()->selectCardToPlay(Hand1, promptZone, promptTargetCID);
 			
 			// -2 为领导牌，不过如果已经使用过了领导牌，GUI不让点领导牌
 			// -1 为回合结束
@@ -277,7 +279,7 @@ void MatchDirector::P1Turn()
 		// 上一个函数的后两个para是pass by reference		
 
 		bool legalPlay=true;
-		// 默认AI一定正确
+		// 默认AIobj一定正确
 		if (!legalPlay) {
 			cocos2d::log("AI doing illegal play.  Forced to end its turn.");
 			field->p1Pass = true;
