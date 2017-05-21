@@ -5,7 +5,7 @@ static MatchDirector* s_SharedMatchDirector = nullptr;
 void MatchDirector::updateField()
 {
 	field = &BattleInfoManager::getInstance()->getBattlefield();
-	cocos2d::log("%i", field->p0Deck[3]);
+	//cocos2d::log("%i", field->p0Deck[3]);
 }
 
 MatchDirector::MatchDirector()
@@ -87,9 +87,11 @@ void MatchDirector::StarterModel()
 	if ((getCardSetOfPlayer(0) == Scoiateal) ^ (getCardSetOfPlayer(1) == Scoiateal)) {
 		if (getCardSetOfPlayer(1) == Scoiateal) {
 			//Starter = GUI->selectStarterByUser();
+			Starter = 1;
 		}
 		else {
 			//Starter = ai.selectStarterByAI();
+			Starter = 0;
 		}
 	}
 	else {
@@ -122,21 +124,21 @@ void MatchDirector::SwitchHands()
 	std::random_shuffle(field->p1Deck.begin(), field->p1Deck.end());
 
 	for (int i = 0; i < 10; i++) {
-		field->p0Hand.push_back(*field->p0Deck.end());
+		field->p0Hand.push_back(field->p0Deck.back());
 		field->p0Deck.pop_back();
-		field->p1Hand.push_back(*field->p1Deck.end());
+		field->p1Hand.push_back(field->p1Deck.back());
 		field->p1Deck.pop_back();
 	}	
 	int cardIDToSwitch;
 	//cardIDToSwitch = ai.selectSwitchHand();
 	field->p1Deck.push_back(cardIDToSwitch);
 	std::random_shuffle(field->p1Deck.begin(), field->p1Deck.end());
-	field->p1Hand.push_back(*field->p1Deck.end());
+	field->p1Hand.push_back(field->p1Deck.back());
 	field->p1Deck.pop_back();
 	//cardIDToSwitch = ai.selectSwitchHand();
 	field->p1Deck.push_back(cardIDToSwitch);
 	std::random_shuffle(field->p1Deck.begin(), field->p1Deck.end());
-	field->p1Hand.push_back(*field->p1Deck.end());
+	field->p1Hand.push_back(field->p1Deck.back());
 	field->p1Deck.pop_back();
 
 	//GUI->select1stHandToSwitch();
