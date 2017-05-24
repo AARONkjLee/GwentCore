@@ -92,7 +92,8 @@ bool PlaySceneTest::init()
 		double wUnit = visibleSize.width / (2 + MAX(n/6, 10));
 		double hUnit = visibleSize.height / 6;
 		CardS1->setScale( 1.6*wUnit/CardS1->getContentSize().height);
-		CardS1->setPosition(Vec2(((i%6)+12)*wUnit/3 + origin.x, ((int)(i/6) + 1.5) * hUnit +origin.y));
+		CardS1->setPosition(Vec2((((i-1)%6)+12)*wUnit/3 + origin.x, ((int)(i/6) + 1.5) * hUnit +origin.y));
+		CardS1->setOpacity(120);
 		this->addChild(CardS1);
 		CardSpritesVec.push_back(CardS1);
 	}

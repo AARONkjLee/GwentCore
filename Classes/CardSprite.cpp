@@ -175,23 +175,30 @@ void CardSprite::initTouchEvent()
 
 void CardSprite::mouseMoveFunc(EventMouse * event)
 {
-	if (clickOnTarget(event, this)) {
-		//log("CardSprite %s detected move!", this->getCardPrototype().getCardName().c_str());
+	if (!clickOnTarget(event, this)) {
+		return;
 	}
+	//log("CardSprite %s detected move!", this->getCardPrototype().getCardName().c_str());
+
 }
 
 void CardSprite::clickDownFunc(EventMouse* event)
 {
-	if (clickOnTarget(event, this)) {
-		log("CardSprite %s detected click down!", this->getCardPrototype().getCardName().c_str());
+	if (!clickOnTarget(event, this)) {
+		return;
 	}
+	this->setOpacity(180);
+	log("CardSprite %s detected click down!", this->getCardPrototype().getCardName().c_str());
+
 }
 
 void CardSprite::clickUpFunc(EventMouse* event)
 {
-	if (clickOnTarget(event, this)) {
-		log("CardSprite %s detected click up!", this->getCardPrototype().getCardName().c_str());
+	if (!clickOnTarget(event, this)) {
+		return;
 	}
+	log("CardSprite %s detected click up!", this->getCardPrototype().getCardName().c_str());
+
 }
 
 bool CardSprite::onTouchBeganFunc(cocos2d::Touch * touch, cocos2d::Event * event)
@@ -199,6 +206,7 @@ bool CardSprite::onTouchBeganFunc(cocos2d::Touch * touch, cocos2d::Event * event
 	if (!clickOnTarget(touch, this)) {
 		return false;
 	}
+	this->setOpacity(255);
 	log("touch began on %i %s CardSprite", cardPrototype.getID(), cardPrototype.getCardName().c_str());
 	return true;
 }
@@ -213,9 +221,10 @@ void CardSprite::onTouchMovedFunc(cocos2d::Touch * touch, cocos2d::Event * event
 
 void CardSprite::onTouchEndedFunc(cocos2d::Touch * touch, cocos2d::Event * event)
 {
-	if (!clickOnTarget(touch, this)) {
+	/*if (!clickOnTarget(touch, this)) {
 		return;
-	}
+	}*/
+	this->setOpacity(120);
 	log("touch ended on %i %s CardSprite", cardPrototype.getID(), cardPrototype.getCardName().c_str());
 }
 
