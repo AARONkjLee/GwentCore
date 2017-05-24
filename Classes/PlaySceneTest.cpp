@@ -1,6 +1,7 @@
 #include "CardSprite.h"
 #include "SimpleAudioEngine.h"
 #include "PlaySceneTest.h"
+#include "CardSpriteWithLayer.h"
 
 //  关于Listener和Event的教程
 //  http://www.gamefromscratch.com/post/2014/10/03/Cocos2d-x-Tutorial-Series-Handling-Touch-and-Mouse-Input.aspx
@@ -95,11 +96,11 @@ bool PlaySceneTest::init()
 		CardSpritesVec.push_back(CardS1);
 	}*/
 
-	auto CardS1 = CardSprite::create(11);
+	auto CardS1 = CardSpriteWithLayer::create(11);
 	CardS1->setPosition(Vec2(visibleSize.width / 4 + origin.x, visibleSize.height / 2 + origin.y));
 	//CardS1->setScale(0.5);
 
-	auto CardS2 = CardSprite::create(1);
+	auto CardS2 = CardSpriteWithLayer::create(1);
 	CardS2->setPosition(Vec2(visibleSize.width * 3 / 4 + origin.x, visibleSize.height / 2 + origin.y));
 	//CardS2->setScale(0.5);
 

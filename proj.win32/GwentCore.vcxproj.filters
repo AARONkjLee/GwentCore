@@ -129,6 +129,9 @@
     <ClCompile Include="..\Classes\AI.cpp">
       <Filter>src\AI</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\CardSpriteWithLayer.cpp">
+      <Filter>src\GUI tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -240,6 +243,9 @@
       <Filter>src\AI</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\EventFreeFuctions.h">
+      <Filter>src\GUI tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CardSpriteWithLayer.h">
       <Filter>src\GUI tools</Filter>
     </ClInclude>
   </ItemGroup>

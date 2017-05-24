@@ -129,7 +129,8 @@ bool CardSprite::initWithID(int cid)
 			/ CARD_SPRITE_SIZE.height * (getContentSize().height));
 	}
 
-	initClickEvent();
+	//initMouseEvent();
+	initTouchEvent();
 
 	return true;
 }
@@ -174,7 +175,7 @@ int CardSprite::getInitStrength()
 	return cardPrototype.getStrength();
 }
 
-void CardSprite::initClickEvent()
+void CardSprite::initMouseEvent()
 {
 	// To-Do 一种事件只创建一个listener,其他的通过位置判断
 	auto mouseEvent = EventListenerMouse::create();	
@@ -198,6 +199,17 @@ void CardSprite::initClickEvent()
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(mouseEvent, this);
 }
 
+void CardSprite::initTouchEvent()
+{
+	auto touchListener = EventListenerTouchOneByOne::create();
+	touchListener->setSwallowTouches(false);
+	touchListener->onTouchBegan = CC_CALLBACK_2(CardSprite::onTouchBeganFunc, this);
+	touchListener->onTouchMoved = CC_CALLBACK_2(CardSprite::onTouchMovedFunc, this);
+	touchListener->onTouchEnded = CC_CALLBACK_2(CardSprite::onTouchEndedFunc, this);
+	touchListener->onTouchCancelled = CC_CALLBACK_2(CardSprite::onTouchCancelledFunc, this);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener, this);
+}
+
 void CardSprite::mouseMoveFunc(EventMouse * event)
 {
 	if (mouseEventOnTarget(event, this)) {
@@ -217,4 +229,25 @@ void CardSprite::clickUpFunc(EventMouse* event)
 	if (mouseEventOnTarget(event, this)) {
 		log("CardSprite %s detected click up!", this->getCardPrototype().getCardName().c_str());
 	}
+}
+
+bool CardSprite::onTouchBeganFunc(cocos2d::Touch * touch, cocos2d::Event * event)
+{
+	log("touch began on %i %s CardSprite", cardPrototype.getID(), cardPrototype.getCardName().c_str());
+	return true;
+}
+
+void CardSprite::onTouchMovedFunc(cocos2d::Touch * touch, cocos2d::Event * event)
+{
+	log("touch moved on %i %s CardSprite", cardPrototype.getID(), cardPrototype.getCardName().c_str());
+}
+
+void CardSprite::onTouchEndedFunc(cocos2d::Touch * touch, cocos2d::Event * event)
+{
+	log("touch ended on %i %s CardSprite", cardPrototype.getID(), cardPrototype.getCardName().c_str());
+}
+
+void CardSprite::onTouchCancelledFunc(cocos2d::Touch * touch, cocos2d::Event * event)
+{
+	log("touch cancelled on %i %s CardSprite", cardPrototype.getID(), cardPrototype.getCardName().c_str());
 }

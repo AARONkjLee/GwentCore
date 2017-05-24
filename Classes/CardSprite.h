@@ -22,24 +22,6 @@ private:
 	std::string getStrStrength();
 	CPosition position;
 
-	// Use this->getChildByName<Sprite*>("strengthSprite")
-	// and this->getChildByName<Label*>("strengthLabel")
-	// to access its strength aprt
-
-	/*
-	Do NOT do like below!  To inherit from Sprite, see:
-	http://blog.csdn.net/while0/article/details/25615685
-
-	Sprite* BodySprite;
-	Sprite* StrengthSprite;
-
-	If someday we want to implement DIY cards, we may need these
-
-	Sprite* SetSprite;
-	Sprite* UTypeSprite;
-	Sprite* SpellSprite;
-	*/
-
 public:
 	bool initCardPrototype(int cid);
 	static CardSprite* create(int cid);
@@ -48,21 +30,18 @@ public:
 	Card getCardPrototype();
 	int getInitStrength();
 
-	void initClickEvent();
+	void initMouseEvent();
+	void initTouchEvent();
+
 
 	virtual void mouseMoveFunc(cocos2d::EventMouse* event);
 	virtual void clickDownFunc(cocos2d::EventMouse* event);  //  判断是那个鼠标按键 用 event->getMouseButton() 判断
 	virtual void clickUpFunc(cocos2d::EventMouse* event);
-	/*
-	Do NOT do like below!  To inherit from Sprite, see:
-	http://blog.csdn.net/while0/article/details/25615685
 
-	CardSprite();
-	CardSprite(const int & cid);
-	CardSprite(const int & cid, const CPosition & posi);
-	void initDraw();
-	~CardSprite();
-	*/
+	bool onTouchBeganFunc(cocos2d::Touch* touch, cocos2d::Event* event);
+	void onTouchMovedFunc(cocos2d::Touch* touch, cocos2d::Event* event);
+	void onTouchEndedFunc(cocos2d::Touch* touch, cocos2d::Event* event);
+	void onTouchCancelledFunc(cocos2d::Touch* touch, cocos2d::Event* event);
 
 	CREATE_FUNC(CardSprite);  //useless for define the create function manually
 };

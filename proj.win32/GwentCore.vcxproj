@@ -156,6 +156,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\CardEffectManager.cpp" />
     <ClCompile Include="..\Classes\CardSprite.cpp" />
     <ClCompile Include="..\Classes\CardSpriteTest.cpp" />
+    <ClCompile Include="..\Classes\CardSpriteWithLayer.cpp" />
     <ClCompile Include="..\Classes\collectionInstance.cpp" />
     <ClCompile Include="..\Classes\CollectionSceneTest.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
@@ -185,6 +186,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\CardEffectManager.h" />
     <ClInclude Include="..\Classes\CardSprite.h" />
     <ClInclude Include="..\Classes\CardSpriteTest.h" />
+    <ClInclude Include="..\Classes\CardSpriteWithLayer.h" />
     <ClInclude Include="..\Classes\collectionInstance.h" />
     <ClInclude Include="..\Classes\CollectionSceneTest.h" />
     <ClInclude Include="..\Classes\EventFreeFuctions.h" />
