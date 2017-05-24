@@ -187,6 +187,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\CardSpriteTest.h" />
     <ClInclude Include="..\Classes\collectionInstance.h" />
     <ClInclude Include="..\Classes\CollectionSceneTest.h" />
+    <ClInclude Include="..\Classes\EventFreeFuctions.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\jsoncpp-master\include\json\allocator.h" />
     <ClInclude Include="..\Classes\jsoncpp-master\include\json\assertions.h" />

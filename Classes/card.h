@@ -42,7 +42,7 @@ public:
 	~Card() {}
 
 /*load the card using the id*/
-	void reload(int id);
+	bool reload(int id);
 
 /*return the collection limit of this card*/
 	int getID();

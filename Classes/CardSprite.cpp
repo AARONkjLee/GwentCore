@@ -47,65 +47,91 @@ std::string CardSprite::getStrStrength()
 	return strengthStream.str();
 }
 
-void CardSprite::initCardPrototype(int cid)
+bool CardSprite::initCardPrototype(int cid)
 {
-	cardPrototype.reload(cid);
-	currentStrength = cardPrototype.getStrength();
+	if (!cardPrototype.reload(cid)) {
+		cardPrototype.reload(0);
+		log("CardSprite with id %i init failed.", cid);
+		return false;
+	}
+	else {
+		return true;
+	}
+	//currentStrength = cardPrototype.getStrength();
 }
 
 CardSprite * CardSprite::create(int cid)
 {
-	CardSprite* sprite  = new CardSprite();
-	sprite->initCardPrototype(cid);
-	std::string filename = sprite->cardPrototype.getPicDir();
+	CardSprite* pRet = new(std::nothrow) CardSprite();
+		if (pRet && pRet->initWithID(cid))
+		{ 
+			pRet->autorelease(); 
+			return pRet; 
+		} 
+		else 
+		{ 
+			log("CardSprite create failed with ID %i", cid);
+			delete pRet; 
+			pRet = nullptr; 
+			return nullptr; 
+		} 
+}
+
+bool CardSprite::initWithID(int cid)
+{
+	if (!initCardPrototype(cid)) {
+		return false;
+	}
+
+	std::string filename = cardPrototype.getPicDir();
 	if (filename.empty()) {
 		filename = CARD_BACK_DIR;
+		log("CardSprite texture cannot be found with cid %i", cid);
 	}
-	if (sprite && sprite->initWithFile(filename)){
-		sprite->autorelease();
+	if (!initWithFile(filename)) {
+		log("CardSprite texture init failed with cid %i", cid);
+		return false;
+	}
+	if (cardPrototype.getCardType() == Unit) {
+		bool heroFlag = cardPrototype.getUnitLevel() == Hero;
+		std::string strengthBackFilename = 
+			(heroFlag) ? CARD_HERO_STRENGTH_BACK_DIR : 
+			CARD_STRENGTH_BACK_DIR;
+		auto strengthSprite = Sprite::create(strengthBackFilename);
+		strengthSprite->setName("strengthSprite");
 
-		//to-do judge the CType and ULevel
-		if (sprite->cardPrototype.getCardType() == Unit) {
-			bool heroFlag = sprite->cardPrototype.getUnitLevel() == Hero;
-			std::string strengthBackFilename = 
-				(heroFlag) ? CARD_HERO_STRENGTH_BACK_DIR : 
-				CARD_STRENGTH_BACK_DIR;
-			auto strengthSprite = Sprite::create(strengthBackFilename);
-			strengthSprite->setName("strengthSprite");
+		addChild(strengthSprite);
+		strengthSprite->setPosition(
+			((heroFlag) ? CS_STRENGTH_HERO_BACK_COORDINATES.width :
+				CS_STRENGTH_BACK_COORDINATES.width)
+			/ CARD_SPRITE_SIZE.width * (getContentSize().width),
+			((heroFlag) ? CS_STRENGTH_HERO_BACK_COORDINATES.height :
+				CS_STRENGTH_BACK_COORDINATES.height)
+			/ CARD_SPRITE_SIZE.height * (getContentSize().height));
 
-			sprite->addChild(strengthSprite);
-			strengthSprite->setPosition(
-				((heroFlag) ? CS_STRENGTH_HERO_BACK_COORDINATES.width :
-					CS_STRENGTH_BACK_COORDINATES.width)
-				/ CARD_SPRITE_SIZE.width * (sprite->getContentSize().width),
-				((heroFlag) ? CS_STRENGTH_HERO_BACK_COORDINATES.height :
-					CS_STRENGTH_BACK_COORDINATES.height)
-				/ CARD_SPRITE_SIZE.height * (sprite->getContentSize().height));
-
-			auto strengthLabel = Label::create(
-				sprite->getStrStrength(), 
-				"fonts/HalisGR-SBook.otf", 70);
-			strengthLabel->setName("strengthLabel");
-			sprite->addChild(strengthLabel);
-			strengthLabel->setColor(
-				(heroFlag) ? Color3B::WHITE : Color3B::BLACK);
-			strengthLabel->enableShadow(
-				(heroFlag) ? Color4B::BLACK : Color4B(Color3B::WHITE, 64),
-				Size(4, -4), 10);
-			
-			strengthLabel->setPosition(
-				( (heroFlag) ? CS_STRENGTH_HERO_LABEL_COORDINATES.width : 
-					CS_STRENGTH_LABEL_COORDINATES.width )
-				/ CARD_SPRITE_SIZE.width * (sprite->getContentSize().width),
-				( (heroFlag) ? CS_STRENGTH_HERO_LABEL_COORDINATES.height :
-					CS_STRENGTH_LABEL_COORDINATES.height )
-				/ CARD_SPRITE_SIZE.height * (sprite->getContentSize().height));
-		}
-		return sprite;
+		auto strengthLabel = Label::create(
+			getStrStrength(), 
+			"fonts/HalisGR-SBook.otf", 70);
+		strengthLabel->setName("strengthLabel");
+		addChild(strengthLabel);
+		strengthLabel->setColor(
+			(heroFlag) ? Color3B::WHITE : Color3B::BLACK);
+		strengthLabel->enableShadow(
+			(heroFlag) ? Color4B::BLACK : Color4B(Color3B::WHITE, 64),
+			Size(4, -4), 10);
+		
+		strengthLabel->setPosition(
+			( (heroFlag) ? CS_STRENGTH_HERO_LABEL_COORDINATES.width : 
+				CS_STRENGTH_LABEL_COORDINATES.width )
+			/ CARD_SPRITE_SIZE.width * (getContentSize().width),
+			( (heroFlag) ? CS_STRENGTH_HERO_LABEL_COORDINATES.height :
+				CS_STRENGTH_LABEL_COORDINATES.height )
+			/ CARD_SPRITE_SIZE.height * (getContentSize().height));
 	}
 
-	CC_SAFE_DELETE(sprite);
-	return nullptr;
+	initClickEvent();
+
+	return true;
 }
 
 void CardSprite::setCurrentStrength(int strength)
@@ -146,4 +172,49 @@ Card CardSprite::getCardPrototype()
 int CardSprite::getInitStrength()
 {
 	return cardPrototype.getStrength();
+}
+
+void CardSprite::initClickEvent()
+{
+	// To-Do 一种事件只创建一个listener,其他的通过位置判断
+	auto mouseEvent = EventListenerMouse::create();	
+	//try {
+	//	EventMouse* mouseEvent = dynamic_cast<EventMouse*>(event);
+	//	mouseEvent->getMouseButton();
+	//	std::stringstream message;
+	//	message << "Mouse event: Button: " << mouseEvent->getMouseButton() << "pressed at point (" <<
+	//		mouseEvent->getLocation().x << "," << mouseEvent->getLocation().y << ")";
+	//	MessageBox(message.str().c_str(), "Mouse Event Details");
+
+	//}
+	//catch (std::bad_cast& e) {
+	//	// Not sure what kind of event you passed us cocos, but it was the wrong one
+	//	return;
+	//}
+
+	mouseEvent->onMouseMove = CC_CALLBACK_1(CardSprite::mouseMoveFunc, this);
+	mouseEvent->onMouseDown = CC_CALLBACK_1(CardSprite::clickDownFunc, this);
+	mouseEvent->onMouseUp = CC_CALLBACK_1(CardSprite::clickUpFunc, this);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(mouseEvent, this);
+}
+
+void CardSprite::mouseMoveFunc(EventMouse * event)
+{
+	if (mouseEventOnTarget(event, this)) {
+		//log("CardSprite %s detected move!", this->getCardPrototype().getCardName().c_str());
+	}
+}
+
+void CardSprite::clickDownFunc(EventMouse* event)
+{
+	if (mouseEventOnTarget(event, this)) {
+		log("CardSprite %s detected click down!", this->getCardPrototype().getCardName().c_str());
+	}
+}
+
+void CardSprite::clickUpFunc(EventMouse* event)
+{
+	if (mouseEventOnTarget(event, this)) {
+		log("CardSprite %s detected click up!", this->getCardPrototype().getCardName().c_str());
+	}
 }

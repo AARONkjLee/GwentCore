@@ -82,6 +82,19 @@ bool PlaySceneTest::init()
     this->addChild(sprite, 0);
 	*/
 
+	/*std::vector<CardSprite*> CardSpritesVec;
+
+	int n = 51;
+	for (int i = 1; i <= n; i++) {
+		auto CardS1 = CardSprite::create(i);
+		double wUnit = visibleSize.width / (2 + MAX(n/6, 10));
+		double hUnit = visibleSize.height / 6;
+		CardS1->setScale( 1.6*wUnit/CardS1->getContentSize().height);
+		CardS1->setPosition(Vec2(((i%6)+1.5)*wUnit/3 + origin.x, ((int)(i/6) + 1.5) * hUnit +origin.y));
+		this->addChild(CardS1);
+		CardSpritesVec.push_back(CardS1);
+	}*/
+
 	auto CardS1 = CardSprite::create(11);
 	CardS1->setPosition(Vec2(visibleSize.width / 4 + origin.x, visibleSize.height / 2 + origin.y));
 	//CardS1->setScale(0.5);

@@ -3,6 +3,7 @@
 #include "card.h"
 #include "cocos2d.h"
 #include "CardEffectManager.h"
+#include "EventFreeFuctions.h"
 
 const std::string CARD_BACK_DIR = "GwentCardsResources/Back.jpg";
 const std::string CARD_STRENGTH_BACK_DIR = "GwentCardsResources/StrengthBack.png";
@@ -40,12 +41,18 @@ private:
 	*/
 
 public:
-	void initCardPrototype(int cid);
+	bool initCardPrototype(int cid);
 	static CardSprite* create(int cid);
+	bool initWithID(int cid);
 	void setCurrentStrength(int strength);
 	Card getCardPrototype();
 	int getInitStrength();
 
+	void initClickEvent();
+
+	virtual void mouseMoveFunc(cocos2d::EventMouse* event);
+	virtual void clickDownFunc(cocos2d::EventMouse* event);  //  判断是那个鼠标按键 用 event->getMouseButton() 判断
+	virtual void clickUpFunc(cocos2d::EventMouse* event);
 	/*
 	Do NOT do like below!  To inherit from Sprite, see:
 	http://blog.csdn.net/while0/article/details/25615685
@@ -57,5 +64,5 @@ public:
 	~CardSprite();
 	*/
 
-	//CREATE_FUNC(CardSprite);  useless for define the create function manually
+	CREATE_FUNC(CardSprite);  //useless for define the create function manually
 };

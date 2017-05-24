@@ -239,6 +239,9 @@
     <ClInclude Include="..\Classes\AI.h">
       <Filter>src\AI</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\EventFreeFuctions.h">
+      <Filter>src\GUI tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
