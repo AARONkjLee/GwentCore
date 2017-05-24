@@ -15,6 +15,7 @@ const cocos2d::Size CS_STRENGTH_HERO_BACK_COORDINATES((float)92, (float)944);
 const cocos2d::Size CS_STRENGTH_LABEL_COORDINATES((float)88, (float)939);
 const cocos2d::Size CS_STRENGTH_HERO_LABEL_COORDINATES((float)92, (float)939);
 
+
 class CardSprite : public cocos2d::Sprite{
 private:
 	Card cardPrototype;
@@ -25,6 +26,7 @@ private:
 public:
 	bool initCardPrototype(int cid);
 	static CardSprite* create(int cid);
+	bool init();
 	bool initWithID(int cid);
 	void setCurrentStrength(int strength);
 	Card getCardPrototype();
@@ -33,15 +35,14 @@ public:
 	void initMouseEvent();
 	void initTouchEvent();
 
-
-	virtual void mouseMoveFunc(cocos2d::EventMouse* event);
-	virtual void clickDownFunc(cocos2d::EventMouse* event);  //  判断是那个鼠标按键 用 event->getMouseButton() 判断
-	virtual void clickUpFunc(cocos2d::EventMouse* event);
+	void mouseMoveFunc(cocos2d::EventMouse* event);
+	void clickDownFunc(cocos2d::EventMouse* event);  //  判断是那个鼠标按键 用 event->getMouseButton() 判断
+	void clickUpFunc(cocos2d::EventMouse* event);
 
 	bool onTouchBeganFunc(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onTouchMovedFunc(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onTouchEndedFunc(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onTouchCancelledFunc(cocos2d::Touch* touch, cocos2d::Event* event);
 
-	CREATE_FUNC(CardSprite);  //useless for define the create function manually
+	CREATE_FUNC(CardSprite);
 };

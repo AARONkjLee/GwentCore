@@ -2,6 +2,7 @@
 #include "SimpleAudioEngine.h"
 #include "PlaySceneTest.h"
 #include "CardSpriteWithLayer.h"
+#include "CardSpriteShaded.h"
 
 //  关于Listener和Event的教程
 //  http://www.gamefromscratch.com/post/2014/10/03/Cocos2d-x-Tutorial-Series-Handling-Touch-and-Mouse-Input.aspx
@@ -83,76 +84,76 @@ bool PlaySceneTest::init()
     this->addChild(sprite, 0);
 	*/
 
-	/*std::vector<CardSprite*> CardSpritesVec;
+	std::vector<CardSprite*> CardSpritesVec;
 
-	int n = 51;
+	int n = 25;
 	for (int i = 1; i <= n; i++) {
-		auto CardS1 = CardSprite::create(i);
+		auto CardS1 = CardSpriteShaded::create(i);
 		double wUnit = visibleSize.width / (2 + MAX(n/6, 10));
 		double hUnit = visibleSize.height / 6;
 		CardS1->setScale( 1.6*wUnit/CardS1->getContentSize().height);
-		CardS1->setPosition(Vec2(((i%6)+1.5)*wUnit/3 + origin.x, ((int)(i/6) + 1.5) * hUnit +origin.y));
+		CardS1->setPosition(Vec2(((i%6)+12)*wUnit/3 + origin.x, ((int)(i/6) + 1.5) * hUnit +origin.y));
 		this->addChild(CardS1);
 		CardSpritesVec.push_back(CardS1);
-	}*/
+	}
 
-	auto CardS1 = CardSpriteWithLayer::create(11);
-	CardS1->setPosition(Vec2(visibleSize.width / 4 + origin.x, visibleSize.height / 2 + origin.y));
-	//CardS1->setScale(0.5);
+	//auto CardS1 = CardSpriteWithLayer::create(11);
+	//CardS1->setPosition(Vec2(visibleSize.width / 4 + origin.x, visibleSize.height / 2 + origin.y));
+	////CardS1->setScale(0.5);
 
-	auto CardS2 = CardSpriteWithLayer::create(1);
-	CardS2->setPosition(Vec2(visibleSize.width * 3 / 4 + origin.x, visibleSize.height / 2 + origin.y));
-	//CardS2->setScale(0.5);
+	//auto CardS2 = CardSpriteWithLayer::create(1);
+	//CardS2->setPosition(Vec2(visibleSize.width * 3 / 4 + origin.x, visibleSize.height / 2 + origin.y));
+	////CardS2->setScale(0.5);
 
-	this->addChild(CardS1);
-	this->addChild(CardS2);
+	//this->addChild(CardS1);
+	//this->addChild(CardS2);
 
-	auto mouselistener = EventListenerMouse::create();
-	// 以下三个是lambda函数 见本cpp文件开头的教程
-	mouselistener->onMouseDown = [] (cocos2d::Event* event){};
-	mouselistener->onMouseMove = [](cocos2d::Event* event) {};
-	mouselistener->onMouseUp = [=](cocos2d::Event* event) {
-		// 获取事件所绑定的 target 
-		auto target = static_cast<CardSprite*>(event->getCurrentTarget());
-		if (target == nullptr)
-		{
-			return true;
-		}
+	//auto mouselistener = EventListenerMouse::create();
+	//// 以下三个是lambda函数 见本cpp文件开头的教程
+	//mouselistener->onMouseDown = [] (cocos2d::Event* event){};
+	//mouselistener->onMouseMove = [](cocos2d::Event* event) {};
+	//mouselistener->onMouseUp = [=](cocos2d::Event* event) {
+	//	// 获取事件所绑定的 target 
+	//	auto target = static_cast<CardSprite*>(event->getCurrentTarget());
+	//	if (target == nullptr)
+	//	{
+	//		return true;
+	//	}
 
-		EventMouse* mouseEvent = dynamic_cast<EventMouse*>(event);
-		//mouseEvent->getMouseButton();
-		//std::stringstream message;
-		//message << "Mouse event: Button: " << mouseEvent->getMouseButton() << "pressed at point (" <<
-		//	mouseEvent->getLocation().x << "," << mouseEvent->getLocation().y << ")";
-		//MessageBox(message.str().c_str(), "Mouse Event Details");
+	//	EventMouse* mouseEvent = dynamic_cast<EventMouse*>(event);
+	//	//mouseEvent->getMouseButton();
+	//	//std::stringstream message;
+	//	//message << "Mouse event: Button: " << mouseEvent->getMouseButton() << "pressed at point (" <<
+	//	//	mouseEvent->getLocation().x << "," << mouseEvent->getLocation().y << ")";
+	//	//MessageBox(message.str().c_str(), "Mouse Event Details");
 
 
-		// 获取当前点击点所在相对按钮的位置坐标
-		// getLocation得到的是openGL坐标系，也就是世界坐标系
-		Vec2 locationInNode = target->convertToNodeSpace(mouseEvent->getLocation());
-		Size s = target->getContentSize();
-		Rect rect = Rect(0, 0, s.width, s.height);
+	//	// 获取当前点击点所在相对按钮的位置坐标
+	//	// getLocation得到的是openGL坐标系，也就是世界坐标系
+	//	Vec2 locationInNode = target->convertToNodeSpace(mouseEvent->getLocation());
+	//	Size s = target->getContentSize();
+	//	Rect rect = Rect(0, 0, s.width, s.height);
 
-		// 点击范围判断检测
-		if (rect.containsPoint(locationInNode))
-		{
-			//log("sprite began... x = %f, y = %f", locationInNode.x, locationInNode.y);
-			if (mouseEvent->getMouseButton() == 0) {
-				target->setCurrentStrength(target->getInitStrength() + 2);
-			} else if (mouseEvent->getMouseButton() == 1) {
-				target->setCurrentStrength(target->getInitStrength() - 2);
-			} else {
-				target->setCurrentStrength(target->getInitStrength());
+	//	// 点击范围判断检测
+	//	if (rect.containsPoint(locationInNode))
+	//	{
+	//		//log("sprite began... x = %f, y = %f", locationInNode.x, locationInNode.y);
+	//		if (mouseEvent->getMouseButton() == 0) {
+	//			target->setCurrentStrength(target->getInitStrength() + 2);
+	//		} else if (mouseEvent->getMouseButton() == 1) {
+	//			target->setCurrentStrength(target->getInitStrength() - 2);
+	//		} else {
+	//			target->setCurrentStrength(target->getInitStrength());
 
-			}
-			return true;
-		}
-		return false;
+	//		}
+	//		return true;
+	//	}
+	//	return false;
 
-	};
+	//};
 
-	_eventDispatcher->addEventListenerWithSceneGraphPriority(mouselistener, CardS1);
-	_eventDispatcher->addEventListenerWithSceneGraphPriority(mouselistener->clone(), CardS2);
+	//_eventDispatcher->addEventListenerWithSceneGraphPriority(mouselistener, CardS1);
+	//_eventDispatcher->addEventListenerWithSceneGraphPriority(mouselistener->clone(), CardS2);
 
     return true;
 }

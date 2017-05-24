@@ -132,19 +132,19 @@ bool PlayPreparationScene::init()
 		EventMouse* mouseEvent = dynamic_cast<EventMouse*>(event);
 		CardSet currentActivatedSetSprite;
 
-		if (mouseEventOnTarget(mouseEvent, ScoiataelBack)) {
+		if (clickOnTarget(mouseEvent, ScoiataelBack)) {
 			currentActivatedSetSprite = Scoiateal;
 		}
-		else if (mouseEventOnTarget(mouseEvent, NorthernRealmsBack)) {
+		else if (clickOnTarget(mouseEvent, NorthernRealmsBack)) {
 			currentActivatedSetSprite = Northern;
 		}
-		else if (mouseEventOnTarget(mouseEvent, NilfgaardianEmpireBack)) {
+		else if (clickOnTarget(mouseEvent, NilfgaardianEmpireBack)) {
 			currentActivatedSetSprite = Nilfgaardian;
 		}
-		else if (mouseEventOnTarget(mouseEvent, MonstersBack)) {
+		else if (clickOnTarget(mouseEvent, MonstersBack)) {
 			currentActivatedSetSprite = Monster;
 		}
-		else if (mouseEventOnTarget(mouseEvent, background)) {
+		else if (clickOnTarget(mouseEvent, background)) {
 			currentActivatedSetSprite = NullCSet;
 		}
 
@@ -205,16 +205,16 @@ bool PlayPreparationScene::init()
 		EventMouse* mouseEvent = dynamic_cast<EventMouse*>(event);
 
 		
-		if (mouseEventOnTarget(mouseEvent, ScoiataelBack)) {
+		if (clickOnTarget(mouseEvent, ScoiataelBack)) {
 			passDeckBeforePassScene(Scoiateal);
 		}
-		else if (mouseEventOnTarget(mouseEvent, NorthernRealmsBack)) {
+		else if (clickOnTarget(mouseEvent, NorthernRealmsBack)) {
 			passDeckBeforePassScene(Northern);
 		}
-		else if (mouseEventOnTarget(mouseEvent, NilfgaardianEmpireBack)) {
+		else if (clickOnTarget(mouseEvent, NilfgaardianEmpireBack)) {
 			passDeckBeforePassScene(Nilfgaardian);
 		}
-		else if (mouseEventOnTarget(mouseEvent, MonstersBack)) {
+		else if (clickOnTarget(mouseEvent, MonstersBack)) {
 			passDeckBeforePassScene(Monster);
 		}
 		else {

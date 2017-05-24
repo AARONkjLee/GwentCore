@@ -7,38 +7,6 @@
 //  http://blog.csdn.net/liuhong135541/article/details/24374227
 
 USING_NS_CC;
-/*
-CardSprite::CardSprite()
-{
-}
-
-CardSprite::CardSprite(const int & cid)
-{
-	cardPrototype.reload(cid);
-	currentStrength = cardPrototype.getStrength();
-}
-
-CardSprite::CardSprite(const int & cid, const CPosition & posi)
-{
-	cardPrototype.reload(cid);
-	currentStrength = cardPrototype.getStrength();
-	position = posi;
-}
-
-void CardSprite::initDraw()
-{
-	auto BodySprite = Sprite::create(cardPrototype.getPicDir());
-	this->addChild(BodySprite);
-	if (cardPrototype.getCardType() == Unit) {
-		auto StrengthSprite = Sprite::create("StrengthBack.png");
-		this->addChild(StrengthSprite);
-	}
-}
-
-CardSprite::~CardSprite()
-{
-}
-*/
 
 std::string CardSprite::getStrStrength()
 {
@@ -77,12 +45,23 @@ CardSprite * CardSprite::create(int cid)
 		} 
 }
 
+bool CardSprite::init()
+{
+	return true;
+}
+
 bool CardSprite::initWithID(int cid)
 {
+	if (!init()) {
+		return false;
+	}
+
 	if (!initCardPrototype(cid)) {
 		return false;
 	}
 
+	// Reading the card Picture
+	// to-do change it to cache
 	std::string filename = cardPrototype.getPicDir();
 	if (filename.empty()) {
 		filename = CARD_BACK_DIR;
@@ -154,8 +133,6 @@ void CardSprite::setCurrentStrength(int strength)
 			(heroFlag) ? Color4B::BLACK : Color4B(Color3B::WHITE, 64),
 			Size(4, -4), 10);
 	}
-
-	
 	auto scale11 = ScaleTo::create(0.1, 2.0);
 	auto scale10 = ScaleTo::create(0.15, 1.0);
 	Vector<FiniteTimeAction*> actions;
@@ -179,20 +156,6 @@ void CardSprite::initMouseEvent()
 {
 	// To-Do 一种事件只创建一个listener,其他的通过位置判断
 	auto mouseEvent = EventListenerMouse::create();	
-	//try {
-	//	EventMouse* mouseEvent = dynamic_cast<EventMouse*>(event);
-	//	mouseEvent->getMouseButton();
-	//	std::stringstream message;
-	//	message << "Mouse event: Button: " << mouseEvent->getMouseButton() << "pressed at point (" <<
-	//		mouseEvent->getLocation().x << "," << mouseEvent->getLocation().y << ")";
-	//	MessageBox(message.str().c_str(), "Mouse Event Details");
-
-	//}
-	//catch (std::bad_cast& e) {
-	//	// Not sure what kind of event you passed us cocos, but it was the wrong one
-	//	return;
-	//}
-
 	mouseEvent->onMouseMove = CC_CALLBACK_1(CardSprite::mouseMoveFunc, this);
 	mouseEvent->onMouseDown = CC_CALLBACK_1(CardSprite::clickDownFunc, this);
 	mouseEvent->onMouseUp = CC_CALLBACK_1(CardSprite::clickUpFunc, this);
@@ -202,7 +165,7 @@ void CardSprite::initMouseEvent()
 void CardSprite::initTouchEvent()
 {
 	auto touchListener = EventListenerTouchOneByOne::create();
-	touchListener->setSwallowTouches(false);
+	touchListener->setSwallowTouches(true);
 	touchListener->onTouchBegan = CC_CALLBACK_2(CardSprite::onTouchBeganFunc, this);
 	touchListener->onTouchMoved = CC_CALLBACK_2(CardSprite::onTouchMovedFunc, this);
 	touchListener->onTouchEnded = CC_CALLBACK_2(CardSprite::onTouchEndedFunc, this);
@@ -212,42 +175,54 @@ void CardSprite::initTouchEvent()
 
 void CardSprite::mouseMoveFunc(EventMouse * event)
 {
-	if (mouseEventOnTarget(event, this)) {
+	if (clickOnTarget(event, this)) {
 		//log("CardSprite %s detected move!", this->getCardPrototype().getCardName().c_str());
 	}
 }
 
 void CardSprite::clickDownFunc(EventMouse* event)
 {
-	if (mouseEventOnTarget(event, this)) {
+	if (clickOnTarget(event, this)) {
 		log("CardSprite %s detected click down!", this->getCardPrototype().getCardName().c_str());
 	}
 }
 
 void CardSprite::clickUpFunc(EventMouse* event)
 {
-	if (mouseEventOnTarget(event, this)) {
+	if (clickOnTarget(event, this)) {
 		log("CardSprite %s detected click up!", this->getCardPrototype().getCardName().c_str());
 	}
 }
 
 bool CardSprite::onTouchBeganFunc(cocos2d::Touch * touch, cocos2d::Event * event)
 {
+	if (!clickOnTarget(touch, this)) {
+		return false;
+	}
 	log("touch began on %i %s CardSprite", cardPrototype.getID(), cardPrototype.getCardName().c_str());
 	return true;
 }
 
 void CardSprite::onTouchMovedFunc(cocos2d::Touch * touch, cocos2d::Event * event)
 {
+	if (!clickOnTarget(touch, this)) {
+		return;
+	}
 	log("touch moved on %i %s CardSprite", cardPrototype.getID(), cardPrototype.getCardName().c_str());
 }
 
 void CardSprite::onTouchEndedFunc(cocos2d::Touch * touch, cocos2d::Event * event)
 {
+	if (!clickOnTarget(touch, this)) {
+		return;
+	}
 	log("touch ended on %i %s CardSprite", cardPrototype.getID(), cardPrototype.getCardName().c_str());
 }
 
 void CardSprite::onTouchCancelledFunc(cocos2d::Touch * touch, cocos2d::Event * event)
 {
+	if (!clickOnTarget(touch, this)) {
+		return;
+	}
 	log("touch cancelled on %i %s CardSprite", cardPrototype.getID(), cardPrototype.getCardName().c_str());
 }
