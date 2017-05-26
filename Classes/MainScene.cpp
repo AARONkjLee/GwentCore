@@ -151,7 +151,7 @@ void MainScene::replaceToPlaySceneCallback(Ref* pSender)
 {
 	if (clickable) {
 		clickable = false;
-		auto Scene = PlayPreparationScene::createScene();
+		auto Scene = SinglePlayScene::createScene();
 		Director::getInstance()->replaceScene(TransitionFade::create(transitionTime, Scene));
 	}
 }

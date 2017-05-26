@@ -46,6 +46,9 @@
     <Filter Include="resource\cardCollection">
       <UniqueIdentifier>{cb8b2dba-3400-472b-8e54-e05a6d4e81ee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Scenes\PlayScene\PlaySceneSprites">
+      <UniqueIdentifier>{c56afd0c-1098-4c5e-af8b-db17f7459bf8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -128,6 +131,12 @@
     </ClCompile>
     <ClCompile Include="..\Classes\AI.cpp">
       <Filter>src\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TemplateSprite.cpp">
+      <Filter>src\GUI tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CoinSprite.cpp">
+      <Filter>src\Scenes\PlayScene\PlaySceneSprites</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +250,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\EventFreeFuctions.h">
       <Filter>src\GUI tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TemplateSprite.h">
+      <Filter>src\GUI tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CoinSprite.h">
+      <Filter>src\Scenes\PlayScene\PlaySceneSprites</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

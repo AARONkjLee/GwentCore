@@ -9,14 +9,14 @@ auto visibleSize = Director::getInstance()->getVisibleSize();
 
 void SinglePlayScene::initWithStarter(int Starter)
 {
-	leader0 = LeaderCardSprite::create(BattleInfoManager::getInstance()->getBattlefield().p0LeaderID);
+	/*leader0 = LeaderCardSprite::create(BattleInfoManager::getInstance()->getBattlefield().p0LeaderID);
 	leader0->setScale(0.08);
 	leader0->setPosition(Vec2(WIN_CORDINATE_2_GL(3.06, 0.22, 2.11, 1.36)));
 	leader1 = LeaderCardSprite::create(BattleInfoManager::getInstance()->getBattlefield().p1LeaderID);
 	leader1->setScale(0.08);
 	leader1->setPosition(Vec2(WIN_CORDINATE_2_GL(3.06,16.62, 2.11, 1.36)));
 	this->addChild(leader0);
-	this->addChild(leader1);
+	this->addChild(leader1);*/
 
 
 }
@@ -46,7 +46,7 @@ bool SinglePlayScene::init()
         return false;
     }
     
-    //auto visibleSize = Director::getInstance()->getVisibleSize();
+    auto visibleSize = Director::getInstance()->getVisibleSize();
     auto origin = Director::getInstance()->getVisibleOrigin();
 
     /////////////////////////////
@@ -58,7 +58,8 @@ bool SinglePlayScene::init()
                                            "CloseNormal.png",
                                            "CloseSelected.png",
                                            CC_CALLBACK_1(SinglePlayScene::GoBackToMainSceneCallback, this));
-    
+	clickable = true;
+
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
 
@@ -71,11 +72,16 @@ bool SinglePlayScene::init()
     // 3. add your codes below...
 
 	auto background = Sprite::create(PLAY_SCENE_BG_DIR);
-	background->setPosition(Vec2(visibleSize.width/2, visibleSize.height/2));
-	this->addChild(background);
+	background->setAnchorPoint(Vec2(0.5, 0.5));
+	background->setPosition(Vec2(visibleSize.width/2+origin.x, visibleSize.height/2+origin.y));
+	this->addChild(background,0);
 
-	MatchDirector::getInstance()->setGUILayer(this);
-	MatchDirector::getInstance()->MainMatchLoop();
+	auto coin = CoinSprite::create();
+	coin->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+	this->addChild(coin, 0);
+
+//	MatchDirector::getInstance()->setGUILayer(this);
+//	MatchDirector::getInstance()->MainMatchLoop();
 
     return true;
 }

@@ -6,7 +6,7 @@
 #include "CardSprite.h"
 #include "MatchDirector.h"
 #include "LeaderCardSprite.h"
-
+#include "CoinSprite.h"
 
 const std::string PLAY_SCENE_BG_DIR = "PlayScene/PlaySceneBG.jpg";
 
@@ -26,8 +26,7 @@ private:
 	//std::vector<CardSprite*> ranged1s;
 	//std::vector<CardSprite*> siege0s;
 	//std::vector<CardSprite*> siege1s;
-	Sprite* coin;
-	LeaderCardSprite* leader0, *leader1;
+	//LeaderCardSprite* leader0, *leader1;
 
 public:
 	void initWithStarter(int Starter);
