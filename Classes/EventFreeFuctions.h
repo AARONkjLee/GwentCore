@@ -49,7 +49,7 @@ void pointHasOpacityOnPNGTarget(const cocos2d::Point & touchLocation, typeValue 
 	//Texture2D::getPath();
 	myImage->initWithImageFile(target->getTexture()->getPath());
 	unsigned char *data = myImage->getData();  //这里就是图片数据了
-											   //根据刚刚计算的相对坐标值，计算出触摸点代表了哪一个像素点      然后再提取出该像素点的alpha值
+											   //根据刚刚计算的相对坐标值，计算出触摸点代表了哪一个像素点????????????然后再提取出该像素点的alpha值
 											   //注意：因为图片坐标（0，0）是在左上角，所以要和触摸点的Y转换一下，也就是“(myImage->getHeight() - (int)(ps.y) - 1)”
 	int pa = 4 * ((myImage->getHeight() - (int)(ps.y) - 1) * myImage->getWidth() + (int)(ps.x)) + 3;
 	unsigned int ap = data[pa];

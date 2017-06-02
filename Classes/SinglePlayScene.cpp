@@ -39,8 +39,6 @@ Scene* SinglePlayScene::createScene()
 // on "init" you need to initialize your instance
 bool SinglePlayScene::init()
 {
-    //////////////////////////////
-    // 1. super init first
     if ( !Layer::init() )
     {
         return false;
@@ -49,11 +47,6 @@ bool SinglePlayScene::init()
     auto visibleSize = Director::getInstance()->getVisibleSize();
     auto origin = Director::getInstance()->getVisibleOrigin();
 
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
-
-    // add a "close" icon to exit the progress. it's an autorelease object
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
                                            "CloseSelected.png",
@@ -63,7 +56,6 @@ bool SinglePlayScene::init()
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
 
-    // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
@@ -77,6 +69,7 @@ bool SinglePlayScene::init()
 	this->addChild(background,0);
 
 	auto coin = CoinSprite::create();
+	coin->setDebugMode(true);
 	coin->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
 	this->addChild(coin, 0);
 

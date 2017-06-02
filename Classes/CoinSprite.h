@@ -7,11 +7,21 @@ const std::string BLUE_COIN_DIR = "PlayScene/CoinBlue.png";
 
 USING_NS_CC;
 
+enum CoinState{
+	BlackC,
+	RedC,
+	BlueC
+};
+
 class CoinSprite : public cocos2d::Sprite{
 private:
-	SpriteFrame* blackCoinFrame, *redCoinFrame, *blueCoinFrame;
+	CoinState coin;
+	bool debugMode;
 public:
 	bool init();
+	void setDebugMode(bool debug);
 	CREATE_FUNC(CoinSprite);
 	void keyDown(EventKeyboard::KeyCode key, Event* event);
+
+	void changeToCoinState(CoinState coinState);
 };
