@@ -7,19 +7,19 @@ bool CoinSprite::init(){
 
 	auto blackCoin = Sprite::create(BLACK_COIN_DIR);
 	blackCoin->setPosition(0, 0);
-	blackCoin->setTag(0);
+	blackCoin->setName("blackCoinSprite");
 	this->addChild(blackCoin);
 
 	auto redCoin = Sprite::create(RED_COIN_DIR);
 	redCoin->setPosition(0, 0);
-	redCoin->setVisible(false);
-	redCoin->setTag(1);
+	redCoin->setOpacity(0);
+	redCoin->setName("redCoinSprite");
 	this->addChild(redCoin);
 
 	auto blueCoin = Sprite::create(BLUE_COIN_DIR);
 	blueCoin->setPosition(0, 0);
-	blueCoin->setVisible(false);
-	blueCoin->setTag(2);
+	blueCoin->setOpacity(0);
+	blueCoin->setName("blueCoinSprite");
 	this->addChild(blueCoin);
 
 	auto coinKeyListener = EventListenerKeyboard::create();
@@ -58,46 +58,48 @@ void CoinSprite::keyDown(EventKeyboard::KeyCode key, Event * event)
 
 
 void CoinSprite::changeToCoinState(CoinState coinState)
-{
-	Sprite* blackCoin = (Sprite*)this->getChildByTag(0);
-	Sprite* redCoin = (Sprite*)this->getChildByTag(1);
-	Sprite* blueCoin = (Sprite*)this->getChildByTag(2);
-	// I know these tags are magic number but I am lazy to change.
-	// If you want to change it see init()
-	
+{	
 	if (coin == coinState) {
 		return;
 	}
+
+	std::string oldChildSpriteName;
 	switch (coin)
 	{
 	case BlackC:
-		blackCoin->setVisible(false);
+		oldChildSpriteName = "blackCoinSprite";
 		break;
 	case RedC:
-		redCoin->setVisible(false);
+		oldChildSpriteName = "redCoinSprite";
 		break;
 	case BlueC:
-		blueCoin->setVisible(false);
+		oldChildSpriteName = "blueCoinSprite";
 		break;
 	default:
 		break;
 	}
+	Sprite* oldCoinSprite = (Sprite*)this->getChildByName(oldChildSpriteName);
 
+	std::string newChildSpriteName;
 	switch (coinState)
 	{
 	case BlackC:
-		blackCoin->setVisible(true);
+		newChildSpriteName = "blackCoinSprite";
 		coin = BlackC;
 		break;
 	case RedC:
-		redCoin->setVisible(true);
+		newChildSpriteName = "redCoinSprite";
 		coin = RedC;
 		break;
 	case BlueC:
-		blueCoin->setVisible(true);
+		newChildSpriteName = "blueCoinSprite";
 		coin = BlueC;
 		break;
 	default:
 		break;
 	}
+	Sprite* mewCoinSprite = (Sprite*)this->getChildByName(newChildSpriteName);
+
+	oldCoinSprite->runAction(FadeOut::create(0.5));
+	mewCoinSprite->runAction(FadeIn::create(0.5));
 }
